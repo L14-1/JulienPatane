@@ -12,6 +12,27 @@
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
     </div>
+    <div class="menu_links">
+      <ul>
+        <li>Prestations <i class="arrow down"></i></li>
+        <ul class="sublinks">
+          <li>Coaching</li>
+          <li>Cohérence cardiaque</li>
+          <li>Réflexologie</li>
+          <li>Kinésiologie</li>
+        </ul>
+        <li>Tarifs <i class="arrow down"></i></li>
+        <ul class="sublinks">
+          <li>Coaching</li>
+          <li>Cohérence cardiaque</li>
+          <li>Réflexologie</li>
+          <li>Kinésiologie</li>
+        </ul>
+        <li>Mon parcours</li>
+        <li>Les bienfaits du sport</li>
+        <li>F.A.Q.</li>
+      </ul>
+    </div>
     <router-view/>
   </div>
 </template>
@@ -67,6 +88,40 @@
       &::before {
         top : 5px;
       }
+    }
+  }
+}
+.menu_links {
+  display: flex;
+  justify-content: right;
+  ul {
+    width : 20rem;
+    background: #d8d8d8;
+    li {
+      position: relative;
+      padding : 1rem 0.5rem;
+    }
+    .sublinks {
+      width : 20rem;
+      background : #e7e7e7;
+      li {
+        padding : 1rem;
+      }
+    }
+    .arrow {
+      position: absolute;
+      right : 1rem;
+      top : 1.2rem;
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 4px;
+    }
+    .left {
+      transform: rotate(135deg);
+    }
+    .down {
+      transform: rotate(45deg);
     }
   }
 }
