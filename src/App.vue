@@ -6,23 +6,23 @@
         <p>Julien Patane</p>
         <p>Sport & Bien-être</p>
       </div>
-      <div class="nav-menu">
+      <div class="nav-menu" @click="menuSwitch">
         <div class="nav-menu_hamburger"></div>
       </div>
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
     </div>
-    <div class="menu_links">
+    <div class="menu_links" v-if="menu == 'opened'">
       <ul>
-        <li>Prestations <i class="arrow down"></i></li>
-        <ul class="sublinks">
+        <li @click="servicesSwitch" >Prestations <i class="arrow down"></i></li>
+        <ul class="sublinks" v-if="servicesMenu == 'opened'">
           <li>Coaching</li>
           <li>Cohérence cardiaque</li>
           <li>Réflexologie</li>
           <li>Kinésiologie</li>
         </ul>
-        <li>Tarifs <i class="arrow down"></i></li>
-        <ul class="sublinks">
+        <li @click="pricesSwitch" >Tarifs <i class="arrow down"></i></li>
+        <ul class="sublinks" v-if="pricesMenu == 'opened'">
           <li>Coaching</li>
           <li>Cohérence cardiaque</li>
           <li>Réflexologie</li>
@@ -36,6 +36,47 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+
+export default {
+  data: function () {
+    return {
+      menu: "default",
+      servicesMenu: "default",
+      pricesMenu: "default",
+    };
+  },
+  methods: {
+    menuSwitch() {
+      if (this.menu == "opened") {
+        this.menu = "default";
+        this.servicesMenu = "default";
+        this.pricesMenu = "default";
+      } else if (this.menu == "default"){
+        this.menu = "opened";
+      }
+    },
+    servicesSwitch() {
+      if (this.servicesMenu == "default") {
+        this.servicesMenu = "opened";
+        this.pricesMenu = "default";
+      } else if (this.servicesMenu == "opened"){
+        this.servicesMenu = "default";
+      }
+    },
+    pricesSwitch() {
+      if (this.pricesMenu == "default") {
+        this.pricesMenu = "opened";
+        this.servicesMenu = "default";
+      } else if (this.pricesMenu == "opened"){
+        this.pricesMenu = "default";
+      }
+    },
+  },
+};
+</script>
+
 
 <style lang="scss">
 
@@ -70,6 +111,12 @@
   }
   .nav-menu {
     margin-right : 1rem;
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    width : 1.8rem;
+    height : 1.2rem;
+    cursor: pointer;
     &_hamburger {
       position: relative;
       width : 21px;
