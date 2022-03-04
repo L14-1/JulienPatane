@@ -11,28 +11,26 @@
       <div class="nav-menu" @click="menuSwitch">
         <div :class="[ menu == 'default' ? 'nav-menu_hamburger' : 'nav-menu_hamburgerCross' ]" ></div>
       </div>
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/Tarifs">About</router-link> -->
     </div>
     <div class="menu_links" v-if="menu == 'opened'" >
       <ul>
         <li @click="servicesSwitch" ><router-link to="/prestations">Prestations</router-link><i :class="[ servicesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
         <ul class="sublinks" v-if="servicesMenu == 'opened'">
-          <li>Coaching</li>
-          <li>Cohérence cardiaque</li>
-          <li>Réflexologie</li>
-          <li>Kinésiologie</li>
+          <li @click="closingNav">Coaching</li>
+          <li @click="closingNav">Cohérence cardiaque</li>
+          <li @click="closingNav">Réflexologie</li>
+          <li @click="closingNav">Kinésiologie</li>
         </ul>
         <li @click="pricesSwitch" ><router-link to="/tarifs">Tarifs</router-link><i :class="[ pricesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
         <ul class="sublinks" v-if="pricesMenu == 'opened'">
-          <li>Coaching</li>
-          <li>Cohérence cardiaque</li>
-          <li>Réflexologie</li>
-          <li>Kinésiologie</li>
+          <li @click="closingNav"><router-link to="/tarifs">Coaching</router-link></li>
+          <li @click="closingNav">Cohérence cardiaque</li>
+          <li @click="closingNav">Réflexologie</li>
+          <li @click="closingNav">Kinésiologie</li>
         </ul>
-        <li><router-link to="/mon-parcours">Mon parcours</router-link></li>
-        <li><router-link to="/les-bienfaits-du-sport">Les bienfaits du sport</router-link></li>
-        <li><router-link to="/faq">F.A.Q.</router-link></li>
+        <li @click="closingNav"><router-link to="/mon-parcours">Mon parcours</router-link></li>
+        <li @click="closingNav"><router-link to="/les-bienfaits-du-sport">Les bienfaits du sport</router-link></li>
+        <li @click="closingNav"><router-link to="/faq">F.A.Q.</router-link></li>
       </ul>
     </div>
     <router-view/>
@@ -75,6 +73,11 @@ export default {
         this.pricesMenu = "default";
       }
     },
+    closingNav() {
+      this.menu = "default";
+      this.servicesMenu = "default";
+      this.pricesMenu = "default";
+    }
   },
 };
 </script>
@@ -99,7 +102,7 @@ export default {
   color: #424242;
   h1 {
     color : #1E3D59;
-    padding : 1.5rem 0;
+    padding : 1.5rem 3rem;
     text-align: center;
   }
   h2 {
@@ -110,10 +113,29 @@ export default {
     padding : 1rem 0;
   }
   .orangeAccent {
+    font-style: normal;
     color : #FF6E40;
   }
   .blueAccent {
+    font-style: normal;
     color : #1E3D59;
+  }
+  .boldAccent {
+    font-style: normal;
+    font-weight : bold;
+  }
+  .button-nav {
+    cursor: pointer;
+    background : #1E3D59;
+    width : 10rem;
+    padding : 0.7rem 0;
+    border-radius: 1rem;
+    text-align : center;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.13);
+    a {
+      color : #F5F0E1;
+      text-decoration: none;
+    }
   }
 }
 
