@@ -1,36 +1,38 @@
 <template>
   <div id="app">
     <div id="nav">
+      <router-link to="/">
       <img src="./assets/Logo.svg" alt="julien Patane Logo">
+      </router-link>
       <div class="nav-title">
         <p>Julien Patane</p>
         <p>Sport & Bien-être</p>
       </div>
       <div class="nav-menu" @click="menuSwitch">
-        <div class="nav-menu_hamburger"></div>
+        <div :class="[ menu == 'default' ? 'nav-menu_hamburger' : 'nav-menu_hamburgerCross' ]" ></div>
       </div>
       <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
+      <router-link to="/Tarifs">About</router-link> -->
     </div>
-    <div class="menu_links" v-if="menu == 'opened'">
+    <div class="menu_links" v-if="menu == 'opened'" >
       <ul>
-        <li @click="servicesSwitch" >Prestations <i class="arrow down"></i></li>
+        <li @click="servicesSwitch" ><router-link to="/prestations">Prestations</router-link><i :class="[ servicesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
         <ul class="sublinks" v-if="servicesMenu == 'opened'">
           <li>Coaching</li>
           <li>Cohérence cardiaque</li>
           <li>Réflexologie</li>
           <li>Kinésiologie</li>
         </ul>
-        <li @click="pricesSwitch" >Tarifs <i class="arrow down"></i></li>
+        <li @click="pricesSwitch" ><router-link to="/tarifs">Tarifs</router-link><i :class="[ pricesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
         <ul class="sublinks" v-if="pricesMenu == 'opened'">
           <li>Coaching</li>
           <li>Cohérence cardiaque</li>
           <li>Réflexologie</li>
           <li>Kinésiologie</li>
         </ul>
-        <li>Mon parcours</li>
-        <li>Les bienfaits du sport</li>
-        <li>F.A.Q.</li>
+        <li><router-link to="/mon-parcours">Mon parcours</router-link></li>
+        <li><router-link to="/les-bienfaits-du-sport">Les bienfaits du sport</router-link></li>
+        <li><router-link to="/faq">F.A.Q.</router-link></li>
       </ul>
     </div>
     <router-view/>
@@ -92,7 +94,47 @@ export default {
   font-family: 'Inter', sans-serif;
 }
 
+#app {
+  padding-top : 5rem;
+  color: #424242;
+  h1 {
+    color : #1E3D59;
+    padding : 1.5rem 0;
+    text-align: center;
+  }
+  h2 {
+    font-size : 18px;
+    font-weight: 600;
+    color : #1E3D59;
+    text-align: center;
+    padding : 1rem 0;
+  }
+  .orangeAccent {
+    color : #FF6E40;
+  }
+  .blueAccent {
+    color : #1E3D59;
+  }
+}
+
+html {
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(180, 180, 180);
+        border-radius: 2rem;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: none;
+    }
+    overflow-x: hidden;
+}
+
 #nav {
+  position: fixed;
+  width : 100vw;
+  top : 0;
   height : 5rem;
   background: #1E3D59;
   color : #F5F0E1;
@@ -136,11 +178,37 @@ export default {
         top : 5px;
       }
     }
+    &_hamburgerCross {
+      position: relative;
+      width : 21px;
+      &::after, &::before {
+        content : '';
+        position: absolute;
+        width : 21px;
+        height : 2px;
+        background: #F5F0E1;
+      }
+      &::after {
+        transform: rotate(45deg);
+        transition: transform 0.3s ease-out;
+      }
+      &::before {
+        transform: rotate(-45deg);
+        transition: transform 0.3s ease-out;
+      }
+    }
   }
 }
 .menu_links {
-  display: flex;
-  justify-content: right;
+  cursor : pointer;
+  position : fixed;
+  right : 0;
+  top : 5rem;
+  color : #424242;
+  a {
+    color : #424242;
+    text-decoration: none;
+  }
   ul {
     width : 20rem;
     background: #d8d8d8;
@@ -166,9 +234,11 @@ export default {
     }
     .left {
       transform: rotate(135deg);
+      transition: transform 0.3s ease-out;
     }
     .down {
       transform: rotate(45deg);
+      transition: transform 0.3s ease-out;
     }
   }
 }
