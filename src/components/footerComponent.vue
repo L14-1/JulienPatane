@@ -4,16 +4,16 @@
     <p>Julien Patane</p>
     <p>Sport & cohérence cardiaque<br>Réflexologie & Kinésiologie</p>
     <div class="social-logos">
-      <a href="facebook.com"><font-awesome-icon icon="fa-brands fa-facebook-square" /></a>
-      <a href="instagram.com"><font-awesome-icon icon="fa-brands fa-instagram-square" /></a>
+      <a href="https://facebook.com"><font-awesome-icon icon="fa-brands fa-facebook-square" /></a>
+      <a href="https://instagram.com"><font-awesome-icon icon="fa-brands fa-instagram-square" /></a>
     </div>
     <ul>
       <li>Acompagnement sportif</li>
-      <li>Mon parcours</li>
+      <li><router-link to="/mon-parcours">Mon parcours</router-link></li>
       <li>Cohérence cardiaque</li>
-      <li>Tarifs</li>
+      <li><router-link to="/tarifs">Tarifs</router-link></li>
       <li>Reflexologie</li>
-      <li>FAQ</li>
+      <li><router-link to="/faq">F.A.Q.</router-link></li>
       <li>Kinésiologie</li>
     </ul>
   </div>
@@ -59,12 +59,16 @@ export default {
   ul {
     display : flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin : 1rem 2rem;
+    justify-content: flex-start;
+    margin : 1rem 0;
     li {
       text-align: center;
-      width : 12rem;
+      width : 49vw;
       margin-bottom : 1rem;
+      a {
+        color : #F5F0E1;
+        text-decoration: none;
+      }
     }
   }
 }
