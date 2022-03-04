@@ -34,10 +34,13 @@
       </ul>
     </div>
     <router-view/>
+    <FooterComponent />
   </div>
 </template>
 
 <script>
+
+import FooterComponent from '@/components/footerComponent.vue'
 
 export default {
   data: function () {
@@ -46,6 +49,9 @@ export default {
       servicesMenu: "default",
       pricesMenu: "default",
     };
+  },
+  components: {
+    FooterComponent
   },
   methods: {
     menuSwitch() {
@@ -154,6 +160,7 @@ html {
 }
 
 #nav {
+  z-index: 999;
   position: fixed;
   width : 100vw;
   top : 0;
@@ -222,6 +229,7 @@ html {
   }
 }
 .menu_links {
+  z-index: 999;
   cursor : pointer;
   position : fixed;
   right : 0;
