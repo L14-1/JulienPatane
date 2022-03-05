@@ -1,32 +1,61 @@
 <template>
   <div class="tarifs">
     <h1>Mes tarifs</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quod cupiditate laborum cum sequi soluta reiciendis odit inventore provident autem. Odio quasi culpa ab consectetur quisquam odit velit nisi in!
-    Rerum qui deleniti veritatis enim, doloremque, error consectetur earum illum quisquam sit temporibus eaque ex quam voluptas fugit et in ullam atque quae culpa quibusdam excepturi molestiae velit facilis? Dignissimos?
-    Vero saepe consectetur animi numquam reprehenderit beatae laboriosam aliquid ullam sit fugit, magnam quae, libero at consequatur illo nam fuga doloribus veniam obcaecati similique cupiditate modi quod expedita atque? Deserunt.
-    Sit reprehenderit repellat ad quibusdam accusamus obcaecati necessitatibus autem dignissimos temporibus, fugit molestias delectus a voluptate expedita iure tempore perferendis, eligendi optio aperiam aliquid corrupti libero esse adipisci saepe! Odit.
-    Alias dolore tenetur quia incidunt magni dolorem cum. Tempore quisquam fugit ipsa suscipit vel, possimus qui ratione magni sint porro nam laudantium harum tenetur nihil aliquid dolore pariatur nesciunt ducimus?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptates commodi iure deserunt vero esse. Magnam, similique molestias error voluptates cupiditate eum, tenetur maiores esse magni hic quasi dolorem tempora?
-    Nesciunt eaque porro veritatis explicabo odit in blanditiis, ut enim eveniet, autem tenetur! Veritatis architecto reiciendis beatae eum culpa sequi accusantium. Exercitationem corrupti ipsum facere ut odit maiores modi vero.
-    Illum deleniti possimus quas esse exercitationem! Velit voluptatibus animi amet eveniet dolor adipisci fugit sit quisquam officiis. Autem eius, molestias aliquam dignissimos provident quia, aperiam veniam magni nemo animi distinctio!
-    Minus consectetur, quas dolorem dignissimos blanditiis fugiat sint veniam, molestias, voluptatum atque tempora error architecto animi aspernatur eaque numquam unde nemo? Hic quas odio, adipisci fugit amet cupiditate expedita et.
-    Quam soluta nobis dicta esse doloribus! Tempore veniam facere iure nemo quas, vel ex blanditiis et temporibus maxime id ab qui ipsa aperiam, ut cumque nulla voluptates quidem fuga repellat!
-    Incidunt id, aspernatur non quo sapiente deserunt et aliquid magni repudiandae qui consequatur dolores libero, porro aperiam nobis. Distinctio reprehenderit et numquam quisquam ex quaerat illo eaque temporibus itaque corrupti?
-    Molestiae voluptas obcaecati officia, et, quis a praesentium quas, quam sapiente totam recusandae non eveniet ut corrupti? Eveniet, nobis. Aliquid, rerum ex veritatis ut doloremque architecto sapiente vel aperiam minima.
-    Reprehenderit esse adipisci, quisquam provident minima quidem non, odit unde illo distinctio odio facere eum? Molestias ipsum, temporibus at quam accusamus tempore? Accusantium dolor nemo esse quas ratione aliquid vel.
-    Autem dolor a molestias voluptas optio delectus modi voluptates nostrum vel earum magni maiores, hic accusantium, libero quibusdam nam consequuntur debitis! Fuga excepturi repellendus ab, nemo quos enim distinctio sit.
-    Soluta dolorem iste provident atque alias vero nihil voluptates rem libero. Aliquid, rem, neque dicta quasi alias laudantium autem, quidem velit dignissimos facilis numquam unde. Eos in iure ex quibusdam.
-    Aspernatur alias quaerat quo, mollitia delectus magni optio architecto dicta labore? Ducimus alias dolorem ea exercitationem illo molestias ex excepturi error quia dolor unde, quis ipsum omnis similique cupiditate laborum.
-    Explicabo praesentium animi nobis nesciunt odit incidunt, unde cupiditate ipsum adipisci numquam, assumenda, vel eveniet velit ut distinctio dolores ad exercitationem quo nostrum itaque id eius! Voluptatibus vero aspernatur odio.
-    Excepturi tempora magni laboriosam fugiat praesentium quidem eius id at. Unde iure assumenda quos obcaecati sequi ex exercitationem eaque cupiditate autem possimus? Optio unde itaque sed facilis delectus vitae aliquid!
-    Tenetur, in? Est cum odio quos necessitatibus! Deserunt, sapiente delectus aliquid odio, quaerat reprehenderit dolorum, at omnis officia libero ut exercitationem vitae debitis vel facilis ab fugit nisi nostrum. Id?
-    Velit rerum temporibus ab distinctio architecto, delectus qui reprehenderit incidunt assumenda labore neque et enim fugiat. Alias neque facilis modi nesciunt sapiente amet voluptatem. Minima, sint et. Recusandae, porro blanditiis.
-    Sunt possimus at illum in, velit, excepturi incidunt minima similique dignissimos ab delectus perferendis! Voluptate, possimus veniam? Quisquam est, odit ex esse quo numquam provident beatae molestiae ea explicabo consectetur.
-    Esse quis repellendus alias fuga earum, excepturi cum culpa vel unde numquam quod consequuntur omnis inventore soluta amet minima laudantium! Qui porro tempora exercitationem sint deserunt. Nesciunt voluptas vel hic!
-    Voluptates iusto saepe quae autem modi dolores reprehenderit. Totam eligendi cumque provident impedit hic? Nesciunt veritatis obcaecati ut exercitationem repellat? Facilis eius repellendus fugit in doloremque qui consectetur, quo hic.
-    Asperiores rem architecto doloribus et debitis, at tempore excepturi repudiandae, nulla, sed eos esse repellendus maxime mollitia veniam dolor omnis! Rerum possimus mollitia quaerat quas labore accusantium sapiente voluptatibus tenetur?
-    Iure aspernatur dolor, fugit, cumque asperiores necessitatibus cupiditate dolorem nihil fugiat laboriosam, pariatur non voluptatum ex. Perspiciatis, ducimus! Iste cupiditate optio fugit eveniet atque excepturi eos quibusdam, sequi eaque itaque?</p>
-    <h2 id="coaching">coaching</h2>
+    <div class="container">
+      <h4>Accompagnement personnalisé</h4>
+      <h5>1 ou 2 personnes</h5>
+      <div class="inside-container">
+        <p class="price-container"><i class="price">40€</i> / séance</p>
+        <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur.<br>Jusqu’à 2 personnes.</p>
+        <div class="breakline"></div>
+        <p class="price-container"><i class="price">20€</i> / séance</p>
+        <div class="pics">
+          <img src="../assets/kisspng-logo-services-la-personne-en-france-chque-emp-5b59512bc6c5e4.0972898015325801398142.png" alt="">
+          <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
+        </div>
+        <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
+        <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
+      </div>
+    </div>
+    <div class="container">
+      <h4>Accompagnement collectif</h4>
+      <h5>3 à 10 personnes</h5>
+      <div class="inside-container">
+        <p class="price-container"><i class="price">15€</i> / séance / personne</p>
+        <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur.</p>
+        <div class="breakline"></div>
+        <p class="price-container"><i class="price">7€50</i> / séance / personne</p>
+        <div class="pics">
+          <img src="../assets/kisspng-logo-services-la-personne-en-france-chque-emp-5b59512bc6c5e4.0972898015325801398142.png" alt="">
+          <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
+        </div>
+        <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
+        <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
+      </div>
+    </div>
+    <div class="container">
+      <h4>Cohérence cardiaque</h4>
+      <div class="inside-container">
+        <p class="price-container"><i class="price">12€</i> / séance / personne</p>
+        <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur. <br> <br>Elle est complémentaire avec l’accompagnement sportif , la reflexologie ou la kinésiologie</p>
+      </div>
+    </div>
+    <div class="button"><router-link to="/les-bienfaits-du-sport">Réflexologie, Kinésiologie<br>Pourquoi ? Pour qui ?</router-link></div>
+    <div class="container">
+      <h4>Réflexologie</h4>
+      <div class="inside-container">
+        <p class="price-container"><i class="price">55€</i> / séance</p>
+        <p>La séance dure en moyenne 1h15 et se déroule à mon cabinet</p>
+      </div>
+        <p class="adress"><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p>
+    </div><div class="container">
+      <h4>Kinésiologie</h4>
+      <div class="inside-container">
+        <p class="price-container"><i class="price">55€</i> / séance</p>
+        <p>La séance dure en moyenne 1h15 et se déroule à mon cabinet</p>
+      </div>
+        <p class="adress"><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p>
+    </div>
   </div>
 </template>
 
@@ -36,3 +65,108 @@ export default {
   name: 'Tarifs',
 }
 </script>
+
+<style lang="scss">
+.tarifs {
+  display : flex;
+  flex-direction : column;
+  align-items: center;
+  .container {
+    padding : 1rem;
+    position: relative;
+    width : 85vw;
+    background: white;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.13);
+    margin-bottom : 4rem;
+    h4 {
+      font-size : 1.1rem;
+    }
+    h5 {
+      font-weight : 600;
+    }
+    .inside-container {
+      margin : 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .price-container {
+        margin: 2rem 0 1rem 0;
+      }
+      .price {
+        font-size : 2.5rem;
+        color : #FFC13B;
+        font-style: normal;
+      }
+      .breakline {
+        width : 25vw;
+        height : 1px;
+        background: #1E3D59;
+        margin-top : 1.5rem;
+      }
+      p {
+        line-height : 1.5rem;
+      }
+      .pics {
+        display : flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          width : 30vw;
+          &:nth-child(2) {
+            width : 20vw;
+            height : 20vw;
+          }
+        }
+      }
+      .lowerCase {
+        line-height : 1.2rem;
+        font-size : 0.7rem;
+        margin-top: 1rem;
+        width : calc(85vw - 3rem)
+      }
+    }
+    .adress {
+      position: relative;
+      margin-top : 1rem;
+      text-align: center;
+      .fa-location-dot {
+        position: absolute;
+        top : 0.1rem;
+        left : 0.5rem;
+        color : #FF6E40;
+      }
+    }
+    &::after, &::before {
+      z-index : -1;
+      content : "";
+      position: absolute;
+      background : #FF6E40;
+      width : 50vw;
+      height : 6.5rem;
+    }
+    &::before {
+      top : -0.5rem;
+      left : -0.5rem;
+    }
+    &::after {
+      bottom : -0.5rem;
+      right : -0.5rem;
+    }
+  }
+  .button {
+    cursor: pointer;
+    margin : 0 auto 4rem auto;
+    background : #1E3D59;
+    width : fit-content;
+    padding : 0.8rem 1.3rem;
+    border-radius: 1rem;
+    text-align : center;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.13);
+    a {
+      color : #F5F0E1;
+      text-decoration: none;
+    }
+  }
+}
+
+</style>

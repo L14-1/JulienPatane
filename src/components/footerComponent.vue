@@ -60,10 +60,10 @@ export default {
     display : flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin : 1rem 0;
+    margin : 1rem 0 1rem 5vw;
     li {
+      width : 45vw;
       text-align: center;
-      width : 49vw;
       margin-bottom : 1rem;
       a {
         color : #F5F0E1;
