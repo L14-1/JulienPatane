@@ -43,7 +43,8 @@ export default {
 
 .parcours {
     p {
-        margin : 0 1.5rem 1.5rem 1rem;
+        margin : 0 2.5rem 1rem 2.5rem;
+        text-align: justify;
         font-weight: 500;
     }
     .ju_pics {
