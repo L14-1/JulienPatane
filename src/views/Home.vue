@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="button"><router-link to="/les-bienfaits-du-sport">Decouvrez les bienfaits<br>du sport sur la santé !</router-link></div>
-
+    <div class="break-line"></div>
     <h4>Mes prestations</h4>
     <h5>Bien-être</h5>
     <div class="squared-container">
@@ -70,7 +70,14 @@
       </div>
     </div>
     <div class="button"><router-link to="/les-bienfaits-du-sport">Réflexologie, Kinésiologie<br>Pourquoi ? Pour qui ?</router-link></div>
+    <div class="break-line"></div>
     <h4>Ils me font confiance</h4>
+    <div class="confiance-pics">
+      <img src="../assets/logo 3.png" alt="">
+      <img src="../assets/kisspng-logo-services-la-personne-en-france-chque-emp-5b59512bc6c5e4.0972898015325801398142.png" alt="">
+      <img src="../assets/HH.png" alt="">
+      <img src="../assets/logo 6.png" alt="">
+    </div>
   </div>
 </template>
 
@@ -117,7 +124,7 @@ export default {
     top : 5rem;
     height : calc(100vh - 5rem);
     width : 100vw;
-    clip-path: polygon(0 0, 97.5% 0, 0 99%, 0 100%);
+    clip-path: polygon(0 0, 99% 0, 0 99%, 0 100%);
     .ju_foot {
       height : calc(100vh - 5rem);
       width : 100%;
@@ -133,13 +140,13 @@ export default {
     background: rgba(255, 255, 255, 0.5);
     .kinesiologie { 
       position : absolute;
-      top : calc(100vh - 30rem);
-      right : 15vw;
+      bottom : 4rem;
+      right : 7vw;
     }
     .sport {
       position : absolute;
-      top : 5rem;
-      left : 20vw;
+      top : 4rem;
+      left : 5vw;
       .infos {
         margin-left : 6rem;
       }
@@ -163,13 +170,14 @@ export default {
   .qui-je-suis {
     display : flex;
     justify-content: space-between;
-    margin : 1rem 5rem 4rem 5rem;
+    align-items: center;
+    margin : 1rem 6vw 4rem 6vw;
     img {
-      height : 17rem;
-      margin : 1rem 0;
+      width : 40vw;
+      // margin : 1rem 0;
     }
     p {
-      width : 10rem;
+      width : 40vw;
       font-weight: 500;
     }
   }
@@ -231,8 +239,24 @@ export default {
     }
     &::after {
       bottom : -0.5rem;
-      right : calc(10vw - 1rem);
+      right : calc(10vw - 0.5rem);
     }
+  }
+  .confiance-pics {
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items : center;
+    margin-bottom : 3rem;
+    img {
+      width : 35vw;
+    }
+  }
+  .break-line {
+    width : 30vw;
+    height : 1px;
+    margin : 3rem 35vw 0 35vw;
+    background: #1E3D59;
   }
 }
 
