@@ -1,5 +1,11 @@
 <template>
   <div class="tarifs">
+    <div class="anchors">
+      <div><p>Coaching</p></div>
+      <div><p>Cohérence cardiaque</p></div>
+      <div><p>Reflexo</p></div>
+      <div><p>Kinéso</p></div>
+    </div>
     <h1>Mes tarifs</h1>
     <div class="container">
       <h4>Accompagnement personnalisé</h4>
@@ -46,15 +52,15 @@
       <div class="inside-container">
         <p class="price-container"><i class="price">55€</i> / séance</p>
         <p>La séance dure en moyenne 1h15 et se déroule à mon cabinet</p>
+        <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
       </div>
-        <p class="adress"><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p>
     </div><div class="container">
       <h4>Kinésiologie</h4>
       <div class="inside-container">
         <p class="price-container"><i class="price">55€</i> / séance</p>
         <p>La séance dure en moyenne 1h15 et se déroule à mon cabinet</p>
+        <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
       </div>
-        <p class="adress"><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p>
     </div>
   </div>
 </template>
@@ -71,6 +77,29 @@ export default {
   display : flex;
   flex-direction : column;
   align-items: center;
+  .anchors {
+    cursor: pointer;
+    display: flex;
+    margin : 0;
+    div {
+      display : flex;
+      align-items : center;
+      justify-content: space-around;
+      width : 25vw;
+      font-weight : bold;
+      font-size : 0.9rem;
+      height : 3.5rem;
+      background: rgba(30, 61, 89, 0.15);
+      border : 1px solid black;
+      border-right : none;
+      &:first-child {
+        border-left : none;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
   .container {
     padding : 1rem;
     position: relative;
@@ -124,17 +153,21 @@ export default {
         margin-top: 1rem;
         width : calc(85vw - 3rem)
       }
-    }
     .adress {
-      position: relative;
-      margin-top : 1rem;
-      text-align: center;
-      .fa-location-dot {
-        position: absolute;
-        top : 0.1rem;
-        left : 0.5rem;
-        color : #FF6E40;
+      p {
+        width : fit-content;
+        margin-left : 1rem;
+        position: relative;
+        margin-top : 1rem;
+        text-align: center;
+        .fa-location-dot {
+          position: absolute;
+          top : 0.1rem;
+          left : -1rem;
+          color : #FF6E40;
+        }
       }
+    }
     }
     &::after, &::before {
       z-index : -1;

@@ -138,24 +138,26 @@ export default {
     width : 100vw;
     height : calc(100vh - 5rem);
     background: rgba(255, 255, 255, 0.5);
+    .kinesiologie, .sport {
+      display: flex;
+      flex-direction: column;
+      align-items : center;
+    }
     .kinesiologie { 
       position : absolute;
-      bottom : 4rem;
+      bottom : 10rem;
       right : 7vw;
     }
     .sport {
       position : absolute;
       top : 4rem;
       left : 5vw;
-      .infos {
-        margin-left : 6rem;
-      }
     }
     h3 {
       color : #1E3D59;
       text-align: center;
       width : fit-content;
-      margin-bottom : 4rem;
+      margin-bottom : 1rem;
       line-height: 2rem;
     }
     .infos {
