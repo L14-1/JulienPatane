@@ -13,13 +13,23 @@
         </div>
     </div>
 
-    <div class="ju_pics">
-    <img src="../assets/uuu.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
+    <div class="dual-photo-container">
+        <div class="dual-photo-container--photo">
+            <img src="../assets/nn.jpg" alt="">
+        </div>
+        <div class="dual-photo-container--photo">
+            <img src="../assets/yyy.jpg" alt="">
+        </div>
     </div>
 
-    <p>Grand passionné de voyages, véritable amoureux de l'Amérique latine, je me suis aperçu que prendre soin de soi est accessible partout et pour tous.</p>
-    <p>C'est une philosophie de vie, ce sont des rituels à adopter au quotidien. Notre voyage intérieur est infini. A très bientôt.</p>
-    <p class="blueAccent">Julien Patane</p>
+    <div class="text-photo-container">
+    <div class="ju_pics">
+        <img src="../assets/uuu.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
+    </div>
+    <p class="text-photo-container--text">Grand passionné de voyages, véritable amoureux de l'Amérique latine, je me suis aperçu que prendre soin de soi est accessible <i class="orangeAccent">partout</i> et <i class="orangeAccent">pour tous</i>.<br>
+    C'est une philosophie de vie, ce sont des rituels à adopter au quotidien. Notre voyage intérieur est infini. A très bientôt.<br>
+    <i class="blueAccent">Julien Patane</i></p>
+    </div>
 
     <div class="diplomes">
         <h2><font-awesome-icon icon="fa-solid fa-ribbon" />Mes diplômes</h2>
@@ -55,11 +65,13 @@ export default {
     flex-direction: column;
     align-items: center;
     .text-photo-container {
-        display : flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width : 1100px;
-        margin-top : 4rem;
+        @include pc {
+            display : flex;
+            justify-content: space-between;
+            align-items: center;
+            width : 900px;
+            margin-top : 4rem;
+        }
         &--text {
             @include pc {
                 flex : 50%
@@ -68,7 +80,6 @@ export default {
         &--photo {
             display : none;
             @include pc {
-                display: block;
                 flex : 50%;
                 display: flex;
                 justify-content: center;
@@ -83,6 +94,28 @@ export default {
             
         }
     }
+    .dual-photo-container {
+        display: none;
+        @include pc {
+            display : flex;
+            justify-content: space-between;
+            align-items: center;
+            width : 900px;
+            margin-top : 4rem;
+        }
+        &--photo {
+            flex : 50%;
+            display: flex;
+            justify-content: center;
+            img {
+                width : 300px;
+                display: none;
+                @include pc {
+                    display : block;
+                }
+            }
+        }
+    }
     p {
         margin : 0 2.5rem 1rem 2.5rem;
         text-align: justify;
@@ -92,6 +125,9 @@ export default {
         display : flex;
         justify-content: center;
         margin : 2rem 0;
+        @include pc {
+            flex : 50%;
+        }
         img {
             width : 20rem;
             border-radius: 0.5rem;

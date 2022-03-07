@@ -1,6 +1,7 @@
 <template>
   <div class="tarifs">
     <h1>Mes tarifs</h1>
+    <div class="dual-container">
     <div class="container">
       <h4>Accompagnement personnalisé</h4>
       <h5>1 ou 2 personnes</h5>
@@ -33,6 +34,7 @@
         <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
       </div>
     </div>
+    </div>
     <div class="container">
       <h4>Cohérence cardiaque</h4>
       <div class="inside-container">
@@ -40,7 +42,8 @@
         <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur. <br> <br>Elle est complémentaire avec l’accompagnement sportif , la reflexologie ou la kinésiologie</p>
       </div>
     </div>
-    <div class="button"><router-link to="/les-bienfaits-du-sport">Réflexologie, Kinésiologie<br>Pourquoi ? Pour qui ?</router-link></div>
+    <!-- <div class="button"><router-link to="/les-bienfaits-du-sport">Réflexologie, Kinésiologie<br>Pourquoi ? Pour qui ?</router-link></div> -->
+    <div class="dual-container">
     <div class="container">
       <h4>Réflexologie</h4>
       <div class="inside-container">
@@ -56,6 +59,7 @@
         <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
       </div>
     </div>
+    </div>
   </div>
 </template>
 
@@ -67,22 +71,38 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import '../assets/_mixin.scss';
+
 .tarifs {
   display : flex;
   flex-direction : column;
   align-items: center;
+  .dual-container {
+    @include pc {
+      width : 900px;
+      display : flex;
+      justify-content: space-between;
+    }
+  }
   .container {
     padding : 1rem;
     position: relative;
     width : 85vw;
+    max-width : 450px;
+    @include pc {
+      width : 400px;
+    }
     background: white;
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.13);
     margin-bottom : 4rem;
     h4 {
       font-size : 1.1rem;
+      text-align: center;
     }
     h5 {
       font-weight : 600;
+      text-align: center;
     }
     .inside-container {
       margin : 0 1rem;
@@ -99,6 +119,7 @@ export default {
       }
       .breakline {
         width : 25vw;
+        max-width : 10rem;
         height : 1px;
         background: #1E3D59;
         margin-top : 1.5rem;
@@ -112,9 +133,12 @@ export default {
         justify-content: space-between;
         img {
           width : 30vw;
+          max-width : 8rem;
           &:nth-child(2) {
             width : 20vw;
             height : 20vw;
+            max-width : 5rem;
+            max-height : 5rem;
           }
         }
       }
@@ -122,7 +146,8 @@ export default {
         line-height : 1.2rem;
         font-size : 0.7rem;
         margin-top: 1rem;
-        width : calc(85vw - 3rem)
+        width : calc(85vw - 3rem);
+        max-width : calc(400px - 3rem);
       }
     .adress {
       p {
@@ -146,6 +171,7 @@ export default {
       position: absolute;
       background : #FF6E40;
       width : 50vw;
+      max-width : 220px;
       height : 6.5rem;
     }
     &::before {
@@ -157,20 +183,20 @@ export default {
       right : -0.5rem;
     }
   }
-  .button {
-    cursor: pointer;
-    margin : 0 auto 4rem auto;
-    background : #1E3D59;
-    width : fit-content;
-    padding : 0.8rem 1.3rem;
-    border-radius: 1rem;
-    text-align : center;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.13);
-    a {
-      color : #F5F0E1;
-      text-decoration: none;
-    }
-  }
+  // .button {
+  //   cursor: pointer;
+  //   margin : 0 auto 4rem auto;
+  //   background : #1E3D59;
+  //   width : fit-content;
+  //   padding : 0.8rem 1.3rem;
+  //   border-radius: 1rem;
+  //   text-align : center;
+  //   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.13);
+  //   a {
+  //     color : #F5F0E1;
+  //     text-decoration: none;
+  //   }
+  // }
 }
 
 </style>

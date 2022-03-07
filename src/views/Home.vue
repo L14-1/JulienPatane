@@ -130,7 +130,14 @@ export default {
 
 <style lang="scss">
 
+@import '../assets/_mixin.scss';
+
 .home {
+  .right, .left, .title {
+    @include tablet {
+      display: none;
+    }
+  }
   h4 {
     font-size : 1.7rem;
     font-weight: 600;
@@ -207,12 +214,12 @@ export default {
   }
   .qui-je-suis {
     display : flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin : 1rem 6vw 4rem 6vw;
+    margin : 1rem 0 4rem 0;
     img {
       width : 40vw;
-      // margin : 1rem 0;
+      max-width : 10rem;
     }
     p {
       width : 40vw;
@@ -282,6 +289,7 @@ export default {
     margin-bottom : 3rem;
     img {
       width : 35vw;
+      max-width : 13rem;
     }
   }
   .break-line {

@@ -184,6 +184,7 @@ export default {
 @import '../assets/_mixin.scss';
 
 .prestations {
+  width : 100vw;
   max-width : 1100px;
   display: flex;
   flex-direction: column;

@@ -1,6 +1,7 @@
 <template>
   <div class="faq">
     <h1>Foire aux questions</h1>
+    <div class="container">
     <div :class="[ firstQuestion ? 'opened-question' : '' , 'question']" @click="firstQuestionSwitch">
       <p class="the-question">Quelle est la durée d’une séance d’accompagnement sportif ?<i :class="[ firstQuestion ? 'left' : 'down', 'arrow' ]"></i></p>
       <p class="the-answer" v-if="firstQuestion">Une séance individuelle ou collective dure 1 heure.</p>
@@ -16,6 +17,7 @@
     <div :class="[ fourthQuestion ? 'opened-question' : '' , 'question']" @click="fourthQuestionSwitch">
       <p class="the-question">Les chèque CESU (Service à la personne) sont-ils  acceptés ?<i :class="[ fourthQuestion ? 'left' : 'down', 'arrow' ]"></i></p>
       <p class="the-answer" v-if="fourthQuestion">Oui, les chèque CESU sont acceptés.</p>
+    </div>
     </div>
   </div>
 </template>
@@ -78,11 +80,22 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import '../assets/_mixin.scss';
+
 .faq {
+  @include pc {
+    margin : auto;
+    margin-bottom : 14rem;
+  }
   .question {
     cursor : pointer;
     width : 84vw;
+    max-width : 700px;
     margin-left : 8vw;
+    @include pc {
+      margin-left : 0;
+    }
     margin-bottom : 1rem;
     padding : 1rem 0.5rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -111,6 +124,11 @@ export default {
     .the-answer {
       padding-left : 4rem;
       margin-top : 1rem;
+    }
+    &:first-child {
+      @include pc {
+        margin-top : 5rem;
+      }
     }
   }
   .opened-question {
