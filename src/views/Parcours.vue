@@ -1,10 +1,17 @@
 <template>
   <div class="parcours">
     <h1>Mon parcours</h1>
-    <p>Diplômé des métiers du sport et de l'animation, je suis <i class="orangeAccent">éducateur coach sportif</i> sur le bassin grenoblois depuis plusieurs années.</p>
-    <p>Un parcours et une histoire qui ont démarré dans un club de basket en tant que salarié en 2010.
-    Puis coordinateur d'équipe dans le milieu périscolaire, directeur d'accueil collectif de mineurs, intervenant sportif dans diverses associations pour les publics enfants et adultes, j'ai décidé de devenir micro entrepreneur en 2017.</p>
-    <p>La petite aventure continue avec un virage complémentaire depuis février 2020. Un parcours de formation pour devenir <i class="orangeAccent">praticien kinésiologue certifié</i>.</p>
+    <div class="text-photo-container">
+        <div class="text-photo-container--text">
+            <p>Diplômé des métiers du sport et de l'animation, je suis <i class="orangeAccent">éducateur coach sportif</i> sur le bassin grenoblois depuis plusieurs années.</p>
+            <p>Un parcours et une histoire qui ont démarré dans un club de basket en tant que salarié en 2010.
+                Puis coordinateur d'équipe dans le milieu périscolaire, directeur d'accueil collectif de mineurs, intervenant sportif dans diverses associations pour les publics enfants et adultes, j'ai décidé de devenir micro entrepreneur en 2017.</p>
+            <p>La petite aventure continue avec un virage complémentaire depuis février 2020. Un parcours de formation pour devenir <i class="orangeAccent">praticien kinésiologue certifié</i>.</p>
+        </div>
+        <div class="text-photo-container--photo">
+            <img src="../assets/uuu.jpg" alt="">
+        </div>
+    </div>
 
     <div class="ju_pics">
     <img src="../assets/uuu.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
@@ -41,7 +48,41 @@ export default {
 
 <style lang="scss">
 
+@import '../assets/_mixin.scss';
+
 .parcours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text-photo-container {
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width : 1100px;
+        margin-top : 4rem;
+        &--text {
+            @include pc {
+                flex : 50%
+            }
+        }
+        &--photo {
+            display : none;
+            @include pc {
+                display: block;
+                flex : 50%;
+                display: flex;
+                justify-content: center;
+            }
+            img {
+                width : 300px;
+                display: none;
+                @include pc {
+                    display : block;
+                }
+            }
+            
+        }
+    }
     p {
         margin : 0 2.5rem 1rem 2.5rem;
         text-align: justify;
@@ -58,6 +99,13 @@ export default {
         }
     }
     .diplomes {
+        @include pc {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding : 1rem 0;
+            width : 1000px
+        }
         .fa-ribbon {
             color : #FF6E40;
             font-size: 1.5rem;
@@ -75,8 +123,10 @@ export default {
         }
     }
     .buttons {
-        margin : 2rem 1rem;
-        display: flex;
+        margin : 2rem 0;
+        width : 100vw;
+        max-width : 25rem;
+        display : flex;
         justify-content: space-around;
     }
 }

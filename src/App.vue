@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">
-      <img src="./assets/Logo.svg" alt="julien Patane Logo">
+      <img src="./assets/Logo.svg" alt="julien Patane Logo" @click="closingNav">
       </router-link>
       <div class="nav-title">
         <p>Julien Patane</p>
