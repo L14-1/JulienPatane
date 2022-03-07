@@ -1,11 +1,5 @@
 <template>
   <div class="tarifs">
-    <div class="anchors">
-      <div><p>Coaching</p></div>
-      <div><p>Cohérence cardiaque</p></div>
-      <div><p>Reflexo</p></div>
-      <div><p>Kinéso</p></div>
-    </div>
     <h1>Mes tarifs</h1>
     <div class="container">
       <h4>Accompagnement personnalisé</h4>
@@ -77,29 +71,6 @@ export default {
   display : flex;
   flex-direction : column;
   align-items: center;
-  .anchors {
-    cursor: pointer;
-    display: flex;
-    margin : 0;
-    div {
-      display : flex;
-      align-items : center;
-      justify-content: space-around;
-      width : 25vw;
-      font-weight : bold;
-      font-size : 0.9rem;
-      height : 3.5rem;
-      background: rgba(30, 61, 89, 0.15);
-      border : 1px solid black;
-      border-right : none;
-      &:first-child {
-        border-left : none;
-      }
-      p {
-        text-align: center;
-      }
-    }
-  }
   .container {
     padding : 1rem;
     position: relative;

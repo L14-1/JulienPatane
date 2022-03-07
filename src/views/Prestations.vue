@@ -15,15 +15,15 @@
         <br>En <i class="orangeAccent">complément</i> d’un rythme de vie à l’écoute de vos besoins, c’est aussi un formidable allié pour votre <i class="orangeAccent">bien-être</i> général. Le sport -ou plutôt le mouvement- contribue à prévenir bon nombre de déséquilibres sur le plan physique et mental.
         <br><br>Voyons-en bref les bienfaits du sport sur votre organisme et votre qualité de vie générale:
       </p>
-      <div :class="[ firstBox ? 'opened-box' : '' , 'box']" @click="firstBoxSwitch">
+      <div class="box" @click="firstBoxSwitch">
         <p class="the-title">1. Respectez votre rythme !<i :class="[ firstBox ? 'left' : 'down', 'arrow' ]"></i></p>
         <p class="the-text" v-if="firstBox">Pour commencer, il convient de revenir sur la signification de « être à l’écoute de vos besoins »<br>C’est lors de notre première rencontre que nous échangeons sur vos problématiques et attentes. Cette séance « test » nous permet d’identifier vos capacités. C’est ensemble que nous pourrons construire pas à pas, par vos ressentis, la variabilité de l’intensité des efforts.</p>
       </div>
-      <div :class="[ secondBox ? 'opened-box' : '' , 'box']" @click="secondBoxSwitch">
+      <div class="box" @click="secondBoxSwitch">
         <p class="the-title">2. Ritualiser, créer une routine !<i :class="[ secondBox ? 'left' : 'down', 'arrow' ]"></i></p>
         <p class="the-text" v-if="secondBox">Comme de nombreuses activités tel que la méditation, la cohérence cardiaque ou d’autres domaines, le sport nécessite d’être pratiqué de manière régulière. C’est lors de notre première séance que nous définissons ensemble la fréquence de nos rendez-vous.<br>Grâce à la méthode d’intervalle / fractionné que je vous propose, vous pourrez rapidement intégrer ces séances dans votre semaine, de manière accompagnée ou en autonomie, seul ou à plusieurs !</p>
       </div>
-      <div :class="[ thirdBox ? 'opened-box' : '' , 'box']" @click="thirdBoxSwitch">
+      <div class="box" @click="thirdBoxSwitch">
         <p class="the-title">3. La méthode intervalle training c’est quoi<i :class="[ thirdBox ? 'left' : 'down', 'arrow' ]"></i></p>
         <p class="the-text" v-if="thirdBox">Plus précisément appelé HIIT Training, cette méthode s’adapte partout et pour tous.
           <br>De courtes périodes d’exercices de haute intensité alterné avec des intervalles de mouvements plus lents.
@@ -32,7 +32,7 @@
           <br><br>Avec ou sans pathologies, elle propose de nombreux bienfaits.
         </p>
       </div>
-      <div :class="[ fourthBox ? 'opened-box' : '' , 'box']" @click="fourthBoxSwitch">
+      <div class="box" @click="fourthBoxSwitch">
         <p class="the-title">4. Le mouvement pour tous<i :class="[ fourthBox ? 'left' : 'down', 'arrow' ]"></i></p>
         <p class="the-text" v-if="fourthBox">Vous êtes une personne active, vous avez dû ralentir la pratique sportive à la suite d’une blessure, une grossesse, une maladie, une pathologie et vous souhaitez être accompagné dans la reprise d’une activité physique et des mouvements adaptés. Le cœur de mes séances se résume en 2 mots. « Bienveillance » et « Plaisir ».</p>
       </div>
@@ -211,7 +211,6 @@ export default {
       margin-bottom : 1rem;
       padding : 0.2rem 0.5rem;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-      // border-radius: 10px;
       .the-title {
         position: relative;
         margin-bottom : 2rem;

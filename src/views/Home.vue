@@ -24,50 +24,34 @@
     <div class="button"><router-link to="/mon-parcours">Découvrez mon parcours</router-link></div>
     <h4>Mes prestations</h4>
     <h5>Sport</h5>
-    <div class="squared-container">
-      <div class="inside-container">
-        <p class="inside-title">Coaching individuel</p>
-        <p class="inside-subtitle">1-2 personnes</p>
-        <div class="buttons">
-          <div class="button buttonHome"><router-link to="/">Plus d'infos</router-link></div>
-          <div class="button buttonHome"><router-link to="/tarifs">Tarifs</router-link></div>
-        </div>
-      </div>
-      <div class="inside-container">
-        <p class="inside-title">Coaching collectif</p>
-        <p class="inside-subtitle">3-10 personnes</p>
-        <div class="buttons">
-          <div class="button buttonHome"><router-link to="/">Plus d'infos</router-link></div>
-          <div class="button buttonHome"><router-link to="/tarifs">Tarifs</router-link></div>
-        </div>
-      </div>
-      <div class="inside-container">
-        <p class="inside-title">Séance Cohérence cardiaque</p>
-        <div class="buttons">
-          <div class="button buttonHome"><router-link to="/">Plus d'infos</router-link></div>
-          <div class="button buttonHome"><router-link to="/tarifs">Tarifs</router-link></div>
-        </div>
-      </div>
+    <div class="box" @click="individuelBoxSwitch">
+      <p class="the-title">Coaching individuel<i :class="[ individuelBox ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <p class="the-text" v-if="individuelBox">1 à 2 personnes. Séance d’une heure personnalisée selon vos objectifs.</p>
+      <div class="button" v-if="individuelBox"><router-link to="/prestations">En savoir plus</router-link></div>
+    </div>
+    <div class="box" @click="collectifBoxSwitch">
+      <p class="the-title">Coaching collectif<i :class="[ collectifBox ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <p class="the-text" v-if="collectifBox">3 à 10 personnes. Reunissez vos forces et donnez le maximum de vous.</p>
+      <div class="button" v-if="collectifBox"><router-link to="/prestations">En savoir plus</router-link></div>
+    </div>
+    <div class="box" @click="cardiaqueBoxSwitch">
+      <p class="the-title">Cohérence cardiaque<i :class="[ cardiaqueBox  ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <p class="the-text" v-if="cardiaqueBox">Apprenez à apaiser vos émotions et gérer votre stress.</p>
+      <div class="button" v-if="cardiaqueBox"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     <div class="button"><router-link to="/les-bienfaits-du-sport">Decouvrez les bienfaits<br>du sport sur la santé !</router-link></div>
     <div class="break-line"></div>
     <h4>Mes prestations</h4>
     <h5>Bien-être</h5>
-    <div class="squared-container">
-      <div class="inside-container">
-        <p class="inside-title">Séance de réfléxologie</p>
-        <div class="buttons">
-          <div class="button buttonHome"><router-link to="/">Plus d'infos</router-link></div>
-          <div class="button buttonHome"><router-link to="/tarifs">Tarifs</router-link></div>
-        </div>
-      </div>
-      <div class="inside-container">
-        <p class="inside-title">Séance de kinésiologie</p>
-        <div class="buttons">
-          <div class="button buttonHome"><router-link to="/">Plus d'infos</router-link></div>
-          <div class="button buttonHome"><router-link to="/tarifs">Tarifs</router-link></div>
-        </div>
-      </div>
+    <div class="box" @click="kinesiologieBoxSwitch">
+      <p class="the-title">Kinésiologie<i :class="[ kinesiologieBox ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <p class="the-text" v-if="kinesiologieBox">Favorisez un état d’équilibre et de bien-être grâce à la kinésiologie.</p>
+      <div class="button" v-if="kinesiologieBox"><router-link to="/prestations">En savoir plus</router-link></div>
+    </div>
+    <div class="box" @click="ReflexologieBoxSwitch">
+      <p class="the-title">Réflexologie<i :class="[ ReflexologieBox ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <p class="the-text" v-if="ReflexologieBox">Douleurs chroniques, migraines, acouphènes, vertiges ? La reflexologie est faite pour vous.</p>
+      <div class="button" v-if="ReflexologieBox"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     <div class="button"><router-link to="/les-bienfaits-du-sport">Réflexologie, Kinésiologie<br>Pourquoi ? Pour qui ?</router-link></div>
     <div class="break-line"></div>
@@ -86,6 +70,60 @@
 
 export default {
   name: 'Home',
+  data: function () {
+    return {
+      individuelBox: false,
+      collectifBox: false,
+      cardiaqueBox: false,
+      kinesiologieBox: false,
+      ReflexologieBox: false,
+    };
+  },
+  methods: {
+    individuelBoxSwitch() {
+      if (this.individuelBox == true) {
+        this.individuelBox = false;
+      } else {
+        this.individuelBox = true;
+        this.collectifBox = false;
+        this.cardiaqueBox = false;
+      }
+    },
+    collectifBoxSwitch() {
+      if (this.collectifBox == true) {
+        this.collectifBox = false;
+      } else {
+        this.individuelBox = false;
+        this.collectifBox = true;
+        this.cardiaqueBox = false;
+      }
+    },
+    cardiaqueBoxSwitch() {
+      if (this.cardiaqueBox == true) {
+        this.cardiaqueBox = false;
+      } else {
+        this.individuelBox = false;
+        this.collectifBox = false;
+        this.cardiaqueBox = true;
+      }
+    },
+    kinesiologieBoxSwitch() {
+      if (this.kinesiologieBox == true) {
+        this.kinesiologieBox = false;
+      } else {
+        this.kinesiologieBox = true;
+        this.ReflexologieBox = false;
+      }
+    },
+    ReflexologieBoxSwitch() {
+      if (this.ReflexologieBox == true) {
+        this.ReflexologieBox = false;
+      } else {
+        this.kinesiologieBox = false;
+        this.ReflexologieBox = true;
+      }
+    },
+  }
   
 }
 </script>
@@ -161,12 +199,10 @@ export default {
       line-height: 2rem;
     }
     .infos {
-      background : #FF6E40;
-      color : #F5F0E1;
+      color : #FF6E40;
       text-align: center;
-      width : 5.5rem;
-      padding : 0.5rem 0;
-      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.13);
+      font-weight : 600;
+      border-bottom: 1px solid #FF6E40;
     }
   }
   .qui-je-suis {
@@ -197,51 +233,45 @@ export default {
       text-decoration: none;
     }
   }
-  .squared-container {
-    position: relative;
-    z-index : 3;
-    margin : 4rem 0;
-    .inside-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.13);
-      width : 80vw;
-      margin : 2rem 10vw;
-      .inside-title {
-        margin-top : 1rem;
-        font-size: 1.3rem;
-        font-weight: 600;
+  .box {
+    cursor : pointer;
+    margin : 2rem 1.5rem;
+    padding : 0.2rem 0.5rem;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+    .the-title {
+      position: relative;
+      margin-bottom : 1.2rem;
+      padding-right : 3rem;
+      font-weight: 600;
+      text-align: center;
+      color : #1E3D59;
+      .arrow {
+        position: absolute;
+        right : 1rem;
+        top : 0.5rem;
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 4px;
       }
-      .inside-subtitle {
-        font-weight: 600;
+      .leftArrow {
+        transform: rotate(135deg);
+        transition: transform 0.3s ease-out;
       }
-      .buttons {
-        margin : 3rem 0 1rem 0;
-        display: flex;
-      }
-      .buttonHome {
-        width : 8rem;
-        margin : 0 1rem;
+      .down {
+        transform: rotate(45deg);
+        transition: transform 0.3s ease-out;
       }
     }
-    &::after, &::before {
-      z-index : -1;
-      content : "";
-      position: absolute;
-      background : #FF6E40;
-      width : 60vw;
-      height : 6.5rem;
+    .the-text {
+      color : #1E3D59;
+      font-weight : 500;
+      text-align: center;
+      margin-bottom : 1rem;
+      margin-top : 2rem;
     }
-    &::before {
-      top : -0.5rem;
-      left : calc(10vw - 0.5rem);
-    }
-    &::after {
-      bottom : -0.5rem;
-      right : calc(10vw - 0.5rem);
+    .button {
+      margin-bottom : 1rem;
     }
   }
   .confiance-pics {

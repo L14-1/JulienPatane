@@ -14,23 +14,18 @@
     </div>
     <div class="menu_links" v-if="menu == 'opened'" >
       <ul>
-        <li @click="servicesSwitch" ><router-link to="/prestations">Prestations</router-link><i :class="[ servicesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
+        <li @click="servicesSwitch" >Prestations<i :class="[ servicesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
         <ul class="sublinks" v-if="servicesMenu == 'opened'">
-          <li @click="closingNav">Coaching</li>
+          <router-link to="/prestations"><li @click="closingNav">Coaching</li></router-link>
           <li @click="closingNav">Cohérence cardiaque</li>
           <li @click="closingNav">Réflexologie</li>
           <li @click="closingNav">Kinésiologie</li>
         </ul>
-        <li @click="pricesSwitch" ><router-link to="/tarifs">Tarifs</router-link><i :class="[ pricesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
-        <ul class="sublinks" v-if="pricesMenu == 'opened'">
-          <li @click="closingNav"><router-link to="/tarifs">Coaching</router-link></li>
-          <li @click="closingNav">Cohérence cardiaque</li>
-          <li @click="closingNav">Réflexologie</li>
-          <li @click="closingNav">Kinésiologie</li>
-        </ul>
-        <li @click="closingNav"><router-link to="/mon-parcours">Mon parcours</router-link></li>
-        <li @click="closingNav"><router-link to="/les-bienfaits-du-sport">Les bienfaits du sport</router-link></li>
-        <li @click="closingNav"><router-link to="/faq">F.A.Q.</router-link></li>
+        <router-link to="/tarifs"><li @click="closingNav" >Tarifs</li></router-link>
+        <router-link to="/mon-parcours"><li @click="closingNav">Mon parcours</li></router-link>
+        <router-link to="/les-bienfaits-du-sport"><li @click="closingNav">Les bienfaits du sport</li></router-link>
+        <router-link to="/faq"><li @click="closingNav">F.A.Q.</li></router-link>
+        <a href="mailto:someone@example.com"><li class="contact-me" @click="closingNav">Contactez-moi</li></a>
       </ul>
     </div>
     <router-view/>
@@ -66,17 +61,8 @@ export default {
     servicesSwitch() {
       if (this.servicesMenu == "default") {
         this.servicesMenu = "opened";
-        this.pricesMenu = "default";
-      } else if (this.servicesMenu == "opened"){
+      } else {
         this.servicesMenu = "default";
-      }
-    },
-    pricesSwitch() {
-      if (this.pricesMenu == "default") {
-        this.pricesMenu = "opened";
-        this.servicesMenu = "default";
-      } else if (this.pricesMenu == "opened"){
-        this.pricesMenu = "default";
       }
     },
     closingNav() {
@@ -175,10 +161,13 @@ html {
     margin-left : 1rem;
   }
   .nav-title {
-    font-weight : 300;
+    font-weight : 200;
     font-size : 1.2rem;
     text-align: center;
-    line-height: 2rem;
+    line-height: 1.6rem;
+    p:first-child {
+      font-weight : 300;
+    }
   }
   .nav-menu {
     margin-right : 1rem;
@@ -229,28 +218,34 @@ html {
   }
 }
 .menu_links {
-  z-index: 999;
+  z-index: 998;
   cursor : pointer;
   position : fixed;
   right : 0;
   top : 5rem;
   color : #424242;
+  border : none;
   a {
     color : #424242;
     text-decoration: none;
   }
   ul {
     width : 20rem;
-    background: #d8d8d8;
+    background: white;
     li {
       position: relative;
       padding : 1rem 0.5rem;
+      
+    }
+    .contact-me {
+      background : #FFC13B;
+      color : white;
     }
     .sublinks {
       width : 20rem;
-      background : #e7e7e7;
+      // background : #e7e7e7;
       li {
-        padding : 1rem;
+        padding : 1rem 0 1rem 2.5rem;
       }
     }
     .arrow {
