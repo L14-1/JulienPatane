@@ -27,10 +27,26 @@ export default {
 
 <style lang="scss">
 
+@import '../assets/_mixin.scss';
+
 .bienfaits {
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
     ul {
         margin : 0 2rem 0 4rem;
+        @include pc {
+            display : flex;
+            flex-wrap : wrap;
+            justify-content: space-between;
+            width : 850px;
+        }
         li {
+            @include pc {
+                width : 40vw;
+                max-width : 350px;
+            }
             position : relative;
             margin : 1.5rem 0;
             line-height: 26px;
@@ -82,8 +98,10 @@ export default {
         }
     }
     .buttons {
-        margin : 2rem 1rem;
-        display: flex;
+        margin : 2rem 0;
+        width : 100vw;
+        max-width : 25rem;
+        display : flex;
         justify-content: space-around;
     }
 }

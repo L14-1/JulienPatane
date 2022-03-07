@@ -104,7 +104,7 @@ export default {
             justify-content: space-around;
             align-items: center;
             padding : 1rem 0;
-            width : 1000px
+            width : 880px
         }
         .fa-ribbon {
             color : #FF6E40;

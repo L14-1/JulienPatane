@@ -90,6 +90,9 @@ export default {
 }
 
 #app {
+  display : flex;
+  flex-direction : column;
+  justify-content: center;
   padding-top : 5rem;
   color: #424242;
   h1 {
