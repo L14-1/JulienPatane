@@ -24,7 +24,6 @@
         <router-link to="/tarifs"><li @click="closingNav" >Tarifs</li></router-link>
         <router-link to="/mon-parcours"><li @click="closingNav">Mon parcours</li></router-link>
         <router-link to="/les-bienfaits-du-sport"><li @click="closingNav">Les bienfaits du sport</li></router-link>
-        <router-link to="/faq"><li @click="closingNav">F.A.Q.</li></router-link>
         <a href="mailto:someone@example.com"><li class="contact-me" @click="closingNav">Contactez-moi</li></a>
       </ul>
     </div>

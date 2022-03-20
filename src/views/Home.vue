@@ -1,24 +1,28 @@
 <template>
   <div class="home">
     <div class="right">
-      <img src="../assets/aaa.jpg" alt="" class="ju_pic">
+      <img src="../assets/kinesio-home-paysage.jpg" alt="Photo de Julien en séance de kinésiologie avec un client" class="ju_pic ju_pic-paysage">
+      <img src="../assets/kinesio-home-portrait.jpg" alt="Photo de Julien en séance de kinésiologie avec un client" class="ju_pic ju_pic-portrait">
     </div>
     <div class="left">
-      <img src="../assets/bb-bis.jpg" alt="" class="ju_foot">
+      <img src="../assets/basket-home-portrait.jpg" alt="Photo de Julien jouant au basket" class="ju_foot ju_foot-portrait">
+      <img src="../assets/basket-home-paysage.jpg" alt="Photo de Julien jouant au basket" class="ju_foot ju_foot-paysage">
     </div>
+    <font-awesome-icon icon="fa-solid fa-angles-down" class="icon-arrow"/>
     <div class="title">
       <div class="sport">
-        <h3>SPORT &<br>COHERENCE CARDIAQUE</h3>
-        <div class="infos">+ d'infos</div>
+        <h3>Sport &<br>cohérence cardiaque</h3>
+        <router-link to="/prestations"><div class="infos">+ d'infos</div></router-link>
       </div>
       <div class="kinesiologie">
-        <h3>KINESIOLOGIE &<br>REFLEXOLOGIE</h3>
-        <div class="infos">+ d'infos</div>
+        <h3>Reflexologie &<br>kinésiologie</h3>
+        <router-link to="/prestations"><div class="infos">+ d'infos</div></router-link>
       </div>
     </div>
     <h4>Qui je suis</h4>
     <div class="qui-je-suis">
-      <img src="../assets/Photo-profil-Julien.jpg" alt="">
+      <img src="../assets/Photo-profil-Julien.jpg" alt="Photo portrait de Julien" class="ju-profil-pic">
+      <img src="../assets/Photo-profil-Julien-large.jpg" alt="Photo portrait de Julien" class="ju-profil-pic-large">
       <p>Micro entrepreneur dans le domaine du <i class="orangeAccent">sport</i> et <i class="orangeAccent">des médecines douces</i> Kinésiologie, Réflexologie et Educateur sportif de formation, j'accompagne les personnes dans la pratique d'une activité régulière pour favoriser l'équilibre du corps physique et mental.</p>
     </div>
     <div class="button"><router-link to="/mon-parcours">Découvrez mon parcours</router-link></div>
@@ -133,11 +137,25 @@ export default {
 @import '../assets/_mixin.scss';
 
 .home {
-  .right, .left, .title {
-    @include tablet {
-      display: none;
-    }
+  @keyframes iconArrow {
+    from {opacity: 0;}
+    to {opacity: 100%;}
   }
+  .icon-arrow {
+    z-index: 888;
+    position: absolute;
+    bottom : 5rem;
+    left : 48%;
+    animation: iconArrow 1.5s ease-in-out alternate infinite;
+  }
+  a {
+    text-decoration: none;
+  }
+  // .right, .left, .title {
+  //   @include tablet {
+  //     display: none;
+  //   }
+  // }
   h4 {
     font-size : 1.7rem;
     font-weight: 600;
@@ -153,15 +171,35 @@ export default {
   }
   .right {
     z-index : 2;
-    border : 2px black solid;
     height : calc(100vh - 5rem);
     clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0 100%);
+    @include pc {
+      clip-path: polygon(70% 0, 100% 0%, 100% 100%, 30% 100%);
+      display: flex;
+      justify-content: right;
+    }
     .ju_pic {
+      opacity: 0.25;
       height : calc(100vh - 5rem);
       width : 100%;
       object-fit: cover;
-      filter: blur(3px);
+      filter: blur(2px);
+      @include pc {
+        width : 85%;
+      }
     }
+    .ju_pic-paysage {
+      display : none;
+      @include pc {
+        display : block;
+      }
+    }
+    .ju_pic-portrait {
+      @include pc {
+        display : none;
+      }
+    }
+
   }
   .left {
     z-index : 0;
@@ -170,11 +208,29 @@ export default {
     height : calc(100vh - 5rem);
     width : 100vw;
     clip-path: polygon(0 0, 99% 0, 0 99%, 0 100%);
+    @include pc {
+      clip-path: polygon(0 0, 69.3% 0, 29.5% 100%, 0 100%);
+    }
     .ju_foot {
+      opacity: 0.25;
       height : calc(100vh - 5rem);
       width : 100%;
       object-fit: cover;
-      filter: blur(3px);
+      filter: blur(2px);
+      @include pc {
+        width : 71%;
+      }
+    }
+    .ju_foot-paysage {
+      display : none;
+      @include pc {
+        display : block;
+      }
+    }
+    .ju_foot-portrait {
+      @include pc {
+        display : none;
+      }
     }
   }
   .title {
@@ -182,7 +238,6 @@ export default {
     top : 5rem;
     width : 100vw;
     height : calc(100vh - 5rem);
-    background: rgba(255, 255, 255, 0.5);
     .kinesiologie, .sport {
       display: flex;
       flex-direction: column;
@@ -192,11 +247,19 @@ export default {
       position : absolute;
       bottom : 10rem;
       right : 7vw;
+      @include pc {
+        bottom : 25vh;
+        right : 30vw;
+      }
     }
     .sport {
       position : absolute;
       top : 4rem;
       left : 5vw;
+      @include pc {
+        top : 25vh;
+        left : 30vw;
+      }
     }
     h3 {
       color : #1E3D59;
@@ -210,6 +273,7 @@ export default {
       text-align: center;
       font-weight : 600;
       border-bottom: 1px solid #FF6E40;
+      cursor: pointer;
     }
   }
   .qui-je-suis {
@@ -217,13 +281,30 @@ export default {
     justify-content: space-around;
     align-items: center;
     margin : 1rem 0 4rem 0;
-    img {
+    @include pc {
+      margin : 1rem 10vw 4rem 10vw;
+    }
+    .ju-profil-pic {
       width : 40vw;
       max-width : 10rem;
+      @include tablet {
+        display: none;
+      }
+    }
+    .ju-profil-pic-large {
+      display: none;
+      @include tablet {
+        display : block;
+        width : 40vw;
+        max-width : 25rem;
+      }
     }
     p {
       width : 40vw;
       font-weight: 500;
+      @include pc {
+        width : 30vw;
+      }
     }
   }
   .button {
