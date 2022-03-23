@@ -131,6 +131,24 @@ export default {
       text-decoration: none;
     }
   }
+  .button-nav-orange {
+    position : relative;
+    padding-top : 0.5rem;
+    font-weight : 600;
+    a {
+      color : #FF6E40;
+      text-decoration: none;
+    }
+    &::after {
+      content : '';
+      position : absolute;
+      height : 1px;
+      width : 7.7rem;
+      background: #FF6E40;
+      bottom : 0.8rem;
+      left : 0;
+    }
+  }
 }
 
 html {
@@ -140,6 +158,9 @@ html {
     &::-webkit-scrollbar-thumb {
         background-color: rgb(180, 180, 180);
         border-radius: 2rem;
+        &:hover {
+          background-color: rgb(128, 128, 128);
+        }
     }
     &::-webkit-scrollbar-track {
         background-color: none;

@@ -9,7 +9,7 @@
             <p>La petite aventure continue avec un virage complémentaire depuis février 2020. Un parcours de formation pour devenir <i class="orangeAccent">praticien kinésiologue certifié</i>.</p>
         </div>
         <div class="text-photo-container--photo">
-            <img src="../assets/uuu.jpg" alt="">
+            <img src="../assets/Julien-voyage-plage.jpg" alt="">
         </div>
     </div>
 
@@ -25,6 +25,9 @@
     <div class="text-photo-container">
     <div class="ju_pics">
         <img src="../assets/uuu.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
+        <img src="../assets/Julien-voyage-plage.jpg" alt="" class="ju_pics-hide">
+        <img src="../assets/nn.jpg" alt="" class="ju_pics-hide">
+        <img src="../assets/yyy.jpg" alt="" class="ju_pics-hide">
     </div>
     <p class="text-photo-container--text">Grand passionné de voyages, véritable amoureux de l'Amérique latine, je me suis aperçu que prendre soin de soi est accessible <i class="orangeAccent">partout</i> et <i class="orangeAccent">pour tous</i>.<br>
     C'est une philosophie de vie, ce sont des rituels à adopter au quotidien. Notre voyage intérieur est infini. A très bientôt.<br>
@@ -42,7 +45,7 @@
     </div>
 
     <div class="buttons">
-        <div class="button-nav"><router-link to="/prestations">Mes prestations</router-link></div>
+        <div class="button-nav-orange"><router-link to="/prestations">Mes prestations</router-link></div>
         <div class="button-nav"><router-link to="/tarifs">Mes tarifs</router-link></div>
     </div>
 
@@ -123,15 +126,43 @@ export default {
     }
     .ju_pics {
         display : flex;
-        justify-content: center;
-        margin : 2rem 0;
+        margin : 2rem 0 2rem 5vw;
+        padding-bottom : 2rem;
+        width : 95vw;
+        overflow-x: auto;
+        white-space: nowrap;
         @include pc {
             flex : 50%;
+            overflow-x: hidden;
+            margin : 2rem 0;
         }
         img {
             width : 20rem;
             border-radius: 0.5rem;
+            margin : 0 5vw;
+            object-fit : cover;
             box-shadow: 0px 4px 4px rgba(30, 61, 89, 0.5);
+            @include pc {
+                margin : 0;
+            }
+        }
+        &-hide {
+            @include pc {
+                display : none;
+            }
+        }
+        &::-webkit-scrollbar {
+            height: 0.5rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(180, 180, 180);
+            border-radius: 2rem;
+            &:hover {
+                background-color: rgb(128, 128, 128);
+            }
+        }
+        &::-webkit-scrollbar-track {
+            background-color: none;
         }
     }
     .diplomes {

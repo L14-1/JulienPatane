@@ -61,10 +61,17 @@
     <div class="break-line"></div>
     <h4>Ils me font confiance</h4>
     <div class="confiance-pics">
-      <img src="../assets/logo 3.png" alt="">
-      <img src="../assets/kisspng-logo-services-la-personne-en-france-chque-emp-5b59512bc6c5e4.0972898015325801398142.png" alt="">
-      <img src="../assets/HH.png" alt="">
-      <img src="../assets/logo 6.png" alt="">
+      <img src="../assets/services-a-la-personne-logo.png" alt="logo du services à la personne">
+      <div class="logo-container">
+        <img src="../assets/bd-logo.svg" alt="logo de Becton Dickinson France">
+        <img src="../assets/ASEL-logo.png" alt="logo de l'association sports et loisirs de Saint-Martin-d'Hères">
+        <img src="../assets/iles-des-couleurs-logo.jpg" alt="logo de l'ile des couleurs">
+        <img src="../assets/U-C-Eybens-logo.jpg" alt="logo de l'union des commercants d'eybens">
+        <img src="../assets/murianette-logo.png" alt="logo de la commune de murianette">
+        <img src="../assets/inclusion-sport-logo.png" alt="logo de l'écolde de l'inclusion par le sport">
+        <img src="../assets/CSC-logo.jpg" alt="logo du chamrousse ski club">
+        <img src="../assets/mare-nostrum-logo.jpg" alt="logo du groupe mare nostrum">
+      </div>
     </div>
   </div>
 </template>
@@ -364,13 +371,29 @@ export default {
   }
   .confiance-pics {
     display : flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items : center;
-    margin-bottom : 3rem;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      max-width : 60rem;
+      margin : auto;
+    }
+    .logo-container {
+      display : flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items : center;
+      margin-bottom : 3rem;
+      @include tablet {
+        img {
+          margin : 0 3rem;
+        }
+      }
+    }
     img {
       width : 35vw;
-      max-width : 13rem;
+      @include tablet {
+        width : 8rem;
+      }
     }
   }
   .break-line {

@@ -2,15 +2,52 @@
   <div class="bienfaits">
     <h1>Les bienfaits du sport sur la santé</h1>
     <ul>
-        <li><font-awesome-icon icon="fa-solid fa-yin-yang" /><i class="boldAccent">Un antistress de qualité :</i><br>Conséquence des hormones, et de ce bien-être général, les niveaux de stress et d’anxiété diminuent également de manière significative avec la pratique d’une <i class="orangeAccent">activité sportive</i>. Une meilleure oxygénation du cerveau améliorant nos capacités de réflexion ou mémoire et lutte contre les tensions nerveuses. En outre, il favorise un <i class="orangeAccent">sommeil de qualité</i>, stimulant et régulant les hormones concernées</li>
-        <li><font-awesome-icon icon="fa-solid fa-comment-medical" /><i class="boldAccent">Pour prévenir ou accompagner le cancer :</i><br>De nombreuses études scientifiques ont révélé l’action préventive de l’activité sportive contre certains types de <i class="orangeAccent">cancer</i> Au-delà de l’aspect préventif, le sport permet également aux patients atteints de cancer de conserver une bonne condition physique. Notamment en ce qui concerne la masse musculaire. Cela peut jouer un <i class="orangeAccent">rôle positif</i> dans la résistance aux traitements et le processus de guérison.</li>
-        <li><font-awesome-icon icon="fa-solid fa-bone" /><i class="boldAccent">Un renforcement de la structure osseuse :</i><br>Ce n’est pas l’effet le plus connu du sport sur le corps, mais il s’agit pourtant de l’un de ses plus grands bienfaits. Bénéfique pour l’amélioration de votre <i class="orangeAccent">densité osseuse</i>, celle-ci ne dépend donc pas uniquement de la quantité de calcium que vous ingérez, mais aussi du sport que vous pratiquez. Le mouvement est donc tout à fait indiqué pour limiter l’apparition chroniques de type <i class="orangeAccent">lombalgies</i>, rhumatismes inflammatoires, ostéoporoses, ou encore arthroses.</li>
-        <li><font-awesome-icon icon="fa-solid fa-heart-pulse" /><i class="boldAccent">Lutte contre les maladies cardiovasculaires :</i><br>Une activité physique régulière améliore et régule le fonctionnement du système cardiaque, en diminuant les facteurs de <i class="orangeAccent">risque cardiovasculaire</i>. En l’occurrence, il régule l’hypertension artérielle, le taux de sucre dans le sang lié aux problématiques dû au diabète, augmente le taux de bon cholestérol.</li>
-        <li><font-awesome-icon icon="fa-solid fa-user-doctor" /><i class="boldAccent">Limiter les signes de vieillissement :</i><br>Tout en contribuant à la diminution des blessures osseuses, maux de dos, douleurs articulaires, et autres maladies chroniques, améliorant ainsi la longévité. En effet, le sport permet de repousser <i class="orangeAccent">la perte d’autonomie</i> qui survient le plus souvent avec l’âge. Celle-ci est liée à notre mode de vie sédentarisé, et non pas seulement au vieillissement.</li>
-        <li><font-awesome-icon icon="fa-solid fa-face-laugh-beam" /><i class="boldAccent">Le plaisir d’être ensemble :</i><br>De façon indirecte, le sport permet de renforcer les liens d’appartenance <i class="orangeAccent">sociale</i>. Le sport réunit autour d’une même passion des individus différents. De quoi pouvoir tisser des liens relationnels forts, des valeurs d’amitié, de solidarité, de respect et de dépassement de soi. Faisons équipe ensemble !</li>
+        <li><font-awesome-icon icon="fa-solid fa-yin-yang" class="icon"/><i class="boldAccent">Un antistress de qualité :</i><br>Conséquence des hormones, et de ce bien-être général, les niveaux de stress et d’anxiété diminuent également de manière significative avec la pratique d’une <i class="orangeAccent">activité sportive</i>. Une meilleure oxygénation du cerveau améliorant nos capacités de réflexion ou mémoire et lutte contre les tensions nerveuses. En outre, il favorise un <i class="orangeAccent">sommeil de qualité</i>, stimulant et régulant les hormones concernées</li>
+        <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                <path d="M2.68945 0.0917358H17.3101C18.7426 0.0917358 19.9082 1.25736 19.9082 2.69017V17.3092C19.9082 18.7424 18.7429 19.9083 17.3101 19.9083H2.68945C1.25695 19.9083 0.0916405 18.7427 0.0916405 17.3092V2.69017C0.0916405 1.25736 1.25695 0.0917358 2.68945 0.0917358ZM3.90914 12.0311H7.96914V16.0908H12.0282V12.0311H16.0895V7.96892H12.0282V3.90924H7.96914V7.96892H3.90914V12.0311Z" fill="#FF6E40"/>
+            </svg>
+            <i class="boldAccent">Pour prévenir ou accompagner le cancer :</i><br>De nombreuses études scientifiques ont révélé l’action préventive de l’activité sportive contre certains types de <i class="orangeAccent">cancer</i> Au-delà de l’aspect préventif, le sport permet également aux patients atteints de cancer de conserver une bonne condition physique. Notamment en ce qui concerne la masse musculaire. Cela peut jouer un <i class="orangeAccent">rôle positif</i> dans la résistance aux traitements et le processus de guérison.
+        </li>
+        <li><font-awesome-icon icon="fa-solid fa-bone" class="icon"/><i class="boldAccent">Un renforcement de la structure osseuse :</i><br>Ce n’est pas l’effet le plus connu du sport sur le corps, mais il s’agit pourtant de l’un de ses plus grands bienfaits. Bénéfique pour l’amélioration de votre <i class="orangeAccent">densité osseuse</i>, celle-ci ne dépend donc pas uniquement de la quantité de calcium que vous ingérez, mais aussi du sport que vous pratiquez. Le mouvement est donc tout à fait indiqué pour limiter l’apparition chroniques de type <i class="orangeAccent">lombalgies</i>, rhumatismes inflammatoires, ostéoporoses, ou encore arthroses.</li>
+        <li><font-awesome-icon icon="fa-solid fa-heart-pulse" class="icon"/><i class="boldAccent">Lutte contre les maladies cardiovasculaires :</i><br>Une activité physique régulière améliore et régule le fonctionnement du système cardiaque, en diminuant les facteurs de <i class="orangeAccent">risque cardiovasculaire</i>. En l’occurrence, il régule l’hypertension artérielle, le taux de sucre dans le sang lié aux problématiques dû au diabète, augmente le taux de bon cholestérol.</li>
+        <li>
+            <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                <path d="M3.77031 5.1C3.16031 5.1 2.5753 4.85768 2.14397 4.42635C1.71263 3.99501 1.47031 3.41 1.47031 2.8C1.47031 2.19 1.71263 1.60499 2.14397 1.17365C2.5753 0.742321 3.16031 0.5 3.77031 0.5C4.38031 0.5 4.96532 0.742321 5.39666 1.17365C5.82799 1.60499 6.07031 2.19 6.07031 2.8C6.07031 3.41 5.82799 3.99501 5.39666 4.42635C4.96532 4.85768 4.38031 5.1 3.77031 5.1Z" fill="#FF6E40"/>
+                <path d="M16.1502 3.75565C16.2169 3.72016 16.2899 3.69815 16.3651 3.69087C16.4402 3.6836 16.5161 3.69121 16.5884 3.71326C16.7343 3.75779 16.8565 3.85846 16.9282 3.99312C16.9998 4.12778 17.0151 4.28539 16.9705 4.43129C16.926 4.57719 16.8253 4.69942 16.6907 4.7711L14.5546 5.90615L15.5154 6.30865C15.6151 6.35038 15.701 6.41937 15.7633 6.50771C15.8256 6.59605 15.8617 6.70015 15.8675 6.80808C15.8734 6.91601 15.8486 7.02339 15.7962 7.11792C15.7438 7.21244 15.6658 7.29028 15.5712 7.3425L12.7324 8.9088C12.5994 8.97656 12.4454 8.99 12.3027 8.94626C12.16 8.90251 12.04 8.80503 11.9679 8.67439C11.8957 8.54375 11.8772 8.3902 11.9163 8.24617C11.9553 8.10214 12.0487 7.97892 12.1769 7.90255L13.9744 6.9101L12.9911 6.4984C12.8908 6.45632 12.8045 6.38664 12.7422 6.29745C12.6798 6.20827 12.6441 6.10323 12.6391 5.99455C12.6341 5.88586 12.6601 5.77799 12.7139 5.68346C12.7678 5.58894 12.8474 5.51163 12.9434 5.46052L16.1508 3.75565H16.1502Z" fill="#FF6E40"/>
+                <path d="M10.5674 8.36946C9.66579 6.89344 8.18286 5.72849 6.07031 5.72849C5.81435 5.72849 5.56571 5.81389 5.36376 5.97116C5.16181 6.12843 5.0181 6.34857 4.95539 6.59673L3.94914 10.5746L1.61809 11.5072C1.3349 11.6205 1.10831 11.8417 0.988187 12.1221C0.86806 12.4024 0.86423 12.719 0.977537 13.0022C1.09084 13.2854 1.31201 13.512 1.59237 13.6321C1.87274 13.7523 2.18935 13.7561 2.47254 13.6428L5.34754 12.4928C5.516 12.4254 5.66613 12.3191 5.78565 12.1826C5.90517 12.0461 5.9907 11.8832 6.03524 11.7073L6.46994 9.98694C6.60804 10.3222 6.73594 10.6616 6.85346 11.0047C7.36751 12.5031 7.75276 14.2517 7.79589 15.9888L7.79531 16.025V22.35C7.79531 22.655 7.91647 22.9475 8.13214 23.1632C8.34781 23.3789 8.64031 23.5 8.94531 23.5C9.25031 23.5 9.54282 23.3789 9.75848 23.1632C9.97415 22.9475 10.0953 22.655 10.0953 22.35V16.7259L10.1252 16.6874C10.3503 16.3994 10.5645 16.1031 10.7675 15.799C11.0009 15.4483 11.2505 15.0343 11.446 14.6099C11.6306 14.2097 11.8203 13.6871 11.8203 13.15C11.8203 11.5975 11.4466 9.80926 10.5674 8.36946Z" fill="#FF6E40"/>
+                <path d="M17.0922 9.68736C17.029 9.36536 16.734 9.15434 16.4338 9.21644L14.3259 9.65344C14.1235 9.69484 13.9625 9.85354 13.9061 10.0657C13.8509 10.2773 13.9102 10.5067 14.0608 10.6614L14.5191 11.1329L13.4047 11.4221C13.1086 11.4998 12.9309 11.8206 13.0086 12.1397C13.0862 12.4589 13.3898 12.6549 13.6865 12.5779L15.7709 12.0351C15.8689 12.0077 15.9576 11.9542 16.0275 11.8802C16.0974 11.8063 16.1458 11.7147 16.1676 11.6153C16.2176 11.4066 16.1573 11.1841 16.0106 11.0329L15.5943 10.6051L16.665 10.3837C16.9646 10.3216 17.156 10.0099 17.0922 9.68794V9.68736Z" fill="#FF6E40"/>
+            </svg>
+            <i class="boldAccent">Limiter les signes de vieillissement :</i><br>Tout en contribuant à la diminution des blessures osseuses, maux de dos, douleurs articulaires, et autres maladies chroniques, améliorant ainsi la longévité. En effet, le sport permet de repousser <i class="orangeAccent">la perte d’autonomie</i> qui survient le plus souvent avec l’âge. Celle-ci est liée à notre mode de vie sédentarisé, et non pas seulement au vieillissement.
+        </li>
+        <li>
+            <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                <path d="M8.88645 0.874962C13.456 0.813243 17.1865 4.54371 17.1247 9.11324C17.0638 13.4957 13.4954 17.064 9.11302 17.125C4.5427 17.1875 0.813017 13.457 0.875517 8.88746C0.935673 4.50426 4.50403 0.935899 8.88645 0.874962ZM9.0302 6.81676C9.022 6.76988 9.01302 6.72301 9.00247 6.67652C8.90381 6.22033 8.68398 5.79917 8.36614 5.45738C7.86262 4.92106 7.14895 4.62496 6.35637 4.62496C6.02292 4.62359 5.69174 4.67989 5.37747 4.79137C4.98681 4.93046 4.635 5.1608 4.3513 5.46324C3.93395 5.91434 3.68552 6.49593 3.64817 7.10934C3.63737 7.25758 3.63737 7.40641 3.64817 7.55465C3.67826 7.97478 3.78691 8.38553 3.96849 8.76559C3.98828 8.80699 4.00898 8.84801 4.03059 8.88863C4.07395 8.96949 4.12044 9.04879 4.17044 9.12535C4.26997 9.27821 4.38277 9.42199 4.50755 9.55504C5.02005 10.1019 5.6763 10.4039 6.35559 10.4039C6.61032 10.4037 6.86329 10.3617 7.10442 10.2796C7.18543 10.2521 7.26497 10.2205 7.3427 10.1847C7.66826 10.0328 7.96109 9.81896 8.20481 9.55504C8.71212 9.00477 9.01545 8.2972 9.06419 7.55035C9.07122 7.44931 9.07356 7.34931 9.07122 7.25035C9.0682 7.10527 9.05449 6.96061 9.0302 6.81754V6.81676ZM14.879 7.76754C14.86 7.48881 14.7912 7.21575 14.6759 6.96129C14.6434 6.89042 14.6071 6.82131 14.5673 6.75426C14.4877 6.61985 14.3935 6.49462 14.2865 6.38082C14.1279 6.21166 13.9433 6.06897 13.7396 5.95817C13.6379 5.90257 13.5319 5.85503 13.4228 5.81598C13.0045 5.66969 12.5549 5.63747 12.12 5.72262C11.6593 5.81173 11.2385 6.04415 10.9177 6.38668C10.5371 6.79758 10.3225 7.33519 10.3157 7.89527C10.3138 7.9777 10.3157 8.06051 10.3216 8.14449C10.3454 8.4661 10.4247 8.78117 10.556 9.07574C10.6188 9.21757 10.6937 9.35374 10.7798 9.48277C10.9454 9.73302 11.1538 9.95212 11.3954 10.13C11.454 10.1718 11.515 10.2109 11.5779 10.25C11.7016 10.3236 11.8324 10.3845 11.9685 10.4316C12.1719 10.5027 12.3858 10.5391 12.6013 10.5394C12.6376 10.5394 12.674 10.5394 12.7099 10.5363C12.7817 10.5324 12.8531 10.5243 12.924 10.5121C12.9944 10.4998 13.0642 10.4838 13.1329 10.464C13.2362 10.4342 13.337 10.3965 13.4345 10.3511C13.4673 10.3359 13.4993 10.3199 13.5314 10.3031C14.2345 9.93238 14.7646 9.16402 14.8685 8.26715C14.8732 8.22613 14.8771 8.18512 14.8798 8.14371C14.8886 8.01847 14.8884 7.89275 14.879 7.76754ZM12.7728 14.7441C13.8128 14.0585 14.6487 13.1051 15.1923 11.9843C15.2101 11.9485 15.2134 11.9072 15.2016 11.869C15.1899 11.8308 15.1639 11.7985 15.129 11.7789C14.4032 11.3707 13.4763 11.1484 12.6005 11.1484C11.9365 11.1484 11.4013 11.2265 10.9329 11.3781C10.8798 11.3956 10.8324 11.427 10.7956 11.469C10.7587 11.5111 10.7339 11.5622 10.7235 11.6172C10.7132 11.6721 10.7178 11.7288 10.7368 11.7814C10.7559 11.8339 10.7886 11.8804 10.8318 11.916C11.7439 12.6582 12.3318 13.5777 12.6079 14.6796C12.6121 14.6965 12.6202 14.7121 12.6316 14.7252C12.6431 14.7382 12.6575 14.7483 12.6736 14.7547C12.6898 14.761 12.7072 14.7633 12.7245 14.7615C12.7418 14.7596 12.7583 14.7537 12.7728 14.7441ZM8.99973 15.875C9.87919 15.8758 10.7506 15.7071 11.5661 15.3781C11.5995 15.3643 11.627 15.3395 11.6441 15.3077C11.6612 15.276 11.6668 15.2393 11.6599 15.2039C11.6443 15.1238 11.6271 15.0507 11.6118 14.9898C11.3337 13.8793 10.6447 12.9586 9.61966 12.3265C8.70989 11.766 7.54934 11.4574 6.35716 11.4574C5.13997 11.4574 4.01341 11.7535 3.09622 12.3132C3.07286 12.3279 3.05609 12.351 3.04946 12.3777C3.04283 12.4045 3.04685 12.4328 3.06067 12.4566C3.66553 13.4957 4.53219 14.3582 5.57425 14.9579C6.61632 15.5577 7.79739 15.8739 8.99973 15.875Z" fill="#FF6E40"/>
+                <path d="M12.7107 10.5344C12.7825 10.5304 12.854 10.5223 12.9248 10.5101C12.854 10.5223 12.7825 10.5304 12.7107 10.5344Z" fill="#FF6E40"/>
+                <path d="M13.7401 5.95819C13.9438 6.06899 14.1284 6.21168 14.287 6.38085C14.3941 6.49464 14.4882 6.61988 14.5679 6.75428C14.4882 6.61988 14.3941 6.49464 14.287 6.38085C14.1284 6.21168 13.9438 6.06899 13.7401 5.95819Z" fill="#FF6E40"/>
+                <path d="M10.5557 9.07378C10.4244 8.7792 10.3451 8.46414 10.3213 8.14253C10.3154 8.05855 10.3135 7.97573 10.3154 7.89331C10.3133 7.97534 10.3153 8.05841 10.3213 8.14253C10.3451 8.46414 10.4244 8.7792 10.5557 9.07378Z" fill="#FF6E40"/>
+                <path d="M13.7402 5.95817C13.6385 5.90257 13.5326 5.85503 13.4234 5.81598C13.5326 5.85503 13.6385 5.90257 13.7402 5.95817Z" fill="#FF6E40"/>
+                <path d="M13.132 10.4621C13.2353 10.4322 13.3361 10.3945 13.4336 10.3492C13.3361 10.3945 13.2353 10.4322 13.132 10.4621Z" fill="#FF6E40"/>
+                <path d="M14.8677 8.2652C14.7638 9.16364 14.2325 9.93043 13.5306 10.3011C14.2341 9.93043 14.7638 9.16207 14.8677 8.2652Z" fill="#FF6E40"/>
+                <path d="M9.06436 7.55464C9.01561 8.30149 8.71229 9.00906 8.20498 9.55933C7.96126 9.82325 7.66843 10.0371 7.34287 10.189C7.66843 10.0371 7.96126 9.82325 8.20498 9.55933C8.71229 9.00906 9.01561 8.30149 9.06436 7.55464C9.07139 7.4536 9.07373 7.3536 9.07139 7.25464C9.07373 7.35229 9.07139 7.45229 9.06436 7.55464Z" fill="#FF6E40"/>
+                <path d="M7.10498 10.282C7.18599 10.2545 7.26553 10.2228 7.34326 10.1871C7.26553 10.2228 7.18599 10.2545 7.10498 10.282Z" fill="#FF6E40"/>
+                <path d="M9.00244 6.67733C8.90378 6.22114 8.68396 5.79998 8.36611 5.45819C8.68396 5.79998 8.90378 6.22114 9.00244 6.67733Z" fill="#FF6E40"/>
+                <path d="M4.35127 5.46326C3.93392 5.91435 3.6855 6.49594 3.64814 7.10935C3.6855 6.49594 3.93392 5.91435 4.35127 5.46326C4.63498 5.16082 4.98678 4.93047 5.37744 4.79138C4.98678 4.93047 4.63498 5.16082 4.35127 5.46326Z" fill="#FF6E40"/>
+                <path d="M3.64795 7.55463C3.67803 7.97476 3.78668 8.38551 3.96826 8.76556C3.78668 8.38551 3.67803 7.97476 3.64795 7.55463Z" fill="#FF6E40"/>
+                <path d="M9.07178 7.25272C9.06874 7.10685 9.0549 6.9614 9.03037 6.81757C9.0549 6.9614 9.06874 7.10685 9.07178 7.25272Z" fill="#FF6E40"/>
+                <path d="M10.9183 6.3847C10.5376 6.79561 10.3231 7.33322 10.3163 7.8933C10.3231 7.33322 10.5376 6.79561 10.9183 6.3847C11.239 6.04217 11.6599 5.80976 12.1206 5.72064C11.6599 5.80976 11.239 6.04217 10.9183 6.3847Z" fill="#FF6E40"/>
+                <path d="M11.5776 10.2499C11.7013 10.3236 11.8322 10.3845 11.9683 10.4316C11.8322 10.3845 11.7013 10.3236 11.5776 10.2499Z" fill="#FF6E40"/>
+                <path d="M14.8789 7.76755C14.8599 7.48883 14.7911 7.21576 14.6758 6.9613C14.7911 7.21576 14.8599 7.48883 14.8789 7.76755Z" fill="#FF6E40"/>
+                <path d="M11.3948 10.1281C11.4538 10.1719 11.5147 10.2109 11.5776 10.25C11.5147 10.2109 11.4538 10.1719 11.3948 10.1281Z" fill="#FF6E40"/>
+                <path d="M10.5555 9.07379C10.6183 9.21561 10.6932 9.35179 10.7793 9.48082C10.6932 9.35179 10.6183 9.21561 10.5555 9.07379Z" fill="#FF6E40"/>
+                <path d="M14.6758 6.9613C14.6432 6.89043 14.607 6.82133 14.5672 6.75427C14.607 6.82133 14.6432 6.89043 14.6758 6.9613Z" fill="#FF6E40"/>
+                <path d="M11.395 10.1281C11.1534 9.95018 10.945 9.73108 10.7794 9.48083C10.945 9.73108 11.1534 9.95018 11.395 10.1281Z" fill="#FF6E40"/>
+            </svg>
+            <i class="boldAccent">Le plaisir d’être ensemble :</i><br>De façon indirecte, le sport permet de renforcer les liens d’appartenance <i class="orangeAccent">sociale</i>. Le sport réunit autour d’une même passion des individus différents. De quoi pouvoir tisser des liens relationnels forts, des valeurs d’amitié, de solidarité, de respect et de dépassement de soi. Faisons équipe ensemble !
+        </li>
     </ul>
     <div class="buttons">
-        <div class="button-nav"><router-link to="/prestations">Mes prestations</router-link></div>
+        <div class="button-nav-orange"><router-link to="/prestations">Mes prestations</router-link></div>
         <div class="button-nav"><router-link to="/tarifs">Mes tarifs</router-link></div>
     </div>
   </div>
@@ -51,49 +88,18 @@ export default {
             margin : 1.5rem 0;
             line-height: 26px;
             font-weight: 500;
-            .fa-yin-yang{
+            .icon {
                 position : absolute;
                 left : -2rem;
                 top : 0.3rem;
                 font-size : 1.3rem;
                 color : #FF6E40;
+            }
+            .fa-yin-yang{
                 transform: rotateY(180deg) rotateZ(180deg);
             }
-            .fa-comment-medical{
-                position : absolute;
-                left : -2rem;
-                top : 0.3rem;
-                font-size : 1.3rem;
-                color : #FF6E40;
-            }
             .fa-bone{
-                position : absolute;
-                left : -2rem;
-                top : 0.3rem;
-                font-size : 1.3rem;
-                color : #FF6E40;
                 transform: rotate(45deg);
-            }
-            .fa-heart-pulse{
-                position : absolute;
-                left : -2rem;
-                top : 0.3rem;
-                font-size : 1.3rem;
-                color : #FF6E40;
-            }
-            .fa-user-doctor{
-                position : absolute;
-                left : -2rem;
-                top : 0.3rem;
-                font-size : 1.3rem;
-                color : #FF6E40;
-            }
-            .fa-face-laugh-beam{
-                position : absolute;
-                left : -2rem;
-                top : 0.3rem;
-                font-size : 1.3rem;
-                color : #FF6E40;
             }
         }
     }

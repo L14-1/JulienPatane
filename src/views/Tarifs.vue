@@ -11,7 +11,7 @@
         <div class="breakline"></div>
         <p class="price-container"><i class="price">20€</i> / séance</p>
         <div class="pics">
-          <img src="../assets/kisspng-logo-services-la-personne-en-france-chque-emp-5b59512bc6c5e4.0972898015325801398142.png" alt="">
+          <img src="../assets/services-a-la-personne-logo.png" alt="">
           <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
         </div>
         <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
@@ -27,7 +27,7 @@
         <div class="breakline"></div>
         <p class="price-container"><i class="price">7€50</i> / séance / personne</p>
         <div class="pics">
-          <img src="../assets/kisspng-logo-services-la-personne-en-france-chque-emp-5b59512bc6c5e4.0972898015325801398142.png" alt="">
+          <img src="../assets/services-a-la-personne-logo.png" alt="">
           <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
         </div>
         <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
@@ -51,7 +51,8 @@
         <p>La séance dure en moyenne 1h15 et se déroule à mon cabinet</p>
         <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
       </div>
-    </div><div class="container">
+    </div>
+    <div class="container">
       <h4>Kinésiologie</h4>
       <div class="inside-container">
         <p class="price-container"><i class="price">55€</i> / séance</p>

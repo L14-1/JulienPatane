@@ -39,9 +39,26 @@
         </div>
       </div>
       <div class="pic-container">
-        <img src="../assets/DSC_0735.jpg" alt="">
+        <img src="../assets/Julien-séance-sport3.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
+        <img src="../assets/Julien-séance-sport4.jpg" alt="" class="pic-container-hide">
+        <img src="../assets/Julien-séance-sport5.jpg" alt="" class="pic-container-hide">
       </div>
-      <div class="button"><router-link to="/tarifs">Tarifs</router-link></div>
+      <div class="container">
+        <h4>Accompagnement personnalisé</h4>
+        <h5>1 ou 2 personnes</h5>
+        <div class="inside-container">
+          <p class="price-container"><i class="price">40€</i> / séance</p>
+          <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur.<br>Jusqu’à 2 personnes.</p>
+            <div class="breakline"></div>
+          <p class="price-container"><i class="price">20€</i> / séance</p>
+          <div class="pics">
+            <img src="../assets/services-a-la-personne-logo.png" alt="">
+            <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
+          </div>
+          <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
+          <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
+        </div>
+      </div>
       <h3>Accompagnement collectif</h3>
       <h4>3 à 10 personnes</h4>
       <p class="under-title-text">
@@ -52,7 +69,22 @@
       <div class="pic-container">
         <img src="../assets/DSC_0735.jpg" alt="">
       </div>
-      <div class="button"><router-link to="/tarifs">Tarifs</router-link></div>
+      <div class="container">
+        <h4>Accompagnement collectif</h4>
+        <h5>3 à 10 personnes</h5>
+        <div class="inside-container">
+          <p class="price-container"><i class="price">15€</i> / séance / personne</p>
+          <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur.</p>
+          <div class="breakline"></div>
+          <p class="price-container"><i class="price">7€50</i> / séance / personne</p>
+          <div class="pics">
+            <img src="../assets/services-a-la-personne-logo.png" alt="">
+            <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
+          </div>
+          <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
+          <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
+        </div>
+      </div>
       <h3>Base de la cohérence cardiaque</h3>
       <h4>“ Le mouvement c’est la vie ”</h4>
       <p class="under-title-text">
@@ -71,10 +103,18 @@
           <li>Meilleure concentration </li>
         </ul>
       </div>
-      <div class="pic-container">
-        <img src="../assets/DSC_0735.jpg" alt="">
+      <div class="yt-container">
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/S7TrmMJogiM">
+        </iframe>
       </div>
-      <div class="button"><router-link to="/tarifs">Tarifs</router-link></div>
+      <div class="container">
+        <h4>Cohérence cardiaque</h4>
+        <div class="inside-container">
+          <p class="price-container"><i class="price">12€</i> / séance / personne</p>
+          <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur. <br> <br>Elle est complémentaire avec l’accompagnement sportif , la reflexologie ou la kinésiologie</p>
+        </div>
+      </div>
       <h3>Réflexologie Cranio-Sacrée</h3>
       <p class="under-title-text">
         La Réflexologie crânio-sacrée est une approche unique et inspirée également appelé "<i class="orangeAccent">ostéo fluidique</i>".
@@ -90,7 +130,14 @@
       <div class="pic-container">
         <img src="../assets/DSC_0735.jpg" alt="">
       </div>
-      <div class="button"><router-link to="/tarifs">Tarifs</router-link></div>
+      <div class="container">
+        <h4>Réflexologie</h4>
+        <div class="inside-container">
+          <p class="price-container"><i class="price">55€</i> / séance</p>
+          <p>La séance dure en moyenne 1h15 et se déroule à mon cabinet</p>
+          <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
+        </div>
+      </div>
       <h3>La pratique kinésiologique</h3>
       <p class="under-title-text">
         « Les bras m’en tombent », « J’ai les jambes en coton », « J’en ai plein le dos »
@@ -103,7 +150,14 @@
       <div class="pic-container">
         <img src="../assets/DSC_0735.jpg" alt="">
       </div>
-      <div class="button"><router-link to="/tarifs">Tarifs</router-link></div>
+      <div class="container">
+        <h4>Kinésiologie</h4>
+        <div class="inside-container">
+          <p class="price-container"><i class="price">55€</i> / séance</p>
+          <p>La séance dure en moyenne 1h15 et se déroule à mon cabinet</p>
+          <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -193,6 +247,7 @@ export default {
     cursor: pointer;
     display: flex;
     margin : 0;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
     @include pc {
       margin : 0 13rem;
     }
@@ -201,21 +256,21 @@ export default {
       align-items : center;
       justify-content: space-around;
       width : 25vw;
-      font-weight : bold;
-      font-size : 0.9rem;
+      font-weight : 400;
+      color : #1E3D59;
       height : 3.5rem;
       background: rgba(30, 61, 89, 0.15);
-      border : 1px solid black;
+      border : 1px solid white;
       border-right : none;
       &:first-child {
         border-left : none;
         @include pc {
-          border-left : 1px solid black;
+          border-left : 1px solid white;
         }
       }
       @include pc {
         &:last-child {
-          border-right : 1px solid black;
+          border-right : 1px solid white;
         }
       }
       p {
@@ -303,14 +358,53 @@ export default {
         }
       }
     }
-    .pic-container {
+    .yt-container {
       display : flex;
-      justify-content: center;
-      img {
-        width : calc(100vw - 3rem);
-        max-width : 550px;
-        margin-top : 1rem;
+      justify-content: space-around;
+      iframe {
+        max-width : 90vw;
       }
+    }
+    .pic-container {
+        display : flex;
+        margin : 2rem 0;
+        padding-bottom : 2rem;
+        width : 95vw;
+        overflow-x: auto;
+        white-space: nowrap;
+        // @include pc {
+        //     overflow-x: hidden;
+        //     margin : 2rem 0;
+        // }
+        img {
+            width : 20rem;
+            border-radius: 0.5rem;
+            margin : 0 5vw;
+            object-fit : cover;
+            box-shadow: 0px 4px 4px rgba(30, 61, 89, 0.5);
+            &:first-child {
+              margin : 0 2rem;
+              margin-left : 0;
+            }
+        }
+        // &-hide {
+        //     @include pc {
+        //         display : none;
+        //     }
+        // }
+        &::-webkit-scrollbar {
+            height: 0.5rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(180, 180, 180);
+            border-radius: 2rem;
+            &:hover {
+                background-color: rgb(128, 128, 128);
+            }
+        }
+        &::-webkit-scrollbar-track {
+            background-color: none;
+        }
     }
     .list {
       display : flex;
@@ -324,7 +418,109 @@ export default {
         }
       }
     }
+    .container {
+      margin-top : 3rem;
+    padding : 1rem;
+    position: relative;
+    width : 85vw;
+    max-width : 450px;
+    @include pc {
+      width : 400px;
+      margin : 3rem auto; 
+    }
+    background: white;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.13);
+    margin-bottom : 4rem;
+    h4 {
+      font-size : 1.1rem;
+      text-align: center;
+    }
+    h5 {
+      font-weight : 600;
+      text-align: center;
+    }
+    .inside-container {
+      margin : 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .price-container {
+        margin: 2rem 0 1rem 0;
+      }
+      .price {
+        font-size : 2.5rem;
+        color : #FFC13B;
+        font-style: normal;
+        font-weight : 400;
+      }
+      .breakline {
+        width : 25vw;
+        max-width : 10rem;
+        height : 1px;
+        background: #1E3D59;
+        margin-top : 1.5rem;
+      }
+      p {
+        line-height : 1.5rem;
+      }
+      .pics {
+        display : flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          width : 30vw;
+          max-width : 8rem;
+          &:nth-child(2) {
+            width : 20vw;
+            height : 20vw;
+            max-width : 5rem;
+            max-height : 5rem;
+          }
+        }
+      }
+      .lowerCase {
+        line-height : 1.2rem;
+        font-size : 0.7rem;
+        margin-top: 1rem;
+        width : calc(85vw - 3rem);
+        max-width : calc(400px - 3rem);
+      }
+    .adress {
+      p {
+        width : fit-content;
+        margin-left : 1rem;
+        position: relative;
+        margin-top : 1rem;
+        text-align: center;
+        .fa-location-dot {
+          position: absolute;
+          top : 0.1rem;
+          left : -1rem;
+          color : #FF6E40;
+        }
+      }
+    }
+    }
+    &::after, &::before {
+      z-index : -1;
+      content : "";
+      position: absolute;
+      background : #FF6E40;
+      width : 50vw;
+      max-width : 220px;
+      height : 6.5rem;
+    }
+    &::before {
+      top : -0.5rem;
+      left : -0.5rem;
+    }
+    &::after {
+      bottom : -0.5rem;
+      right : -0.5rem;
+    }
   }
+  }
+
 }
 
 
