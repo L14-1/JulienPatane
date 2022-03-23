@@ -67,7 +67,10 @@
         <br><br>Les séances <i class="orangeAccent">HIIT</i> ou circuit training impliquent de courtes rafales d’exercices de haute intensité, travaillant jusqu’à <i class="orangeAccent">100 %</i> de la capacité maximale, alternées avec des intervalles d’activité plus faibles ou un arrêt complet. Parce que l’intensité est élevée, la durée d’une séance hors échauffement et étirements est courte – jamais <i class="orangeAccent">plus de 35 minutes</i>.
       </p>
       <div class="pic-container">
-        <img src="../assets/DSC_0735.jpg" alt="">
+        <img src="../assets/Julien-et-client-sport.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
+        <img src="../assets/Julien-et-client-sport2.jpg" alt="" >
+        <img src="../assets/Julien-séance-sport6.jpg" alt="" >
+        <img src="../assets/Julien-et-client-ettirement.jpg" alt="" >
       </div>
       <div class="container">
         <h4>Accompagnement collectif</h4>
@@ -85,7 +88,7 @@
           <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
         </div>
       </div>
-      <h3>Base de la cohérence cardiaque</h3>
+      <h3 id="coherence">Base de la cohérence cardiaque</h3>
       <h4>“ Le mouvement c’est la vie ”</h4>
       <p class="under-title-text">
         La cohérence cardiaque s’intéresse à la variabilité du rythme cardiaque qui est l’une des manifestations physiologiques de nos sentiments et de nos <i class="orangeAccent">émotions</i>. 
@@ -115,7 +118,7 @@
           <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur. <br> <br>Elle est complémentaire avec l’accompagnement sportif , la reflexologie ou la kinésiologie</p>
         </div>
       </div>
-      <h3>Réflexologie Cranio-Sacrée</h3>
+      <h3 id="reflexologie">Réflexologie Cranio-Sacrée</h3>
       <p class="under-title-text">
         La Réflexologie crânio-sacrée est une approche unique et inspirée également appelé "<i class="orangeAccent">ostéo fluidique</i>".
         <br>C'est une technique manuelle douce qui consiste à appliquer une légère pression sur les os du crâne et du visage de même que sur la partie inférieure de la moelle epinière qui s’étend jusqu'au sacrum.
@@ -128,7 +131,7 @@
         <br><br>Elle ne comporte aucune contre indication et sepratique sur tout public.
       </p>
       <div class="pic-container">
-        <img src="../assets/DSC_0735.jpg" alt="">
+        <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="" >
       </div>
       <div class="container">
         <h4>Réflexologie</h4>
@@ -138,7 +141,7 @@
           <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
         </div>
       </div>
-      <h3>La pratique kinésiologique</h3>
+      <h3 id="kinesiologie">La pratique kinésiologique</h3>
       <p class="under-title-text">
         « Les bras m’en tombent », « J’ai les jambes en coton », « J’en ai plein le dos »
         <br><br>Ces expressions populaires attestent du rapport étroit entre nos muscles et nos émotions. <i class="orangeAccent">Écoutons votre corps</i> ! Il a quelque chose à nous dire.
@@ -148,7 +151,9 @@
         <br>Grace au test musculaire, nous établissons un dialogue silencieux avec le corps afin de détecter l'origine du stress, les émotions, <i class="orangeAccent">les événements</i> qui bloquent la personne dans son plein potentiel. Tout est en inter-relation: Si l'un des systèmes est perturbé, toute <i class="orangeAccent">l'énergie</i> de la personne sera déséquilibrée.
       </p>
       <div class="pic-container">
-        <img src="../assets/DSC_0735.jpg" alt="">
+        <img src="../assets/Julien-seance-Kinesiologie3.jpg" alt="">
+        <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="" >
+        <img src="../assets/Julien-seance-Kinesiologie.jpg" alt="" >
       </div>
       <div class="container">
         <h4>Kinésiologie</h4>
@@ -369,10 +374,8 @@ export default {
         display : flex;
         margin : 2rem 0;
         padding-bottom : 2rem;
-        width : 95vw;
         overflow-x: auto;
         white-space: nowrap;
-
         img {
             width : 20rem;
             border-radius: 0.5rem;
@@ -384,11 +387,6 @@ export default {
               margin-left : 0;
             }
         }
-        // &-hide {
-        //     @include pc {
-        //         display : none;
-        //     }
-        // }
         &::-webkit-scrollbar {
             height: 0.5rem;
         }

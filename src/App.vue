@@ -17,9 +17,9 @@
         <li @click="servicesSwitch" >Prestations<i :class="[ servicesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
         <ul class="sublinks" v-if="servicesMenu == 'opened'">
           <router-link to="/prestations"><li @click="closingNav">Coaching</li></router-link>
-          <li @click="closingNav">Cohérence cardiaque</li>
-          <li @click="closingNav">Réflexologie</li>
-          <li @click="closingNav">Kinésiologie</li>
+          <router-link to="/prestations#coherence"><li @click="closingNav">Cohérence cardiaque</li></router-link>
+          <router-link to="/prestations#reflexologie"><li @click="closingNav">Réflexologie</li></router-link>
+          <router-link to="/prestations#kinesiologie"><li @click="closingNav">Kinésiologie</li></router-link>
         </ul>
         <router-link to="/tarifs"><li @click="closingNav" >Tarifs</li></router-link>
         <router-link to="/mon-parcours"><li @click="closingNav">Mon parcours</li></router-link>

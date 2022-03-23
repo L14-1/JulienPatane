@@ -45,8 +45,19 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  scrollBehavior() {
-    return { x: 0, y: 0 };
+  // scrollBehavior() {
+  //   return { x: 0, y: 0 };
+  // },
+  scrollBehavior: function(to) {
+    if (to.hash) {
+        return {
+          selector: to.hash,
+          offset: { x: 0, y: 95 },
+          behavior: 'smooth'
+        }
+    } else {
+        return { x: 0, y: 0 }
+    }
   },
 })
 
