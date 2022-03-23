@@ -372,10 +372,7 @@ export default {
         width : 95vw;
         overflow-x: auto;
         white-space: nowrap;
-        // @include pc {
-        //     overflow-x: hidden;
-        //     margin : 2rem 0;
-        // }
+
         img {
             width : 20rem;
             border-radius: 0.5rem;
