@@ -25,12 +25,19 @@
         <router-link to="/tarifs"><li @click="closingNav" >Tarifs</li></router-link>
         <router-link to="/mon-parcours"><li @click="closingNav">Mon parcours</li></router-link>
         <router-link to="/les-bienfaits-du-sport"><li @click="closingNav">Les bienfaits du sport</li></router-link>
-        <a href="mailto:someone@example.com"><li class="contact-me" @click="closingNav">Contactez-moi</li></a>
+        <!-- <a href="mailto:someone@example.com"> -->
+          <li class="contact-me" @click="openingContact">Contactez-moi</li>
+        <!-- </a> -->
       </ul>
     </div>
     <router-view/>
     <FooterComponent />
-    <ContactComponent />
+    <transition name="slide-fade">
+    <ContactComponent v-if="contactPage" />
+    </transition>
+    <transition name="slide-fade">
+    <div class="close-cross" @click="closingContact" v-if="contactPage"></div>
+    </transition>
   </div>
 </template>
 
@@ -55,6 +62,7 @@ export default {
       servicesMenu: "default",
       pricesMenu: "default",
       windowWidth: 0,
+      contactPage: false,
     };
   },
   components: {
@@ -85,6 +93,15 @@ export default {
       this.menu = "default";
       this.servicesMenu = "default";
       this.pricesMenu = "default";
+    },
+    openingContact() {
+      this.menu = "default";
+      this.servicesMenu = "default";
+      this.pricesMenu = "default";
+      this.contactPage = true;
+    },
+    closingContact() {
+        this.contactPage = false;
     }
   },
 };
@@ -338,5 +355,39 @@ html {
       transition: transform 0.3s ease-out;
     }
   }
+}
+.close-cross {
+  z-index: 1100;
+  position : fixed;
+  right : 1rem;
+  top : 7.5rem;
+  width : 1.5rem;
+  height : 1.5rem;
+  cursor: pointer;
+  &::after, &::before {
+    content : '';
+    position : absolute;
+    background : #1E3D59;
+    width : 1.5rem;
+    height : 2px;
+    top : 0.75rem;
+    left : 0;
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+.slide-fade-enter-active {
+  transition: all 1s ease-in-out;
+}
+.slide-fade-leave-active {
+  transition: all 1s ease-in-out;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(100vh);
+  opacity: 0;
 }
 </style>

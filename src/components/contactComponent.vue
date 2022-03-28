@@ -1,9 +1,6 @@
 <template>
-  <div :class="[ ContactOpened ? '' : 'inactiveContact' , 'contactComponent']">
+  <div class="contactComponent">
         <h4>Contactez-moi</h4>
-        <div class="close-cross" @click="closingContact">
-
-        </div>
         <div class="contact-link">
             <a href="tel:+33637738297">
                 <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="contact-icon">
@@ -22,7 +19,7 @@
                 34 chemin de la revirée, 38240 Meylan</a>
         </div>
         <div class="contact-form">
-            <form action="https://formsubmit.co/el/mujehi" method="POST">
+            <form action="https://formsubmit.co/nico.maitre.stair@gmail.com" method="POST">
                 <p class="top-text">Votre nom</p>
                 <input type="text" name="name" placeholder="Votre nom" required>
                 <p class="top-text">Votre mail</p>
@@ -40,17 +37,7 @@
 
 <script>
 export default {
-  name: 'ContactComponent',
-  data: function () {
-    return {
-      ContactOpened : true,
-    }
-  },
-  methods: {
-    closingContact() {
-        this.ContactOpened = false;
-    }
-  }
+  name: 'ContactComponent'
 }
 </script>
 
@@ -68,8 +55,8 @@ export default {
     border-top : 1px solid #1E3D59;
     border-top-right-radius : 0.7rem;
     border-top-left-radius : 0.7rem;
-    transform: translateY(0);
-    transition: 1s transform ease-out;
+    // transform: translateY(-100vh);
+    // transition: 1s transform ease-out;
     display : flex;
     flex-direction : column;
     align-items : center;
@@ -77,29 +64,6 @@ export default {
         margin : 1.5rem 0;
         color : #1E3D59;
         font-size : 1.2rem;
-    }
-    .close-cross {
-        position : absolute;
-        right : 1rem;
-        top : 1.5rem;
-        width : 1.5rem;
-        height : 1.5rem;
-        cursor: pointer;
-        &::after, &::before {
-            content : '';
-            position : absolute;
-            background : #1E3D59;
-            width : 1.5rem;
-            height : 2px;
-            top : 0.75rem;
-            left : 0;
-        }
-        &::after {
-            transform: rotate(45deg);
-        }
-        &::before {
-            transform: rotate(-45deg);
-        }
     }
     .contact-link {
         display: flex;
@@ -153,7 +117,7 @@ export default {
                 color : white;
                 background: #FFC13B;
                 border : transparent;
-                // width : fir-content;
+                // width : fit-content;
                 margin :  1rem auto;
                 // padding : 0.5rem 0.7rem;
                 width: 102px;
@@ -161,11 +125,6 @@ export default {
             }
         }
     }
-}
-
-.inactiveContact {
-    transform: translateY(100vh);
-    transition: 1s transform ease-out;
 }
 
 
