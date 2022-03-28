@@ -99,11 +99,15 @@ export default {
     margin-bottom : 4rem;
     h4 {
       font-size : 1.1rem;
+      font-weight : 600;
       text-align: center;
     }
     h5 {
       font-weight : 600;
-      text-align: center;
+      // text-align: center;
+    }
+    h4, h5 {
+      margin : 0 0.5rem;
     }
     .inside-container {
       margin : 0 1rem;
@@ -176,12 +180,12 @@ export default {
       height : 6.5rem;
     }
     &::before {
-      top : -0.5rem;
-      left : -0.5rem;
+      top : -0.25rem;
+      left : -0.25rem;
     }
     &::after {
-      bottom : -0.5rem;
-      right : -0.5rem;
+      bottom : -0.25rem;
+      right : -0.25rem;
     }
   }
   // .button {

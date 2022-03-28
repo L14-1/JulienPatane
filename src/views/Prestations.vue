@@ -1,10 +1,10 @@
 <template>
   <div class="prestations">
     <div class="anchors">
-      <div><p>Coaching</p></div>
-      <div><p>Cohérence cardiaque</p></div>
-      <div><p>Reflexo</p></div>
-      <div><p>Kinéso</p></div>
+      <div><p><router-link to="/prestations">Coaching</router-link></p></div>
+      <div><p><router-link to="/prestations#coherence">Cohérence cardiaque</router-link></p></div>
+      <div><p><router-link to="/prestations#reflexologie">Reflexo</router-link></p></div>
+      <div><p><router-link to="/prestations#kinesiologie">Kinéso</router-link></p></div>
     </div>
     <h1>Prestations</h1>
     <div class="page-container">
@@ -39,9 +39,10 @@
         </div>
       </div>
       <div class="pic-container">
-        <img src="../assets/Julien-séance-sport3.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
+        <img src="../assets/Julien-et-client-sport2.jpg" alt="" >
         <img src="../assets/Julien-séance-sport4.jpg" alt="" class="pic-container-hide">
         <img src="../assets/Julien-séance-sport5.jpg" alt="" class="pic-container-hide">
+        <img src="../assets/Julien-séance-sport6.jpg" alt="" >
       </div>
       <div class="container">
         <h4>Accompagnement personnalisé</h4>
@@ -68,8 +69,7 @@
       </p>
       <div class="pic-container">
         <img src="../assets/Julien-et-client-sport.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
-        <img src="../assets/Julien-et-client-sport2.jpg" alt="" >
-        <img src="../assets/Julien-séance-sport6.jpg" alt="" >
+        <img src="../assets/Julien-et-client-footing.jpg" alt="" >
         <img src="../assets/Julien-et-client-ettirement.jpg" alt="" >
       </div>
       <div class="container">
@@ -263,7 +263,6 @@ export default {
       justify-content: space-around;
       width : 25vw;
       font-weight : 400;
-      color : #1E3D59;
       height : 3.5rem;
       background: rgba(30, 61, 89, 0.15);
       border : 1px solid white;
@@ -281,6 +280,10 @@ export default {
       }
       p {
         text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color : #1E3D59;
       }
     }
   }
@@ -381,13 +384,13 @@ export default {
         overflow-x: auto;
         white-space: nowrap;
         img {
-            width : 20rem;
+            width : 60vw;
+            max-width : 20rem;
             border-radius: 0.5rem;
-            margin : 0 5vw;
+            margin : 0 1.2rem;
             object-fit : cover;
             box-shadow: 0px 4px 4px rgba(30, 61, 89, 0.5);
             &:first-child {
-              margin : 0 2rem;
               margin-left : 0;
             }
         }
@@ -514,12 +517,12 @@ export default {
       height : 6.5rem;
     }
     &::before {
-      top : -0.5rem;
-      left : -0.5rem;
+      top : -0.25rem;
+      left : -0.25rem;
     }
     &::after {
-      bottom : -0.5rem;
-      right : -0.5rem;
+      bottom : -0.25rem;
+      right : -0.25rem;
     }
   }
   }

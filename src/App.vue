@@ -293,7 +293,7 @@ html {
     li {
       position: relative;
       padding : 1rem 0.5rem;
-      font-weight: 300;
+      font-weight : 400;
       @include largeScreen {
         color : white;
         margin : 0 1rem;

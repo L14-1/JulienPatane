@@ -2,15 +2,27 @@
   <div class="bienfaits">
     <h1>Les bienfaits du sport sur la santé</h1>
     <ul>
-        <li><font-awesome-icon icon="fa-solid fa-yin-yang" class="icon"/><i class="boldAccent">Un antistress de qualité :</i><br>Conséquence des hormones, et de ce bien-être général, les niveaux de stress et d’anxiété diminuent également de manière significative avec la pratique d’une <i class="orangeAccent">activité sportive</i>. Une meilleure oxygénation du cerveau améliorant nos capacités de réflexion ou mémoire et lutte contre les tensions nerveuses. En outre, il favorise un <i class="orangeAccent">sommeil de qualité</i>, stimulant et régulant les hormones concernées</li>
+        <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99984 0.643555C15.1587 0.643555 19.3398 4.83297 19.3398 10C19.3398 15.1671 15.1575 19.3565 9.99984 19.3565C4.8422 19.3565 0.659843 15.1671 0.659843 10C0.659843 4.83297 4.84102 0.643555 9.99984 0.643555ZM10.581 2.98708C9.59514 2.98708 8.79396 3.7565 8.79396 4.70473C8.79396 5.65297 9.59514 6.42238 10.581 6.42238C11.5693 6.42238 12.3681 5.65297 12.3681 4.70473C12.3681 3.7565 11.5693 2.98708 10.581 2.98708ZM9.93984 18.12C13.5293 18.12 16.6375 13.4259 9.8622 9.97414C3.67867 6.82591 6.56455 1.4565 9.93984 1.76708C4.79278 1.76708 1.77631 5.42708 1.77631 9.94355C1.77514 14.46 5.43161 18.12 9.93984 18.12Z" fill="#FF6E40"/>
+                <path d="M9.40124 15.7459C8.43117 15.7459 7.64477 14.9848 7.64477 14.0459C7.64477 13.1071 8.43117 12.3459 9.40124 12.3459C10.3713 12.3459 11.1577 13.1071 11.1577 14.0459C11.1577 14.9848 10.3713 15.7459 9.40124 15.7459Z" fill="#FF6E40"/>
+            </svg>
+            <i class="boldAccent">Un antistress de qualité :</i><br>Conséquence des hormones, et de ce bien-être général, les niveaux de stress et d’anxiété diminuent également de manière significative avec la pratique d’une <i class="orangeAccent">activité sportive</i>. Une meilleure oxygénation du cerveau améliorant nos capacités de réflexion ou mémoire et lutte contre les tensions nerveuses. En outre, il favorise un <i class="orangeAccent">sommeil de qualité</i>, stimulant et régulant les hormones concernées</li>
         <li>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
                 <path d="M2.68945 0.0917358H17.3101C18.7426 0.0917358 19.9082 1.25736 19.9082 2.69017V17.3092C19.9082 18.7424 18.7429 19.9083 17.3101 19.9083H2.68945C1.25695 19.9083 0.0916405 18.7427 0.0916405 17.3092V2.69017C0.0916405 1.25736 1.25695 0.0917358 2.68945 0.0917358ZM3.90914 12.0311H7.96914V16.0908H12.0282V12.0311H16.0895V7.96892H12.0282V3.90924H7.96914V7.96892H3.90914V12.0311Z" fill="#FF6E40"/>
             </svg>
             <i class="boldAccent">Pour prévenir ou accompagner le cancer :</i><br>De nombreuses études scientifiques ont révélé l’action préventive de l’activité sportive contre certains types de <i class="orangeAccent">cancer</i> Au-delà de l’aspect préventif, le sport permet également aux patients atteints de cancer de conserver une bonne condition physique. Notamment en ce qui concerne la masse musculaire. Cela peut jouer un <i class="orangeAccent">rôle positif</i> dans la résistance aux traitements et le processus de guérison.
         </li>
-        <li><font-awesome-icon icon="fa-solid fa-bone" class="icon"/><i class="boldAccent">Un renforcement de la structure osseuse :</i><br>Ce n’est pas l’effet le plus connu du sport sur le corps, mais il s’agit pourtant de l’un de ses plus grands bienfaits. Bénéfique pour l’amélioration de votre <i class="orangeAccent">densité osseuse</i>, celle-ci ne dépend donc pas uniquement de la quantité de calcium que vous ingérez, mais aussi du sport que vous pratiquez. Le mouvement est donc tout à fait indiqué pour limiter l’apparition chroniques de type <i class="orangeAccent">lombalgies</i>, rhumatismes inflammatoires, ostéoporoses, ou encore arthroses.</li>
-        <li><font-awesome-icon icon="fa-solid fa-heart-pulse" class="icon"/><i class="boldAccent">Lutte contre les maladies cardiovasculaires :</i><br>Une activité physique régulière améliore et régule le fonctionnement du système cardiaque, en diminuant les facteurs de <i class="orangeAccent">risque cardiovasculaire</i>. En l’occurrence, il régule l’hypertension artérielle, le taux de sucre dans le sang lié aux problématiques dû au diabète, augmente le taux de bon cholestérol.</li>
+        <li>
+            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                <path d="M3.29037 2.64349C3.3223 1.95889 3.60741 1.31057 4.09037 0.824321C4.34779 0.564064 4.65411 0.357258 4.99172 0.215793C5.32934 0.0743286 5.69158 0.000995267 6.05764 1.00607e-05C6.42369 -0.000975145 6.78633 0.0704072 7.1247 0.210053C7.46307 0.349698 7.7705 0.554852 8.02931 0.813719C8.28812 1.07259 8.49321 1.38006 8.63279 1.71846C8.77236 2.05686 8.84366 2.41951 8.8426 2.78556C8.84154 3.15162 8.76813 3.51385 8.62659 3.85143C8.48505 4.18902 8.27818 4.49529 8.01787 4.75265L12.6004 9.33599C12.8577 9.07568 13.164 8.86881 13.5016 8.72727C13.8392 8.58573 14.2014 8.51232 14.5675 8.51126C14.9335 8.5102 15.2962 8.5815 15.6346 8.72108C15.973 8.86065 16.2804 9.06574 16.5393 9.32455C16.7982 9.58336 17.0033 9.89079 17.143 10.2292C17.2826 10.5675 17.354 10.9302 17.353 11.2962C17.352 11.6623 17.2787 12.0245 17.1372 12.3621C16.9958 12.6998 16.789 13.0061 16.5287 13.2635C16.0237 13.7685 15.3704 14.0285 14.7095 14.0635C14.6745 14.7243 14.4145 15.3768 13.9095 15.8827C13.6521 16.1429 13.3458 16.3497 13.0082 16.4912C12.6706 16.6326 12.3083 16.706 11.9423 16.707C11.5762 16.708 11.2136 16.6366 10.8752 16.4969C10.5368 16.3573 10.2294 16.1521 9.9706 15.8933C9.71179 15.6344 9.5067 15.3269 9.36713 14.9885C9.22756 14.6501 9.15625 14.2875 9.15731 13.9214C9.15837 13.5554 9.23179 13.1931 9.37332 12.8555C9.51486 12.518 9.72173 12.2117 9.98204 11.9543L5.39954 7.37182C5.14218 7.63213 4.83591 7.839 4.49832 7.98054C4.16074 8.12208 3.7985 8.19549 3.43245 8.19655C3.0664 8.19761 2.70374 8.12631 2.36534 7.98673C2.02694 7.84716 1.71947 7.64207 1.4606 7.38326C1.20174 7.12445 0.996584 6.81702 0.856939 6.47865C0.717295 6.14028 0.64591 5.77764 0.646896 5.41158C0.647882 5.04553 0.721216 4.68328 0.86268 4.34567C1.00414 4.00806 1.21095 3.70174 1.47121 3.44432C1.95714 2.96078 2.60559 2.67532 3.29037 2.64349Z" fill="#FF6E40"/>
+            </svg>
+            <i class="boldAccent">Un renforcement de la structure osseuse :</i><br>Ce n’est pas l’effet le plus connu du sport sur le corps, mais il s’agit pourtant de l’un de ses plus grands bienfaits. Bénéfique pour l’amélioration de votre <i class="orangeAccent">densité osseuse</i>, celle-ci ne dépend donc pas uniquement de la quantité de calcium que vous ingérez, mais aussi du sport que vous pratiquez. Le mouvement est donc tout à fait indiqué pour limiter l’apparition chroniques de type <i class="orangeAccent">lombalgies</i>, rhumatismes inflammatoires, ostéoporoses, ou encore arthroses.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1558 11.8752C16.6221 14.1752 14.0258 16.7139 9.99957 19.3752C5.97332 16.7139 3.37707 14.1752 1.84332 11.8752H4.99957C5.12439 11.8752 5.24634 11.8378 5.34971 11.7678C5.45308 11.6979 5.53314 11.5985 5.57957 11.4827L7.40082 6.93019L9.39832 13.9214C9.43404 14.0468 9.50807 14.1579 9.61005 14.2391C9.71203 14.3203 9.83685 14.3676 9.96705 14.3744C10.0972 14.3811 10.2263 14.347 10.3361 14.2768C10.446 14.2065 10.5311 14.1037 10.5796 13.9827L12.6383 8.83519L14.4796 11.5977C14.5367 11.6831 14.6141 11.7532 14.7048 11.8016C14.7955 11.85 14.8968 11.8753 14.9996 11.8752H18.1558ZM18.9008 10.6252C23.0321 2.72519 14.4871 -1.87481 10.2196 2.05394C10.1446 2.12269 10.0708 2.19394 9.99957 2.26769C9.92904 2.19401 9.85566 2.12312 9.77957 2.05519C5.51207 -1.87481 -3.03293 2.72519 1.09957 10.6252H4.57832L6.92082 4.76769C6.96931 4.64667 7.05443 4.54385 7.16427 4.47361C7.2741 4.40337 7.40315 4.36924 7.53334 4.37599C7.66354 4.38274 7.78837 4.43004 7.89035 4.51126C7.99233 4.59248 8.06636 4.70355 8.10207 4.82894L10.0983 11.8202L11.9196 7.26769C11.962 7.16208 12.0324 7.07006 12.1233 7.00155C12.2142 6.93304 12.322 6.89065 12.4353 6.87894C12.5485 6.86724 12.6627 6.88666 12.7657 6.93512C12.8687 6.98359 12.9564 7.05925 13.0196 7.15394L15.3346 10.6252H18.8996H18.9008Z" fill="#FF6E40"/>
+            </svg>
+            <i class="boldAccent">Lutte contre les maladies cardiovasculaires :</i><br>Une activité physique régulière améliore et régule le fonctionnement du système cardiaque, en diminuant les facteurs de <i class="orangeAccent">risque cardiovasculaire</i>. En l’occurrence, il régule l’hypertension artérielle, le taux de sucre dans le sang lié aux problématiques dû au diabète, augmente le taux de bon cholestérol.</li>
         <li>
             <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
                 <path d="M3.77031 5.1C3.16031 5.1 2.5753 4.85768 2.14397 4.42635C1.71263 3.99501 1.47031 3.41 1.47031 2.8C1.47031 2.19 1.71263 1.60499 2.14397 1.17365C2.5753 0.742321 3.16031 0.5 3.77031 0.5C4.38031 0.5 4.96532 0.742321 5.39666 1.17365C5.82799 1.60499 6.07031 2.19 6.07031 2.8C6.07031 3.41 5.82799 3.99501 5.39666 4.42635C4.96532 4.85768 4.38031 5.1 3.77031 5.1Z" fill="#FF6E40"/>
@@ -47,7 +59,7 @@
         </li>
     </ul>
     <div class="buttons">
-        <div class="button-nav-orange"><router-link to="/prestations">Mes prestations</router-link></div>
+        <div class="button-nav"><router-link to="/prestations">Mes prestations</router-link></div>
         <div class="button-nav"><router-link to="/tarifs">Mes tarifs</router-link></div>
     </div>
   </div>
@@ -87,19 +99,11 @@ export default {
             position : relative;
             margin : 1.5rem 0;
             line-height: 26px;
-            font-weight: 500;
             .icon {
                 position : absolute;
                 left : -2rem;
                 top : 0.3rem;
-                font-size : 1.3rem;
-                color : #FF6E40;
-            }
-            .fa-yin-yang{
-                transform: rotateY(180deg) rotateZ(180deg);
-            }
-            .fa-bone{
-                transform: rotate(45deg);
+                
             }
         }
     }
