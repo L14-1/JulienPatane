@@ -103,7 +103,6 @@ export default {
                 position : absolute;
                 left : -2rem;
                 top : 0.3rem;
-                
             }
         }
     }

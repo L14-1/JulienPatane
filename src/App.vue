@@ -30,12 +30,14 @@
     </div>
     <router-view/>
     <FooterComponent />
+    <ContactComponent />
   </div>
 </template>
 
 <script>
 
-import FooterComponent from '@/components/footerComponent.vue'
+import FooterComponent from '@/components/footerComponent.vue';
+import ContactComponent from '@/components/contactComponent.vue';
 
 export default {
   created()  {
@@ -56,7 +58,8 @@ export default {
     };
   },
   components: {
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   },
   methods: {
     resizeHandler() {
