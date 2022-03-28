@@ -6,8 +6,8 @@
       <p>Julien Patane</p>
       <p>Sport & cohérence cardiaque<br>Réflexologie & Kinésiologie</p>
       <div class="social-logos">
-        <a href="https://facebook.com"><font-awesome-icon icon="fa-brands fa-facebook-square" /></a>
-        <a href="https://instagram.com"><font-awesome-icon icon="fa-brands fa-instagram-square" /></a>
+        <a href="https://facebook.com"><img src="../assets/Logo-facebook.svg" alt="logo facebook" class="facebook"></a>
+        <a href="https://instagram.com"><img src="../assets/Logo-instagram.svg" alt="logo instagram" class="instagram"></a>
       </div>
     </div>
     <ul>
@@ -53,16 +53,16 @@ export default {
     }
   }
   img {
-    margin : 1.5rem 0;
+    margin : 1.5rem 0 0.5rem 0;
     width : 3.5rem;
     @include pc {
       width : 6rem;
+      margin : 1.5rem 0;
     }
   }
   p {
     text-align : center;
     font-weight : 300;
-    font-size : 1.3rem;
     margin : 0.5rem 0;
     line-height: 25px;
     @include pc {
@@ -77,20 +77,12 @@ export default {
       display : flex;
       justify-content: center;
     }
-    .fa-facebook-square {
-      color : rgb(212, 116, 25);
-    }
-    .fa-instagram-square {
-      color : #FFC13B;
-    }
-    .fa-facebook-square, .fa-instagram-square {
-      background : #F5F0E1;
-      font-size : 3rem;
-      margin : 3rem 2rem;
-      box-shadow: inset 0 0 0 0.2rem #1E3D59;
+    .facebook, .instagram {
+      width : 2.5rem;
+      margin : 1.5rem 1.2rem;
       @include pc {
         margin : 1rem 1.5rem;
-        font-size : 2rem;
+        width : 2rem;
       }
     }
   }
@@ -108,9 +100,13 @@ export default {
       max-width : 12rem;
       text-align: center;
       margin-bottom : 1rem;
+      font-weight: 300;
+      font-size: 0.9rem;
       a {
         color : #F5F0E1;
         text-decoration: none;
+        font-weight : 300;
+        font-size: 0.9rem;
       }
     }
   }

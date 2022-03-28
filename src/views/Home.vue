@@ -11,54 +11,52 @@
     <font-awesome-icon icon="fa-solid fa-angles-down" class="icon-arrow"/>
     <div class="title">
       <div class="sport">
-        <h3>Sport &<br>cohérence cardiaque</h3>
-        <router-link to="/prestations"><div class="infos">+ d'infos</div></router-link>
+        <h3>SPORT &<br>COHERENCE CARDIAQUE</h3>
+        <router-link to="/#prestations-sport"><div class="infos">+ d'infos</div></router-link>
       </div>
       <div class="kinesiologie">
-        <h3>Reflexologie &<br>kinésiologie</h3>
-        <router-link to="/prestations"><div class="infos">+ d'infos</div></router-link>
+        <h3>KINESIOLOGIE &<br>REFLEXOLOGIE</h3>
+        <router-link to="/#prestations-bien-etre"><div class="infos">+ d'infos</div></router-link>
       </div>
     </div>
     <h4>Qui je suis</h4>
     <div class="qui-je-suis">
       <img src="../assets/Photo-profil-Julien.jpg" alt="Photo portrait de Julien" class="ju-profil-pic">
       <img src="../assets/Photo-profil-Julien-large.jpg" alt="Photo portrait de Julien" class="ju-profil-pic-large">
-      <p>Micro entrepreneur dans le domaine du <i class="orangeAccent">sport</i> et <i class="orangeAccent">des médecines douces</i> Kinésiologie, Réflexologie et Educateur sportif de formation, j'accompagne les personnes dans la pratique d'une activité régulière pour favoriser l'équilibre du corps physique et mental.</p>
+      <p>Micro entrepreneur dans le domaine du <i class="orangeAccent">sport</i> et des <i class="orangeAccent">médecines douces:</i> Kinésiologie, Réflexologie et Educateur sportif de formation, j'accompagne les personnes dans la pratique d'une activité régulière pour favoriser l'équilibre du corps physique et mental.</p>
     </div>
     <div class="button"><router-link to="/mon-parcours">Découvrez mon parcours</router-link></div>
-    <h4>Mes prestations</h4>
+    <h4 id="prestations-sport">Mes prestations</h4>
     <h5>Sport</h5>
     <div class="box" @click="individuelBoxSwitch">
-      <p class="the-title">Coaching individuel<i :class="[ individuelBox ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <div class="the-title">Coaching individuel<i :class="[ individuelBox ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
       <p class="the-text" v-if="individuelBox">1 à 2 personnes. Séance d’une heure personnalisée selon vos objectifs.</p>
       <div class="button" v-if="individuelBox"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     <div class="box" @click="collectifBoxSwitch">
-      <p class="the-title">Coaching collectif<i :class="[ collectifBox ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <div class="the-title">Coaching collectif<i :class="[ collectifBox ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
       <p class="the-text" v-if="collectifBox">3 à 10 personnes. Reunissez vos forces et donnez le maximum de vous.</p>
       <div class="button" v-if="collectifBox"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     <div class="box" @click="cardiaqueBoxSwitch">
-      <p class="the-title">Cohérence cardiaque<i :class="[ cardiaqueBox  ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <div class="the-title">Cohérence cardiaque<i :class="[ cardiaqueBox  ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
       <p class="the-text" v-if="cardiaqueBox">Apprenez à apaiser vos émotions et gérer votre stress.</p>
       <div class="button" v-if="cardiaqueBox"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     <div class="button"><router-link to="/les-bienfaits-du-sport">Decouvrez les bienfaits<br>du sport sur la santé !</router-link></div>
     <div class="break-line"></div>
-    <h4>Mes prestations</h4>
+    <h4 id="prestations-bien-etre">Mes prestations</h4>
     <h5>Bien-être</h5>
     <div class="box" @click="kinesiologieBoxSwitch">
-      <p class="the-title">Kinésiologie<i :class="[ kinesiologieBox ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <div class="the-title">Kinésiologie<i :class="[ kinesiologieBox ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
       <p class="the-text" v-if="kinesiologieBox">Favorisez un état d’équilibre et de bien-être grâce à la kinésiologie.</p>
       <div class="button" v-if="kinesiologieBox"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     <div class="box" @click="ReflexologieBoxSwitch">
-      <p class="the-title">Réflexologie<i :class="[ ReflexologieBox ? 'leftArrow' : 'down', 'arrow' ]"></i></p>
+      <div class="the-title">Réflexologie<i :class="[ ReflexologieBox ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
       <p class="the-text" v-if="ReflexologieBox">Douleurs chroniques, migraines, acouphènes, vertiges ? La reflexologie est faite pour vous.</p>
       <div class="button" v-if="ReflexologieBox"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
-    <div class="button"><router-link to="/les-bienfaits-du-sport">Réflexologie, Kinésiologie<br>Pourquoi ? Pour qui ?</router-link></div>
-    <div class="break-line"></div>
     <h4>Ils me font confiance</h4>
     <div class="confiance-pics">
       <img src="../assets/services-a-la-personne-logo.png" alt="logo du services à la personne">
@@ -158,11 +156,6 @@ export default {
   a {
     text-decoration: none;
   }
-  // .right, .left, .title {
-  //   @include tablet {
-  //     display: none;
-  //   }
-  // }
   h4 {
     font-size : 1.7rem;
     font-weight: 600;
@@ -184,6 +177,7 @@ export default {
       clip-path: polygon(70% 0, 100% 0%, 100% 100%, 30% 100%);
       display: flex;
       justify-content: right;
+      -webkit-justify-content: right;
     }
     .ju_pic {
       opacity: 0.25;
@@ -253,7 +247,7 @@ export default {
     .kinesiologie { 
       position : absolute;
       bottom : 10rem;
-      right : 7vw;
+      right : 15vw;
       @include pc {
         bottom : 25vh;
         right : 30vw;
@@ -271,14 +265,17 @@ export default {
     h3 {
       color : #1E3D59;
       text-align: center;
+      font-size: 17px;
+      font-weight : 700;
       width : fit-content;
-      margin-bottom : 1rem;
-      line-height: 2rem;
+      margin-bottom : 10px;
+      line-height: 27.51px;
     }
     .infos {
       color : #FF6E40;
       text-align: center;
       font-weight : 600;
+      font-size : 14px;
       border-bottom: 1px solid #FF6E40;
       cursor: pointer;
     }
@@ -308,7 +305,6 @@ export default {
     }
     p {
       width : 40vw;
-      font-weight: 500;
       @include pc {
         width : 30vw;
       }
@@ -330,7 +326,7 @@ export default {
   }
   .box {
     cursor : pointer;
-    margin : 2rem 1.5rem;
+    margin : 2rem 2.5rem;
     padding : 0.2rem 0.5rem;
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
     .the-title {
@@ -360,10 +356,8 @@ export default {
     }
     .the-text {
       color : #1E3D59;
-      font-weight : 500;
       text-align: center;
-      margin-bottom : 1rem;
-      margin-top : 2rem;
+      margin : 2rem 1rem 1rem 1rem;
     }
     .button {
       margin-bottom : 1rem;
