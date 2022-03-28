@@ -6,14 +6,14 @@
       <div><p>Reflexo</p></div>
       <div><p>Kinéso</p></div>
     </div>
-    <h1>Mes prestations</h1>
+    <h1>Prestations</h1>
     <div class="page-container">
       <h3>Accompagnement personnalisé</h3>
       <h4>1 ou 2 personnes</h4>
       <p class="under-title-text">
         Seul ou à plusieurs, l’activité physique n’est pas seulement un moyen très efficace pour perdre du poids et conserver sa silhouette svelte et tonique.
         <br>En <i class="orangeAccent">complément</i> d’un rythme de vie à l’écoute de vos besoins, c’est aussi un formidable allié pour votre <i class="orangeAccent">bien-être</i> général. Le sport -ou plutôt le mouvement- contribue à prévenir bon nombre de déséquilibres sur le plan physique et mental.
-        <br><br>Voyons-en bref les bienfaits du sport sur votre organisme et votre qualité de vie générale:
+        <br><br><br>Voyons-en bref les bienfaits du sport sur votre organisme et votre qualité de vie générale:
       </p>
       <div class="box-container">
         <div class="box" @click="firstBoxSwitch">
@@ -79,7 +79,7 @@
           <p class="price-container"><i class="price">15€</i> / séance / personne</p>
           <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur.</p>
           <div class="breakline"></div>
-          <p class="price-container"><i class="price">7€50</i> / séance / personne</p>
+          <p class="price-container"><i class="price">7,5€</i> / séance / personne</p>
           <div class="pics">
             <img src="../assets/services-a-la-personne-logo.png" alt="">
             <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
@@ -88,6 +88,7 @@
           <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
         </div>
       </div>
+      <div class="button"><router-link to="/les-bienfaits-du-sport">Decouvrez les bienfaits<br>du sport sur la santé !</router-link></div>
       <h3 id="coherence">Base de la cohérence cardiaque</h3>
       <h4>“ Le mouvement c’est la vie ”</h4>
       <p class="under-title-text">
@@ -128,7 +129,7 @@
         <br>- gérer des problématiques liés à la sphère crânienne (<i class="orangeAccent">maux de tête, migraines, acouphènes, vertiges</i>).
         <br>- retrouver du <i class="orangeAccent">tonus</i> et de la <i class="orangeAccent">vitalité</i>.
         <br>- se relaxer.
-        <br><br>Elle ne comporte aucune contre indication et sepratique sur tout public.
+        <br><br><i class="boldAccent">Elle ne comporte aucune contre indication et sepratique sur tout public.</i>
       </p>
       <div class="pic-container">
         <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="" >
@@ -310,9 +311,9 @@ export default {
     }
     p {
       margin : 2rem 0;
-      font-weight : 500;
     }
     .under-title-text {
+      line-height: 26px;
       @include pc {
         margin : 2rem 5rem;
       }
@@ -326,7 +327,7 @@ export default {
       .box {
         cursor : pointer;
         margin-bottom : 1rem;
-        padding : 0.2rem 0.5rem;
+        padding : 0.2rem 1rem;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
         @include pc {
           width : 49%;
@@ -334,9 +335,9 @@ export default {
         }
         .the-title {
           position: relative;
-          margin-bottom : 2rem;
           padding-right : 3rem;
           color : #FF6E40;
+          font-weight: 500;
           @include pc {
             padding-right : 0;
           }
@@ -360,6 +361,9 @@ export default {
             transform: rotate(45deg);
             transition: transform 0.3s ease-out;
           }
+        }
+        p {
+          line-height: 26px;
         }
       }
     }
@@ -408,8 +412,7 @@ export default {
       ul {
         li {
           list-style-type: disc;
-          margin-bottom : 1rem;
-          font-weight : 500;
+          margin : 0 0 1rem 1rem;
         }
       }
     }
@@ -428,11 +431,16 @@ export default {
     margin-bottom : 4rem;
     h4 {
       font-size : 1.1rem;
-      text-align: center;
+      font-weight : 600;
+      color : #424242;
+      // text-align: center;
     }
     h5 {
       font-weight : 600;
-      text-align: center;
+      // text-align: center;
+    }
+    h4, h5 {
+      margin : 0 1rem;
     }
     .inside-container {
       margin : 0 1rem;

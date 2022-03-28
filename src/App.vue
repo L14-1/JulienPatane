@@ -127,11 +127,12 @@ export default {
   }
   .blueAccent {
     font-style: normal;
+    font-weight : 600;
     color : #1E3D59;
   }
   .boldAccent {
     font-style: normal;
-    font-weight : bold;
+    font-weight : 600;
   }
   .button-nav {
     cursor: pointer;
