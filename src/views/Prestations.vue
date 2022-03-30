@@ -269,6 +269,7 @@ export default {
       justify-content: space-around;
       width : 25vw;
       font-weight : 400;
+      font-size: 13px;
       height : 3.5rem;
       background: #dde2e6;
       border : 1px solid white;

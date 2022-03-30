@@ -159,10 +159,11 @@ export default {
   .button-nav {
     cursor: pointer;
     background : #1E3D59;
-    width : 10rem;
+    width : 8.5rem;
     padding : 0.7rem 0;
     border-radius: 1rem;
     text-align : center;
+    font-size: 14px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.13);
     a {
       color : #F5F0E1;

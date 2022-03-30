@@ -104,6 +104,9 @@ export default {
                 left : -2rem;
                 top : 0.3rem;
             }
+            &:first-child {
+                margin-top : 0;
+            }
         }
     }
     .buttons {
@@ -111,7 +114,7 @@ export default {
         width : 100vw;
         max-width : 25rem;
         display : flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 }
 

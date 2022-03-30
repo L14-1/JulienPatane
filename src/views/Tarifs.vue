@@ -1,11 +1,11 @@
 <template>
   <div class="tarifs">
-    <h1>Mes tarifs</h1>
+    <h1>Tarifs</h1>
     <div class="dual-container">
     <div class="container">
       <h4>Accompagnement personnalisé</h4>
       <h5>1 ou 2 personnes</h5>
-      <div class="inside-container">
+      <div class="inside-container large-inside-container">
         <p class="price-container"><i class="price">40€</i> / séance</p>
         <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur.<br>Jusqu’à 2 personnes.</p>
         <div class="breakline"></div>
@@ -21,7 +21,7 @@
     <div class="container">
       <h4>Accompagnement collectif</h4>
       <h5>3 à 10 personnes</h5>
-      <div class="inside-container">
+      <div class="inside-container large-inside-container">
         <p class="price-container"><i class="price">15€</i> / séance / personne</p>
         <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur.</p>
         <div class="breakline"></div>
@@ -37,7 +37,7 @@
     </div>
     <div class="container">
       <h4>Cohérence cardiaque</h4>
-      <div class="inside-container">
+      <div class="inside-container large-inside-container">
         <p class="price-container"><i class="price">12€</i> / séance / personne</p>
         <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur. <br> <br>Elle est complémentaire avec l’accompagnement sportif , la reflexologie ou la kinésiologie</p>
       </div>
@@ -94,7 +94,7 @@ export default {
     @include pc {
       width : 400px;
     }
-    background: white;
+    background : #fbfbfc;
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.13);
     margin-bottom : 4rem;
     h4 {
@@ -110,7 +110,7 @@ export default {
       margin : 0 0.5rem;
     }
     .inside-container {
-      margin : 0 1rem;
+      // margin : 0 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -162,6 +162,7 @@ export default {
         position: relative;
         margin-top : 1rem;
         text-align: center;
+        font-size: 14px;
         .fa-location-dot {
           position: absolute;
           top : 0.1rem;
@@ -188,6 +189,9 @@ export default {
       bottom : -0.25rem;
       right : -0.25rem;
     }
+  }
+  .large-inside-container {
+    margin : 0 1rem;
   }
   // .button {
   //   cursor: pointer;

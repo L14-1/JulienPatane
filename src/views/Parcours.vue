@@ -127,8 +127,8 @@ export default {
         }
     }
     p {
-        margin : 0 2.5rem 1rem 2.5rem;
-        text-align: justify;
+        margin : 0 1rem 1rem 1rem;
+        // text-align: justify;
         line-height: 26px;
     }
     .ju_pics {
@@ -144,7 +144,7 @@ export default {
             margin : 2rem 0;
         }
         img {
-            width : 20rem;
+            width : 15rem;
             border-radius: 0.5rem;
             margin : 0 5vw;
             object-fit : cover;
@@ -187,6 +187,7 @@ export default {
         h2{
             position : relative;
             width : fit-content;
+            margin-bottom : 1rem;
         }
         .diplomeLogo {
             position : absolute;
@@ -194,7 +195,7 @@ export default {
             top : 0.5rem;
             margin-right : 0.8rem;
         }
-        margin : 0 1rem;
+        margin : 1rem 1rem 0.5rem 1rem;
         border : 2px solid #FF6E40;
         ul {
             margin : 0 0.5rem 0 3rem;
@@ -210,7 +211,7 @@ export default {
         width : 100vw;
         max-width : 25rem;
         display : flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 }
 
