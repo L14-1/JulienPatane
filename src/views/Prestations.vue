@@ -249,7 +249,13 @@ export default {
   display: flex;
   flex-direction: column;
   margin : auto;
+  h1 {
+    margin-top : 3rem;
+  }
   .anchors {
+    position : fixed;
+    top: 5rem;
+    z-index : 800;
     cursor: pointer;
     display: flex;
     margin : 0;
@@ -264,7 +270,7 @@ export default {
       width : 25vw;
       font-weight : 400;
       height : 3.5rem;
-      background: rgba(30, 61, 89, 0.15);
+      background: #dde2e6;
       border : 1px solid white;
       border-right : none;
       &:first-child {

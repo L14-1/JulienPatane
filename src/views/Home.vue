@@ -10,14 +10,18 @@
     </div>
     <font-awesome-icon icon="fa-solid fa-angles-down" class="icon-arrow"/>
     <div class="title">
-      <div class="sport">
-        <h3>SPORT &<br>COHERENCE CARDIAQUE</h3>
-        <router-link to="/#prestations-sport"><div class="infos">+ d'infos</div></router-link>
-      </div>
-      <div class="kinesiologie">
-        <h3>KINESIOLOGIE &<br>REFLEXOLOGIE</h3>
-        <router-link to="/#prestations-bien-etre"><div class="infos">+ d'infos</div></router-link>
-      </div>
+      <router-link to="/#prestations-sport">
+        <div class="sport">
+          <h3>SPORT &<br>COHERENCE CARDIAQUE</h3>
+          <div class="infos">+ d'infos</div>
+        </div>
+      </router-link>
+      <router-link to="/#prestations-bien-etre">
+        <div class="kinesiologie">
+          <h3>KINESIOLOGIE &<br>REFLEXOLOGIE</h3>
+          <div class="infos">+ d'infos</div>
+        </div>
+      </router-link>
     </div>
     <h4>Qui je suis</h4>
     <div class="qui-je-suis">

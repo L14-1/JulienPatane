@@ -21,7 +21,7 @@
         <div class="contact-form">
             <form action="https://formsubmit.co/nico.maitre.stair@gmail.com" method="POST">
                 <p class="top-text">Nom</p>
-                <input type="text" name="name" placeholder="Entrez votre nom" required>
+                <input type="text" name="nom" placeholder="Entrez votre nom" required>
                 <p class="top-text">Email</p>
                 <input type="email" name="email" placeholder="Entrez votre adresse mail" required>
                 <p class="top-text">N° de téléphone (Facultatif)</p>
@@ -29,6 +29,9 @@
                 <p class="top-text">Votre message</p>
                 <textarea type="text" name="message" rows="5" cols="33" placeholder="Une demande particulière, un devis, mes disponibilités ...">
                 </textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://l14-1.github.io/JulienPatane/#/">
                 <button type="submit">Envoyer</button>
             </form>
         </div>
