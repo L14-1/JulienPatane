@@ -18,15 +18,15 @@
       <div class="box-container">
         <div class="box" @click="firstBoxSwitch">
           <p class="the-title">1. Respectez votre rythme !<i :class="[ firstBox ? 'left' : 'down', 'arrow' ]"></i></p>
-          <p class="the-text" v-if="firstBox || windowWidth > 900">Pour commencer, il convient de revenir sur la signification de « être à l’écoute de vos besoins ».<br>C’est lors de notre première rencontre que nous échangeons sur vos problématiques et attentes. Cette séance « test » nous permet d’identifier vos capacités. C’est ensemble que nous pourrons construire pas à pas, par vos ressentis, la variabilité de l’intensité des efforts.</p>
+          <p class="the-text" v-if="firstBox">Pour commencer, il convient de revenir sur la signification de « être à l’écoute de vos besoins ».<br>C’est lors de notre première rencontre que nous échangeons sur vos problématiques et attentes. Cette séance « test » nous permet d’identifier vos capacités. C’est ensemble que nous pourrons construire pas à pas, par vos ressentis, la variabilité de l’intensité des efforts.</p>
         </div>
         <div class="box" @click="secondBoxSwitch">
           <p class="the-title">2. Ritualiser, créer une routine !<i :class="[ secondBox ? 'left' : 'down', 'arrow' ]"></i></p>
-          <p class="the-text" v-if="secondBox || windowWidth > 900">Comme de nombreuses activités tel que la méditation, la cohérence cardiaque ou d’autres domaines, le sport nécessite d’être pratiqué de manière régulière. C’est lors de notre première séance que nous définissons ensemble la fréquence de nos rendez-vous.<br>Grâce à la méthode d’intervalle / fractionné que je vous propose, vous pourrez rapidement intégrer ces séances dans votre semaine, de manière accompagnée ou en autonomie, seul ou à plusieurs !</p>
+          <p class="the-text" v-if="secondBox">Comme de nombreuses activités tel que la méditation, la cohérence cardiaque ou d’autres domaines, le sport nécessite d’être pratiqué de manière régulière. C’est lors de notre première séance que nous définissons ensemble la fréquence de nos rendez-vous.<br>Grâce à la méthode d’intervalle / fractionné que je vous propose, vous pourrez rapidement intégrer ces séances dans votre semaine, de manière accompagnée ou en autonomie, seul ou à plusieurs !</p>
         </div>
         <div class="box" @click="thirdBoxSwitch">
           <p class="the-title">3. La méthode intervalle training c’est quoi<i :class="[ thirdBox ? 'left' : 'down', 'arrow' ]"></i></p>
-          <p class="the-text" v-if="thirdBox || windowWidth > 900">Plus précisément appelé HIIT Training, cette méthode s’adapte partout et pour tous.
+          <p class="the-text" v-if="thirdBox">Plus précisément appelé HIIT Training, cette méthode s’adapte partout et pour tous.
             <br>De courtes périodes d’exercices de haute intensité alterné avec des intervalles de mouvements plus lents.
             <br>Très facile à mettre en place, ces séances durent entre 20 et 35 minutes.
             <br>Les exercices s’effectuent au poids du corps et ne nécessite pas d’espace ou de matériels particulier.
@@ -35,7 +35,7 @@
         </div>
         <div class="box" @click="fourthBoxSwitch">
           <p class="the-title">4. Le mouvement pour tous<i :class="[ fourthBox ? 'left' : 'down', 'arrow' ]"></i></p>
-          <p class="the-text" v-if="fourthBox || windowWidth > 900">Vous êtes une personne active, vous avez dû ralentir la pratique sportive à la suite d’une blessure, une grossesse, une maladie, une pathologie et vous souhaitez être accompagné dans la reprise d’une activité physique et des mouvements adaptés. Le cœur de mes séances se résume en 2 mots. « Bienveillance » et « Plaisir ».</p>
+          <p class="the-text" v-if="fourthBox">Vous êtes une personne active, vous avez dû ralentir la pratique sportive à la suite d’une blessure, une grossesse, une maladie, une pathologie et vous souhaitez être accompagné dans la reprise d’une activité physique et des mouvements adaptés. Le cœur de mes séances se résume en 2 mots. « Bienveillance » et « Plaisir ».</p>
         </div>
       </div>
       <div class="pic-container">
@@ -261,7 +261,8 @@ export default {
     margin : 0;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
     @include pc {
-      margin : 0 13rem;
+      width : 50rem;
+      left : calc(50% - 25rem);
     }
     div {
       display : flex;
@@ -297,7 +298,8 @@ export default {
   .button {
     cursor: pointer;
     margin : 0 auto 4rem auto;
-    background : #1E3D59;
+    background-color : #1E3D59;
+    transition : background-color 0.5s ease-out;
     width : fit-content;
     padding : 0.8rem 2rem;
     border-radius: 1rem;
@@ -306,6 +308,10 @@ export default {
     a {
       color : #F5F0E1;
       text-decoration: none;
+    }
+    &:hover {
+      background-color : #34628C;
+      transition : background-color 0.5s ease-out;
     }
   }
   .page-container {
@@ -368,9 +374,6 @@ export default {
             border-width: 0 2px 2px 0;
             display: inline-block;
             padding: 4px;
-            @include pc {
-              display: none;
-            }
           }
           .left {
             transform: rotate(135deg);

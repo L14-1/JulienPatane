@@ -58,11 +58,17 @@ export default {
     border-top : 1px solid #1E3D59;
     border-top-right-radius : 0.7rem;
     border-top-left-radius : 0.7rem;
-    // transform: translateY(-100vh);
-    // transition: 1s transform ease-out;
     display : flex;
     flex-direction : column;
     align-items : center;
+    @include largeScreen {
+        width : 40rem;
+        height : 35rem;
+        right : calc(50vw - 20rem);
+        bottom : calc(50vh - 17.5rem);
+        border : 1px solid rgb(0, 0, 0);
+        border-radius : 0.7rem;
+    }
     h4 {
         margin : 1.5rem 0;
         color : #1E3D59;
@@ -90,6 +96,9 @@ export default {
         form {
             display : flex;
             flex-direction: column;
+            @include largeScreen {
+                width : 30rem;
+            }
             .top-text {
                 font-size : 13px;
                 font-weight : 500;
@@ -97,7 +106,9 @@ export default {
             }
             input {
                 width : 75vw;
+                max-width : 30rem;
                 height : 2.1rem;
+                margin : 0 auto;
                 padding-left : 0.5rem;
                 border-radius : 10px;
                 border: 0.1px solid transparent;
@@ -111,6 +122,7 @@ export default {
             textarea {
                 resize : none;
                 width : 75vw;
+                max-width : 30rem;
                 height : 6rem;
                 padding : 0.5rem; 
                 border-radius : 10px;

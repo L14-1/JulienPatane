@@ -30,36 +30,42 @@
       <p>Micro entrepreneur dans le domaine du <i class="orangeAccent">sport</i> et des <i class="orangeAccent">médecines douces:</i> Kinésiologie, Réflexologie et Educateur sportif de formation, j'accompagne les personnes dans la pratique d'une activité régulière pour favoriser l'équilibre du corps physique et mental.</p>
     </div>
     <div class="button"><router-link to="/mon-parcours">Découvrez mon parcours</router-link></div>
-    <h4 id="prestations-sport">Mes prestations</h4>
-    <h5>Sport</h5>
-    <div class="box" @click="individuelBoxSwitch">
-      <div class="the-title">Coaching individuel<i :class="[ individuelBox ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
-      <p class="the-text" v-if="individuelBox">1 à 2 personnes. Séance d’une heure personnalisée selon vos objectifs.</p>
-      <div class="button" v-if="individuelBox"><router-link to="/prestations">En savoir plus</router-link></div>
+    <div class="sport-container">
+      <h4 id="prestations-sport">Mes prestations Sport</h4>
+      <h5 v-if="windowWidth <= 1100">Sport</h5>
+      <div class="sport-container-box">
+      <div class="box" @click="individuelBoxSwitch">
+        <div class="the-title">Coaching individuel<i :class="[ individuelBox ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+        <p class="the-text" v-if="individuelBox || windowWidth > 1100">1 à 2 personnes. Séance d’une heure personnalisée selon vos objectifs.</p>
+        <div class="button" v-if="individuelBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
+      </div>
+      <div class="box" @click="collectifBoxSwitch">
+        <div class="the-title">Coaching collectif<i :class="[ collectifBox ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+        <p class="the-text" v-if="collectifBox || windowWidth > 1100">3 à 10 personnes. Reunissez vos forces et donnez le maximum de vous.</p>
+        <div class="button" v-if="collectifBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
+      </div>
+      <div class="box margin-bottom-4" @click="cardiaqueBoxSwitch">
+        <div class="the-title">Cohérence cardiaque<i :class="[ cardiaqueBox  ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+        <p class="the-text" v-if="cardiaqueBox || windowWidth > 1100">Apprenez à apaiser vos émotions et gérer votre stress.</p>
+        <div class="button" v-if="cardiaqueBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
+      </div>
+      </div>
+      <div class="button"><router-link to="/les-bienfaits-du-sport">Decouvrez les bienfaits<br>du sport sur la santé !</router-link></div>
     </div>
-    <div class="box" @click="collectifBoxSwitch">
-      <div class="the-title">Coaching collectif<i :class="[ collectifBox ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
-      <p class="the-text" v-if="collectifBox">3 à 10 personnes. Reunissez vos forces et donnez le maximum de vous.</p>
-      <div class="button" v-if="collectifBox"><router-link to="/prestations">En savoir plus</router-link></div>
-    </div>
-    <div class="box" @click="cardiaqueBoxSwitch">
-      <div class="the-title">Cohérence cardiaque<i :class="[ cardiaqueBox  ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
-      <p class="the-text" v-if="cardiaqueBox">Apprenez à apaiser vos émotions et gérer votre stress.</p>
-      <div class="button" v-if="cardiaqueBox"><router-link to="/prestations">En savoir plus</router-link></div>
-    </div>
-    <div class="button"><router-link to="/les-bienfaits-du-sport">Decouvrez les bienfaits<br>du sport sur la santé !</router-link></div>
-    <div class="break-line"></div>
-    <h4 id="prestations-bien-etre">Mes prestations</h4>
-    <h5>Bien-être</h5>
+    <div class="break-line" v-if="windowWidth <= 1100"></div>
+    <h4 id="prestations-bien-etre">Mes prestations Médecine douce</h4>
+    <h5 v-if="windowWidth <= 1100">Bien-être</h5>
+    <div class="medecine-container-box">
     <div class="box" @click="kinesiologieBoxSwitch">
-      <div class="the-title">Kinésiologie<i :class="[ kinesiologieBox ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
-      <p class="the-text" v-if="kinesiologieBox">Favorisez un état d’équilibre et de bien-être grâce à la kinésiologie.</p>
-      <div class="button" v-if="kinesiologieBox"><router-link to="/prestations">En savoir plus</router-link></div>
+      <div class="the-title">Kinésiologie<i :class="[ kinesiologieBox ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+      <p class="the-text" v-if="kinesiologieBox || windowWidth > 1100">Favorisez un état d’équilibre et<br> de bien-être grâce à la<br> kinésiologie.</p>
+      <div class="button" v-if="kinesiologieBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     <div class="box" @click="ReflexologieBoxSwitch">
-      <div class="the-title">Réflexologie<i :class="[ ReflexologieBox ? 'leftArrow' : 'down', 'arrow' ]"></i></div>
-      <p class="the-text" v-if="ReflexologieBox">Douleurs chroniques, migraines, acouphènes, vertiges ? La reflexologie est faite pour vous.</p>
-      <div class="button" v-if="ReflexologieBox"><router-link to="/prestations">En savoir plus</router-link></div>
+      <div class="the-title">Réflexologie<i :class="[ ReflexologieBox ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+      <p class="the-text" v-if="ReflexologieBox || windowWidth > 1100">Douleurs chroniques,<br> migraines, acouphènes,<br> vertiges ? La reflexologie est<br> faite pour vous.</p>
+      <div class="button" v-if="ReflexologieBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
+    </div>
     </div>
     <h4>Ils me font confiance</h4>
     <div class="confiance-pics">
@@ -83,6 +89,15 @@
 
 export default {
   name: 'Home',
+  created()  {
+    window.addEventListener("resize", this.resizeHandler);
+  },
+  destroyed()  {
+    window.removeEventListener("resize", this.resizeHandler);
+  },
+  mounted: function () {
+    this.windowWidth = window.innerWidth;
+  },
   data: function () {
     return {
       individuelBox: false,
@@ -90,9 +105,13 @@ export default {
       cardiaqueBox: false,
       kinesiologieBox: false,
       ReflexologieBox: false,
+      windowWidth: 0,
     };
   },
   methods: {
+    resizeHandler() {
+      this.windowWidth = window.innerWidth;
+    },
     individuelBoxSwitch() {
       if (this.individuelBox == true) {
         this.individuelBox = false;
@@ -253,7 +272,7 @@ export default {
       bottom : 10rem;
       right : 15vw;
       @include pc {
-        bottom : 25vh;
+        top : 50vh;
         right : 30vw;
       }
     }
@@ -274,14 +293,29 @@ export default {
       width : fit-content;
       margin-bottom : 10px;
       line-height: 27.51px;
+      @include largeScreen {
+        font-size: 20px;
+      }
     }
     .infos {
       color : #FF6E40;
       text-align: center;
       font-weight : 600;
-      font-size : 14px;
       border-bottom: 1px solid #FF6E40;
-      cursor: pointer;
+      @include largeScreen {
+        font-size: 18px;
+        padding-top : 0.5rem;
+        cursor: pointer;
+        &:hover {
+          color : #fff;
+          background-color: #FF6E40;
+          padding : 0.5rem 0;
+          width : 99px;
+          border-bottom: none;
+          transition: background-color 1s ease-out;
+        }
+
+      }
     }
   }
   .qui-je-suis {
@@ -306,19 +340,24 @@ export default {
         display : block;
         width : 40vw;
         max-width : 25rem;
+        margin-right : 5rem;
+      }
+      @include largeScreen {
+        margin-right : 15rem;
       }
     }
     p {
       width : 40vw;
       @include pc {
-        width : 30vw;
+        width : 25rem;
       }
     }
   }
   .button {
     cursor: pointer;
     margin : auto;
-    background : #1E3D59;
+    background-color : #1E3D59;
+    transition : background-color 0.5s ease-out;
     width : fit-content;
     padding : 0.8rem 1.3rem;
     border-radius: 1rem;
@@ -328,6 +367,10 @@ export default {
       color : #F5F0E1;
       text-decoration: none;
     }
+    &:hover {
+      background-color : #34628C;
+      transition : background-color 0.5s ease-out;
+    }
   }
   .box {
     cursor : pointer;
@@ -335,6 +378,9 @@ export default {
     padding : 1rem 0.5rem 0.2rem 0.5rem;
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
     background: rgba(30, 61, 89, 0.01);
+    @include tablet {
+      margin : 1rem 25vw;
+    }
     .the-title {
       position: relative;
       margin-bottom : 1.2rem;
@@ -342,6 +388,11 @@ export default {
       font-size : 18px;
       text-align: center;
       color : #1E3D59;
+      @include largeScreen {
+        padding-right : 0;
+        margin-bottom : 0.6rem;
+        font-weight: 500;
+      }
       .arrow {
         position: absolute;
         right : 1rem;
@@ -369,6 +420,94 @@ export default {
       margin-bottom : 1rem;
       font-size : 14px;
     }
+  }
+  .sport-container {
+     @include largeScreen {
+       background: rgba(30, 61, 89, 0.1);
+       margin-top : 6rem;
+       padding-bottom : 2rem;
+       margin-bottom : 1rem;
+       &-box {
+         position : relative;
+         display: flex;
+         align-items : center;
+         justify-content: center;
+         margin : auto;
+         margin-top : 3rem;
+         margin-bottom : 5rem;
+         width : fit-content;
+         &::after, &::before {
+          z-index : -1;
+          content : "";
+          position: absolute;
+          background : #FF6E40;
+          width : 50vw;
+          max-width : 220px;
+          height : 6.5rem;
+        }
+        &::before {
+          top : -0.25rem;
+          left : -0.25rem;
+        }
+        &::after {
+          bottom : -0.25rem;
+          right : -0.25rem;
+        }
+       }
+       .box {
+          background : #fff;
+          margin : 0 1rem 0 0;
+          width : 350px;
+          height : 200px;
+          &:last-child {
+            margin-right : 0;
+          }
+       }
+     }
+  }
+  @include largeScreen {
+    .medecine-container-box {
+      position : relative;
+      display: flex;
+      align-items : center;
+      justify-content: center;
+      margin : auto;
+      margin-top : 5rem;
+      margin-bottom : 5rem;
+      width : fit-content;
+      &::after, &::before {
+        z-index : -1;
+        content : "";
+        position: absolute;
+        background : #FF6E40;
+        width : 50vw;
+        max-width : 220px;
+        height : 6.5rem;
+      }
+      &::before {
+        top : -0.25rem;
+        left : -0.25rem;
+      }
+      &::after {
+        bottom : -0.25rem;
+        right : -0.25rem;
+      }
+      .box {
+        background : #fcfdfd;
+        margin : 0 3rem 0 0;
+        width : 350px;
+        height : 200px;
+        p {
+          margin-top : 0;
+        }
+        &:last-child {
+          margin-right : 0;
+        }
+      }
+    }
+  }
+  .margin-bottom-4 {
+    margin-bottom : 4rem;
   }
   .confiance-pics {
     display : flex;

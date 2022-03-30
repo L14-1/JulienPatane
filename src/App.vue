@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="blackBack" v-if="menu == 'opened'"></div>
+    <div class="blackBack" v-if="menu == 'opened' || contactPage && windowWidth >= 1100"></div>
     <div id="nav">
       <router-link to="/">
       <img src="./assets/Logo.svg" alt="julien Patane Logo" @click="closingNav">
@@ -16,19 +16,18 @@
     <div class="menu_links" v-if="menu == 'opened' || windowWidth >= 1100" >
       <ul>
         <li @click="servicesSwitch" v-if="windowWidth < 1100">Prestations<i :class="[ servicesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
-        <router-link to="/prestations" v-if="windowWidth >= 1100"><li>Prestations</li></router-link>
+        <router-link to="/prestations" v-if="windowWidth >= 1100"><li class="underline-anim-1">Prestations</li></router-link>
         <ul class="sublinks" v-if="servicesMenu == 'opened'">
           <router-link to="/prestations"><li @click="closingNav">Coaching</li></router-link>
           <router-link to="/prestations#coherence"><li @click="closingNav">Cohérence cardiaque</li></router-link>
           <router-link to="/prestations#reflexologie"><li @click="closingNav">Réflexologie</li></router-link>
           <router-link to="/prestations#kinesiologie"><li @click="closingNav">Kinésiologie</li></router-link>
         </ul>
-        <router-link to="/tarifs"><li @click="closingNav" >Tarifs</li></router-link>
-        <router-link to="/mon-parcours"><li @click="closingNav">Mon parcours</li></router-link>
-        <router-link to="/les-bienfaits-du-sport"><li @click="closingNav">Les bienfaits du sport</li></router-link>
-        <!-- <a href="mailto:someone@example.com"> -->
-          <li class="contact-me" @click="openingContact">Contactez-moi</li>
-        <!-- </a> -->
+        <router-link to="/tarifs"><li @click="closingNav" class="underline-anim-2">Tarifs</li></router-link>
+        <router-link to="/mon-parcours"><li @click="closingNav" class="underline-anim-3">Mon parcours</li></router-link>
+        <router-link to="/les-bienfaits-du-sport"><li @click="closingNav" class="underline-anim-4">Les bienfaits du sport</li></router-link>
+        
+        <li class="contact-me" @click="openingContact">Contactez-moi</li>
       </ul>
     </div>
     <router-view/>
@@ -158,16 +157,21 @@ export default {
   }
   .button-nav {
     cursor: pointer;
-    background : #1E3D59;
+    background-color : #1E3D59;
     width : 8.5rem;
     padding : 0.7rem 0;
     border-radius: 1rem;
     text-align : center;
     font-size: 14px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.13);
+    transition : background-color 0.5s ease-out;
     a {
       color : #F5F0E1;
       text-decoration: none;
+    }
+    &:hover {
+      background-color : #34628C;
+      transition : background-color 0.5s ease-out;
     }
   }
   .button-nav-orange {
@@ -313,14 +317,88 @@ html {
   ul {
     @include largeScreen {
       display : flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       background: transparent;
       color : white;
       width : fit-content;
       align-items : center;
+      width : 65vw;
+      .underline-anim-1 {
+        &::after {
+          content : '';
+          position : absolute;
+          bottom : 0.7rem;
+          left : 0.5rem;
+          height : 2px;
+          width : 0rem;
+          background: white;
+          transition : width 0.5s ease-out;
+        }
+        &:hover {
+          &::after {
+            width : 5.5rem;
+            transition : width 0.5s ease-in;
+          }
+        }
+      }
+      .underline-anim-2 {
+        &::after {
+          content : '';
+          position : absolute;
+          bottom : 0.7rem;
+          left : 0.5rem;
+          height : 2px;
+          width : 0rem;
+          background: white;
+          transition : width 0.5s ease-out;
+        }
+        &:hover {
+          &::after {
+            width : 2.7rem;
+            transition : width 0.5s ease-in;
+          }
+        }
+      }
+      .underline-anim-3 {
+        &::after {
+          content : '';
+          position : absolute;
+          bottom : 0.7rem;
+          left : 0.5rem;
+          height : 2px;
+          width : 0rem;
+          background: white;
+          transition : width 0.5s ease-out;
+        }
+        &:hover {
+          &::after {
+            width : 6.7rem;
+            transition : width 0.5s ease-in;
+          }
+        }
+      }
+      .underline-anim-4 {
+        &::after {
+          content : '';
+          position : absolute;
+          bottom : 0.7rem;
+          left : 0.5rem;
+          height : 2px;
+          width : 0rem;
+          background: white;
+          transition : width 0.5s ease-out;
+        }
+        &:hover {
+          &::after {
+            width : 10.5rem;
+            transition : width 0.5s ease-in;
+          }
+        }
+      }
     }
     width : 20rem;
     background: white;
+    
     li {
       position: relative;
       padding : 1rem 0.5rem;
@@ -328,14 +406,22 @@ html {
       @include largeScreen {
         color : white;
         margin : 0 1rem;
-      }
+      } 
+      
     }
     .contact-me {
-      background : #FFC13B;
+      background-color : #FFC13B;
       color : white;
       @include largeScreen {
+        position : absolute;
+        right : 0;
         padding : 0.3rem 0.5rem;
-        margin-left : 5rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+        transition : background-color 0.5s ease-in;
+        &:hover {
+          background-color: #FF9C40;
+          transition : background-color 0.5s ease-out;
+        }
       }
     }
     .sublinks {
@@ -375,6 +461,10 @@ html {
   width : 1.5rem;
   height : 1.5rem;
   cursor: pointer;
+  @include largeScreen {
+    right : calc(50vw - 20rem + 1rem);
+    bottom : calc(100vh - 10.5rem);
+  }
   &::after, &::before {
     content : '';
     position : absolute;

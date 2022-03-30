@@ -83,8 +83,12 @@ export default {
             margin-top : 4rem;
         }
         &--text {
+            @include tablet {
+                margin : 0 11vw 0 11vw;
+            }
             @include pc {
-                flex : 50%
+                flex : 50%;
+                margin : 0;
             }
         }
         &--photo {
@@ -92,7 +96,10 @@ export default {
             @include pc {
                 flex : 50%;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-end;
+                img {
+                    margin-right : 1rem;
+                }
             }
             img {
                 width : 300px;
@@ -122,6 +129,11 @@ export default {
                 display: none;
                 @include pc {
                     display : block;
+                    width : 40vw;
+                    height : 30vw;
+                    max-width : 400px;
+                    max-height : 300px;
+                    object-fit: cover;
                 }
             }
         }
@@ -142,6 +154,7 @@ export default {
             flex : 50%;
             overflow-x: hidden;
             margin : 2rem 0;
+            padding-left : 1.5rem;
         }
         img {
             width : 15rem;
@@ -151,6 +164,12 @@ export default {
             box-shadow: 0px 4px 4px rgba(30, 61, 89, 0.5);
             @include pc {
                 margin : 0;
+                width : 40vw;
+                height : 30vw;
+                max-width : 400px;
+                max-height : 300px;
+                box-shadow: 0px 0px 0px rgba(30, 61, 89, 0.5);
+                border-radius : 0;
             }
         }
         &-hide {
@@ -177,9 +196,13 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @include tablet {
+            width : 410px;
+            padding : 0 2.3rem;
+        }
         @include pc {
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             padding : 1rem 0;
             width : 880px
