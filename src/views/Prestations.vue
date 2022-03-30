@@ -13,7 +13,7 @@
       <p class="under-title-text">
         Seul ou à plusieurs, l’activité physique n’est pas seulement un moyen très efficace pour perdre du poids et conserver sa silhouette svelte et tonique.
         <br>En <i class="orangeAccent">complément</i> d’un rythme de vie à l’écoute de vos besoins, c’est aussi un formidable allié pour votre <i class="orangeAccent">bien-être</i> général. Le sport -ou plutôt le mouvement- contribue à prévenir bon nombre de déséquilibres sur le plan physique et mental.
-        <br><br><br>Voyons-en bref les bienfaits du sport sur votre organisme et votre qualité de vie générale:
+        <br><br>Voyons-en bref les bienfaits du sport sur votre organisme et votre qualité de vie générale:
       </p>
       <div class="box-container">
         <div class="box" @click="firstBoxSwitch">
@@ -39,10 +39,10 @@
         </div>
       </div>
       <div class="pic-container">
-        <img src="../assets/Julien-et-client-sport2.jpg" alt="" >
-        <img src="../assets/Julien-séance-sport4.jpg" alt="" class="pic-container-hide">
-        <img src="../assets/Julien-séance-sport5.jpg" alt="" class="pic-container-hide">
-        <img src="../assets/Julien-séance-sport6.jpg" alt="" >
+        <img src="../assets/Julien-et-client-sport2.jpg" alt="Julien et un client, exercice avec un élastique, l'élastique est bloqué sous le pied et ils le tire jusqu'au dessus de leur tête" class="portrait-pic">
+        <img src="../assets/Julien-séance-sport4.jpg" alt="Julien et un client, exercice avec un ballon de yoga, le client est assis et bouge ses jambes en tenant le ballon au niveau de sa tête" class="portrait-pic">
+        <img src="../assets/Julien-séance-sport5.jpg" alt="Julien et un client, exercice avec un ballon de yoga, le client est en postion de gainage avec les coudes sur le ballon." class="portrait-pic">
+        <img src="../assets/Julien-séance-sport6.jpg" alt="Julien et un client, exercice avec un ballon de yoga, julien tient le ballon au niveau de sa tête et le client frappe dedans." class="portrait-pic">
       </div>
       <div class="container">
         <h4>Accompagnement personnalisé</h4>
@@ -53,8 +53,8 @@
             <div class="breakline"></div>
           <p class="price-container"><i class="price">20€</i> / séance</p>
           <div class="pics">
-            <img src="../assets/services-a-la-personne-logo.png" alt="">
-            <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
+            <img src="../assets/services-a-la-personne-logo.svg" alt="">
+            <img src="../assets/Picto-reduction-impot-50-1.svg" alt="">
           </div>
           <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
           <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
@@ -68,9 +68,9 @@
         <br><br>Les séances <i class="orangeAccent">HIIT</i> ou circuit training impliquent de courtes rafales d’exercices de haute intensité, travaillant jusqu’à <i class="orangeAccent">100 %</i> de la capacité maximale, alternées avec des intervalles d’activité plus faibles ou un arrêt complet. Parce que l’intensité est élevée, la durée d’une séance hors échauffement et étirements est courte – jamais <i class="orangeAccent">plus de 35 minutes</i>.
       </p>
       <div class="pic-container">
-        <img src="../assets/Julien-et-client-sport.jpg" alt="Julien Patane, de dos, en tailleur sur une mer de sel">
-        <img src="../assets/Julien-et-client-footing.jpg" alt="" >
-        <img src="../assets/Julien-et-client-ettirement.jpg" alt="" >
+        <img src="../assets/Julien-et-client-sport.jpg" alt="Julien et un client, étirement au sol après une séance de sport." class="portrait-pic">
+        <img src="../assets/Julien-et-client-footing.jpg" alt="Julien et un client, de face, en train de courir." class="portrait-pic">
+        <img src="../assets/Julien-et-client-ettirement.jpg" alt="Julien et un client, étirement debout après une séance de sport." class="portrait-pic">
       </div>
       <div class="container">
         <h4>Accompagnement collectif</h4>
@@ -81,8 +81,8 @@
           <div class="breakline"></div>
           <p class="price-container"><i class="price">7,5€</i> / séance / personne</p>
           <div class="pics">
-            <img src="../assets/services-a-la-personne-logo.png" alt="">
-            <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
+            <img src="../assets/services-a-la-personne-logo.svg" alt="">
+            <img src="../assets/Picto-reduction-impot-50-1.svg" alt="">
           </div>
           <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
           <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
@@ -119,7 +119,7 @@
           <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur. <br> <br>Elle est complémentaire avec l’accompagnement sportif , la reflexologie ou la kinésiologie</p>
         </div>
       </div>
-      <h3 id="reflexologie">Réflexologie Cranio-Sacrée</h3>
+      <h3 id="reflexologie" class="margined">Réflexologie Cranio-Sacrée</h3>
       <p class="under-title-text">
         La Réflexologie crânio-sacrée est une approche unique et inspirée également appelé "<i class="orangeAccent">ostéo fluidique</i>".
         <br>C'est une technique manuelle douce qui consiste à appliquer une légère pression sur les os du crâne et du visage de même que sur la partie inférieure de la moelle epinière qui s’étend jusqu'au sacrum.
@@ -132,7 +132,7 @@
         <br><br><i class="boldAccent">Elle ne comporte aucune contre indication et sepratique sur tout public.</i>
       </p>
       <div class="pic-container">
-        <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="" >
+        <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="Julien et une cliente, julien en train de pratiquer de la réflexologie cranio-sacrée." >
       </div>
       <div class="container">
         <h4>Réflexologie</h4>
@@ -142,7 +142,7 @@
           <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
         </div>
       </div>
-      <h3 id="kinesiologie">La pratique kinésiologique</h3>
+      <h3 id="kinesiologie" class="margined">La pratique kinésiologique</h3>
       <p class="under-title-text">
         « Les bras m’en tombent », « J’ai les jambes en coton », « J’en ai plein le dos »
         <br><br>Ces expressions populaires attestent du rapport étroit entre nos muscles et nos émotions. <i class="orangeAccent">Écoutons votre corps</i> ! Il a quelque chose à nous dire.
@@ -152,9 +152,9 @@
         <br>Grace au test musculaire, nous établissons un dialogue silencieux avec le corps afin de détecter l'origine du stress, les émotions, <i class="orangeAccent">les événements</i> qui bloquent la personne dans son plein potentiel. Tout est en inter-relation: Si l'un des systèmes est perturbé, toute <i class="orangeAccent">l'énergie</i> de la personne sera déséquilibrée.
       </p>
       <div class="pic-container">
-        <img src="../assets/Julien-seance-Kinesiologie3.jpg" alt="">
-        <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="" >
-        <img src="../assets/Julien-seance-Kinesiologie.jpg" alt="" >
+        <img src="../assets/Julien-seance-Kinesiologie3.jpg" alt="Julien et une cliente, en salle de kinésiologie, la cliente est allongée et Julien tient son bras gauche et sa jambe gauche en l'air, la jambe gauche est pliée.">
+        <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="Julien et une cliente, en salle de kinésiologie, la cliente est allongée et julien tient sa tête et son bras." >
+        <img src="../assets/Julien-seance-Kinesiologie.jpg" alt="Julien et une cliente, en salle de kinésiologie, la cliente est allongée et julien tient ses pieds" >
       </div>
       <div class="container">
         <h4>Kinésiologie</h4>
@@ -289,7 +289,7 @@ export default {
   }
   .button {
     cursor: pointer;
-    margin : 2rem auto 4rem auto;
+    margin : 0 auto 4rem auto;
     background : #1E3D59;
     width : fit-content;
     padding : 0.8rem 2rem;
@@ -309,11 +309,18 @@ export default {
         text-align : center;
       }
     }
+    h3 {
+      margin-top : 4rem;
+      &:first-child {
+        margin-top : 0;
+      }
+    }
+    .margined {
+      margin-bottom : 1.5rem;
+    }
     h4 {
       font-size : 0.8rem;
-    }
-    p {
-      margin : 2rem 0;
+      margin-bottom : 1.5rem;
     }
     .under-title-text {
       line-height: 26px;
@@ -327,10 +334,12 @@ export default {
         flex-wrap: wrap;
         justify-content: space-between;
       }
+      margin-top : 3rem;
       .box {
         cursor : pointer;
         margin-bottom : 1rem;
-        padding : 0.2rem 1rem;
+        padding : 1rem 1rem;
+        background: rgba(30, 61, 89, 0.01);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
         @include pc {
           width : 49%;
@@ -340,7 +349,7 @@ export default {
           position: relative;
           padding-right : 3rem;
           color : #FF6E40;
-          font-weight: 500;
+          margin-bottom : 0.5rem;
           @include pc {
             padding-right : 0;
           }
@@ -379,26 +388,29 @@ export default {
     }
     .pic-container {
         display : flex;
-        margin : 2rem 0;
+        margin : 4rem 0 2rem 0;
         padding-bottom : 2rem;
         overflow-x: auto;
         white-space: nowrap;
         img {
-            width : 60vw;
+            width : 65vw;      
             max-width : 20rem;
             border-radius: 0.5rem;
-            margin : 0 1.2rem;
+            margin : 0 0.5rem;
             object-fit : cover;
             box-shadow: 0px 4px 4px rgba(30, 61, 89, 0.5);
-            &:first-child {
-              margin-left : 0;
-            }
+            // &:first-child {
+            //   margin-left : 0.5rem;
+            // }
+        }
+        .portrait-pic {
+          height : 20rem;
         }
         &::-webkit-scrollbar {
             height: 0.5rem;
         }
         &::-webkit-scrollbar-thumb {
-            background-color: rgb(180, 180, 180);
+            background-color: #1e3d5996;
             border-radius: 2rem;
             &:hover {
                 background-color: rgb(128, 128, 128);
@@ -413,6 +425,7 @@ export default {
       flex-direction: column;
       align-items: center;
       ul {
+        margin : 2rem auto;
         li {
           list-style-type: disc;
           margin : 0 0 1rem 1rem;
@@ -425,26 +438,27 @@ export default {
     position: relative;
     width : 85vw;
     max-width : 450px;
+    background-color: #fbfbfc;
     @include pc {
       width : 400px;
       margin : 3rem auto; 
     }
-    background: white;
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.13);
-    margin-bottom : 4rem;
+    margin-bottom : 2rem;
     h4 {
       font-size : 1.1rem;
       font-weight : 600;
       color : #424242;
+      margin : 0;
       // text-align: center;
     }
     h5 {
       font-weight : 600;
       // text-align: center;
     }
-    h4, h5 {
-      margin : 0 1rem;
-    }
+    // h4, h5 {
+    //   margin : 0 1rem;
+    // }
     .inside-container {
       margin : 0 1rem;
       display: flex;
@@ -473,14 +487,11 @@ export default {
         display : flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom : 1rem;
         img {
-          width : 30vw;
-          max-width : 8rem;
+          width : 4rem;
           &:nth-child(2) {
-            width : 20vw;
-            height : 20vw;
-            max-width : 5rem;
-            max-height : 5rem;
+            margin-left : 2rem;
           }
         }
       }

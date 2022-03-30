@@ -184,7 +184,7 @@ export default {
       height : calc(100vh - 5rem);
       width : 100%;
       object-fit: cover;
-      filter: blur(2px);
+      filter: blur(1px);
       @include pc {
         width : 85%;
       }
@@ -217,7 +217,7 @@ export default {
       height : calc(100vh - 5rem);
       width : 100%;
       object-fit: cover;
-      filter: blur(2px);
+      filter: blur(1px);
       @include pc {
         width : 71%;
       }
@@ -255,8 +255,8 @@ export default {
     }
     .sport {
       position : absolute;
-      top : 4rem;
-      left : 5vw;
+      top : 15vh;
+      left : 10vw;
       @include pc {
         top : 25vh;
         left : 30vw;
@@ -282,15 +282,16 @@ export default {
   }
   .qui-je-suis {
     display : flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin : 1rem 0 4rem 0;
     @include pc {
       margin : 1rem 10vw 4rem 10vw;
     }
     .ju-profil-pic {
-      width : 40vw;
+      width : 45vw;
       max-width : 10rem;
+      margin-right : 1rem;
       @include tablet {
         display: none;
       }
@@ -326,14 +327,15 @@ export default {
   }
   .box {
     cursor : pointer;
-    margin : 2rem 2.5rem;
-    padding : 0.2rem 0.5rem;
+    margin : 1rem 2.5rem;
+    padding : 1rem 0.5rem 0.2rem 0.5rem;
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+    background: rgba(30, 61, 89, 0.01);
     .the-title {
       position: relative;
       margin-bottom : 1.2rem;
       padding-right : 3rem;
-      font-weight: 600;
+      font-size : 18px;
       text-align: center;
       color : #1E3D59;
       .arrow {
@@ -361,6 +363,7 @@ export default {
     }
     .button {
       margin-bottom : 1rem;
+      font-size : 14px;
     }
   }
   .confiance-pics {
@@ -376,7 +379,27 @@ export default {
       flex-wrap: wrap;
       justify-content: space-evenly;
       align-items : center;
-      margin-bottom : 3rem;
+      // margin-bottom : 3rem;
+      img {
+        margin-bottom : 3rem;
+        &:nth-child(3) {
+          width : 8rem;
+        }
+        &:nth-child(5) {
+          width : 9rem;
+        }
+        &:nth-child(6) {
+          width : 10rem;
+        }
+        &:nth-child(7) {
+          width : 6rem;
+        }
+        &:nth-child(8) {
+          width : 8rem;
+          height : 9rem;
+          object-fit: cover;
+        }
+      }
       @include tablet {
         img {
           margin : 0 3rem;

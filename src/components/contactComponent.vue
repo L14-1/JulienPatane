@@ -20,12 +20,12 @@
         </div>
         <div class="contact-form">
             <form action="https://formsubmit.co/nico.maitre.stair@gmail.com" method="POST">
-                <p class="top-text">Votre nom</p>
-                <input type="text" name="name" placeholder="Votre nom" required>
-                <p class="top-text">Votre mail</p>
-                <input type="email" name="email" placeholder="votre mail" required>
-                <p class="top-text">Votre n° de téléphone (Facultatif)</p>
-                <input type="text" name="telephone" placeholder="Votre n° de téléphone">
+                <p class="top-text">Nom</p>
+                <input type="text" name="name" placeholder="Entrez votre nom" required>
+                <p class="top-text">Email</p>
+                <input type="email" name="email" placeholder="Entrez votre adresse mail" required>
+                <p class="top-text">N° de téléphone (Facultatif)</p>
+                <input type="text" name="telephone" placeholder="Entrez votre N° de téléphone">
                 <p class="top-text">Votre message</p>
                 <textarea type="text" name="message" rows="5" cols="33" placeholder="Une demande particulière, un devis, mes disponibilités ...">
                 </textarea>
@@ -75,6 +75,7 @@ export default {
             text-decoration : none;
             position : relative;
             font-size : 0.9rem;
+            font-weight : 500;
         }
         .contact-icon {
             position : absolute;
@@ -88,6 +89,7 @@ export default {
             flex-direction: column;
             .top-text {
                 font-size : 13px;
+                font-weight : 500;
                 margin : 0.5rem 0 0.3rem 0;
             }
             input {
@@ -99,6 +101,7 @@ export default {
                 background: rgba(255, 110, 64, 0.1);
                &::placeholder {
                     color: #4E4E4E;
+                    font-style: italic;
                     font-size : 12px;
                }
             }
@@ -111,6 +114,11 @@ export default {
                 border: 0.1px solid transparent;
                 background: rgba(255, 110, 64, 0.1);
                 color : #4E4E4E;
+                &::placeholder {
+                    color: #4E4E4E;
+                    font-style: italic;
+                    font-size : 12px;
+                }
             }
             button {
                 // margin-top : 1rem;

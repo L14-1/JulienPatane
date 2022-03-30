@@ -73,13 +73,21 @@ export default {
     @include pc {
       width : 80rem;
     }
+    p {
+      &:first-child {
+        margin-bottom : 0;
+      }
+      &:nth-child(2) {
+        margin-top : 0.2rem;
+      }
+    }  
     .social-logos {
       display : flex;
       justify-content: center;
     }
     .facebook, .instagram {
       width : 2.5rem;
-      margin : 1.5rem 1.2rem;
+      margin : 1.5rem 1.2rem 1rem 1.2rem;
       @include pc {
         margin : 1rem 1.5rem;
         width : 2rem;

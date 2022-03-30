@@ -11,8 +11,8 @@
         <div class="breakline"></div>
         <p class="price-container"><i class="price">20€</i> / séance</p>
         <div class="pics">
-          <img src="../assets/services-a-la-personne-logo.png" alt="">
-          <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
+          <img src="../assets/services-a-la-personne-logo.svg" alt="">
+          <img src="../assets/Picto-reduction-impot-50-1.svg" alt="">
         </div>
         <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
         <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
@@ -27,8 +27,8 @@
         <div class="breakline"></div>
         <p class="price-container"><i class="price">7€50</i> / séance / personne</p>
         <div class="pics">
-          <img src="../assets/services-a-la-personne-logo.png" alt="">
-          <img src="../assets/Picto-reduction-impot-50-1.png" alt="">
+          <img src="../assets/services-a-la-personne-logo.svg" alt="">
+          <img src="../assets/Picto-reduction-impot-50-1.svg" alt="">
         </div>
         <p>Vous êtes particulier ? <br>Bénéficiez d’une réduction d’impôt sur le revenu de 50% des sommes versées à un salarié à domicile.</p>
         <p class="lowerCase">Plus d’informations:<br> https://www.servicesalapersonne.gouv.fr</p>
@@ -137,13 +137,14 @@ export default {
         align-items: center;
         justify-content: space-between;
         img {
-          width : 30vw;
-          max-width : 8rem;
+          width : 20vw;
+          max-width : 5rem;
           &:nth-child(2) {
             width : 20vw;
             height : 20vw;
             max-width : 5rem;
             max-height : 5rem;
+            margin-left : 3rem;
           }
         }
       }

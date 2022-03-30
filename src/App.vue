@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="blackBack" v-if="menu == 'opened'"></div>
     <div id="nav">
       <router-link to="/">
       <img src="./assets/Logo.svg" alt="julien Patane Logo" @click="closingNav">
@@ -130,8 +131,9 @@ export default {
   color: #424242;
   h1 {
     color : #1E3D59;
-    padding : 1.5rem 3rem;
+    padding : 1.5rem 3rem 2rem 3rem;
     text-align: center;
+    font-size : 24px;
   }
   h2 {
     font-size : 18px;
@@ -282,6 +284,14 @@ html {
     }
   }
 }
+.blackBack {
+  position : fixed;
+  z-index : 900;
+  top : 0;
+  width : 100vw;
+  height : 100vh;
+  background : rgba(0, 0, 0, 0.452);
+}
 .menu_links {
   z-index: 998;
   cursor : pointer;
@@ -360,7 +370,7 @@ html {
   z-index: 1100;
   position : fixed;
   right : 1rem;
-  top : 7.5rem;
+  bottom : calc(100vh - 9rem);
   width : 1.5rem;
   height : 1.5rem;
   cursor: pointer;
