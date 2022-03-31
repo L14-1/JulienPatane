@@ -107,6 +107,7 @@ export default {
             flex-wrap: wrap;
             width : 1000px;
             margin: 2rem auto 0 auto;
+            justify-content: space-evenly;
         }
         .theReview-container {
             display: flex;
@@ -131,13 +132,22 @@ export default {
                     margin-top : 2rem;
                 }
             }
+            &:nth-child(3n) {
+                @include largeScreen {
+                    margin-right : 0;
+                }
+            }
             .theReview {
                 position : relative;
                 background: rgba(255, 110, 64, 0.1);
                 width : 275px;
+                height: 320px;
                 border-radius: 10px;
                 margin : 3rem 0.8rem;
                 padding : 0.5rem 1rem;
+                @include largeScreen {
+                    background: white;
+                }
                 .top-mark {
                     position : absolute;
                     top : -2rem;
@@ -165,6 +175,19 @@ export default {
                     margin-bottom : 1rem;
                 }
             }
+        }
+        &::-webkit-scrollbar {
+            height: 0.5rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(180, 180, 180);
+            border-radius: 2rem;
+            &:hover {
+                background-color: rgb(128, 128, 128);
+            }
+        }
+        &::-webkit-scrollbar-track {
+            background-color: none;
         }
     }
 }

@@ -37,17 +37,23 @@
       <div class="sport-container-box">
       <div class="box" @click="individuelBoxSwitch">
         <div class="the-title">Coaching individuel<i :class="[ individuelBox ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+        <transition name="opening-fade">
         <p class="the-text" v-if="individuelBox || windowWidth > 1100">1 à 2 personnes. Séance d’une heure personnalisée selon vos objectifs.</p>
+        </transition>
         <div class="button" v-if="individuelBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
       </div>
       <div class="box" @click="collectifBoxSwitch">
         <div class="the-title">Coaching collectif<i :class="[ collectifBox ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+         <transition name="opening-fade">
         <p class="the-text" v-if="collectifBox || windowWidth > 1100">3 à 10 personnes. Reunissez vos forces et donnez le maximum de vous.</p>
+         </transition>
         <div class="button" v-if="collectifBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
       </div>
       <div class="box margin-bottom-4" @click="cardiaqueBoxSwitch">
         <div class="the-title">Cohérence cardiaque<i :class="[ cardiaqueBox  ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+         <transition name="opening-fade">
         <p class="the-text" v-if="cardiaqueBox || windowWidth > 1100">Apprenez à apaiser vos émotions et gérer votre stress.</p>
+         </transition>
         <div class="button" v-if="cardiaqueBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
       </div>
       </div>
@@ -580,6 +586,7 @@ export default {
     margin : 3rem 35vw 0 35vw;
     background: #1E3D59;
   }
+  
 }
 
 </style>

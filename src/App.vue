@@ -462,13 +462,13 @@ html {
   z-index: 1100;
   position : fixed;
   right : 1rem;
-  bottom : calc(100vh - 9rem);
+  bottom : calc(100vh - 6.5rem);
   width : 1.5rem;
   height : 1.5rem;
   cursor: pointer;
   @include largeScreen {
-    right : calc(50vw - 20rem + 1rem);
-    bottom : calc(100vh - 10.5rem);
+    right : 24rem;
+    top : 6.5rem;
   }
   &::after, &::before {
     content : '';
@@ -495,15 +495,18 @@ html {
 .slide-fade-enter, .slide-fade-leave-to {
   transform: translateY(100vh);
   opacity: 0;
+  @include largeScreen {
+    transform: translateX(50vh);
+  }
 }
 
 .opening-fade-enter-active {
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
 }
 .opening-fade-leave-active {
-  transition: none;
+  transition: all 0.2s ease-out;
 }
-.opening-fade-enter, .slide-fade-leave-to {
+.opening-fade-enter, .opening-fade-leave-to {
   opacity: 0;
   transform: translateY(-2rem);
 }
