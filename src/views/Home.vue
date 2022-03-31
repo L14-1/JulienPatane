@@ -69,6 +69,7 @@
       <div class="button" v-if="ReflexologieBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     </div>
+    <ReviewComponent />
     <h4>Ils me font confiance</h4>
     <div class="confiance-pics">
       <img src="../assets/services-a-la-personne-logo.png" alt="logo du services à la personne">
@@ -88,6 +89,7 @@
 
 <script>
 
+import ReviewComponent from '../components/reviewComponent.vue';
 
 export default {
   name: 'Home',
@@ -99,6 +101,9 @@ export default {
   },
   mounted: function () {
     this.windowWidth = window.innerWidth;
+  },
+  components: {
+    ReviewComponent
   },
   data: function () {
     return {
