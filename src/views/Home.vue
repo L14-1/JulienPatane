@@ -31,7 +31,8 @@
     </div>
     <div class="button"><router-link to="/mon-parcours">Découvrez mon parcours</router-link></div>
     <div class="sport-container">
-      <h4 id="prestations-sport">Mes prestations Sport</h4>
+      <h4 id="prestations-sport" v-if="windowWidth > 1100">Mes prestations Sport</h4>
+      <h4 id="prestations-sport" v-if="windowWidth <= 1100">Mes prestations</h4>
       <h5 v-if="windowWidth <= 1100">Sport</h5>
       <div class="sport-container-box">
       <div class="box" @click="individuelBoxSwitch">
@@ -53,7 +54,8 @@
       <div class="button"><router-link to="/les-bienfaits-du-sport">Decouvrez les bienfaits<br>du sport sur la santé !</router-link></div>
     </div>
     <div class="break-line" v-if="windowWidth <= 1100"></div>
-    <h4 id="prestations-bien-etre">Mes prestations Médecine douce</h4>
+    <h4 id="prestations-bien-etre" v-if="windowWidth > 1100">Mes prestations Médecine douce</h4>
+    <h4 id="prestations-bien-etre" v-if="windowWidth <= 1100">Mes prestations</h4>
     <h5 v-if="windowWidth <= 1100">Bien-être</h5>
     <div class="medecine-container-box">
     <div class="box" @click="kinesiologieBoxSwitch">
@@ -174,7 +176,7 @@ export default {
     position: absolute;
     bottom : 5rem;
     left : 48%;
-    animation: iconArrow 1.5s ease-in-out alternate infinite;
+    // animation: iconArrow 1.5s ease-in-out alternate infinite;
   }
   a {
     text-decoration: none;
@@ -271,6 +273,10 @@ export default {
       position : absolute;
       bottom : 10rem;
       right : 15vw;
+      @include tablet {
+        bottom : 25vh;
+        right : 25vw;
+      }
       @include pc {
         top : 50vh;
         right : 30vw;
@@ -280,6 +286,10 @@ export default {
       position : absolute;
       top : 15vh;
       left : 10vw;
+      @include tablet {
+        top : 25vh;
+        left : 15vw;
+      }
       @include pc {
         top : 25vh;
         left : 30vw;
@@ -293,7 +303,10 @@ export default {
       width : fit-content;
       margin-bottom : 10px;
       line-height: 27.51px;
-      @include largeScreen {
+      @include tablet {
+        font-size : 24px;
+      }
+      @include pc {
         font-size: 20px;
       }
     }

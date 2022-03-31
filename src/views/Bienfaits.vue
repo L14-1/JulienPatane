@@ -106,6 +106,9 @@ export default {
             }
             &:first-child {
                 margin-top : 0;
+                @include pc {
+                    margin-top : 1.5rem;
+                }
             }
         }
     }

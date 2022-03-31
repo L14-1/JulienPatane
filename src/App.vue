@@ -17,12 +17,14 @@
       <ul>
         <li @click="servicesSwitch" v-if="windowWidth < 1100">Prestations<i :class="[ servicesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
         <router-link to="/prestations" v-if="windowWidth >= 1100"><li class="underline-anim-1">Prestations</li></router-link>
+          <transition name="opening-fade">
         <ul class="sublinks" v-if="servicesMenu == 'opened'">
           <router-link to="/prestations"><li @click="closingNav">Coaching</li></router-link>
           <router-link to="/prestations#coherence"><li @click="closingNav">Cohérence cardiaque</li></router-link>
           <router-link to="/prestations#reflexologie"><li @click="closingNav">Réflexologie</li></router-link>
           <router-link to="/prestations#kinesiologie"><li @click="closingNav">Kinésiologie</li></router-link>
         </ul>
+          </transition>
         <router-link to="/tarifs"><li @click="closingNav" class="underline-anim-2">Tarifs</li></router-link>
         <router-link to="/mon-parcours"><li @click="closingNav" class="underline-anim-3">Mon parcours</li></router-link>
         <router-link to="/les-bienfaits-du-sport"><li @click="closingNav" class="underline-anim-4">Les bienfaits du sport</li></router-link>
@@ -133,6 +135,9 @@ export default {
     padding : 1.5rem 3rem 2rem 3rem;
     text-align: center;
     font-size : 24px;
+    @include tablet {
+      font-size : 38px;
+    }
   }
   h2 {
     font-size : 18px;
@@ -332,12 +337,12 @@ html {
           height : 2px;
           width : 0rem;
           background: white;
-          transition : width 0.5s ease-out;
+          transition : width 0.3s ease-in-out;
         }
         &:hover {
           &::after {
             width : 5.5rem;
-            transition : width 0.5s ease-in;
+            transition : width 0.3s ease-in-out;
           }
         }
       }
@@ -350,12 +355,12 @@ html {
           height : 2px;
           width : 0rem;
           background: white;
-          transition : width 0.5s ease-out;
+          transition : width 0.3s ease-in-out;
         }
         &:hover {
           &::after {
             width : 2.7rem;
-            transition : width 0.5s ease-in;
+            transition : width 0.3s ease-in-out;
           }
         }
       }
@@ -368,12 +373,12 @@ html {
           height : 2px;
           width : 0rem;
           background: white;
-          transition : width 0.5s ease-out;
+          transition : width 0.3s ease-in-out;
         }
         &:hover {
           &::after {
             width : 6.7rem;
-            transition : width 0.5s ease-in;
+            transition : width 0.3s ease-in-out;
           }
         }
       }
@@ -386,12 +391,12 @@ html {
           height : 2px;
           width : 0rem;
           background: white;
-          transition : width 0.5s ease-out;
+          transition : width 0.3s ease-in-out;
         }
         &:hover {
           &::after {
             width : 10.5rem;
-            transition : width 0.5s ease-in;
+            transition : width 0.3s ease-in-out;
           }
         }
       }
@@ -490,5 +495,16 @@ html {
 .slide-fade-enter, .slide-fade-leave-to {
   transform: translateY(100vh);
   opacity: 0;
+}
+
+.opening-fade-enter-active {
+  transition: all 0.5s ease-out;
+}
+.opening-fade-leave-active {
+  transition: none;
+}
+.opening-fade-enter, .slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-2rem);
 }
 </style>

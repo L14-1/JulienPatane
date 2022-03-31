@@ -82,6 +82,9 @@ export default {
             width : 900px;
             margin-top : 4rem;
         }
+        @include largeScreen {
+            width : 1100px;
+        }
         &--text {
             @include tablet {
                 margin : 0 11vw 0 11vw;
@@ -96,10 +99,10 @@ export default {
             @include pc {
                 flex : 50%;
                 display: flex;
-                justify-content: flex-end;
-                img {
-                    margin-right : 1rem;
-                }
+                justify-content: center;
+                // img {
+                //     margin-right : 1rem;
+                // }
             }
             img {
                 width : 300px;
@@ -118,7 +121,10 @@ export default {
             justify-content: space-between;
             align-items: center;
             width : 900px;
-            margin-top : 4rem;
+            margin-top : 7rem;
+        }
+        @include largeScreen {
+            width : 1100px;
         }
         &--photo {
             flex : 50%;
@@ -134,6 +140,10 @@ export default {
                     max-width : 400px;
                     max-height : 300px;
                     object-fit: cover;
+                }
+                @include largeScreen {
+                    max-width : 500px;
+                    max-height : 350px;
                 }
             }
         }
@@ -156,6 +166,9 @@ export default {
             margin : 2rem 0;
             padding-left : 1.5rem;
         }
+        @include largeScreen {
+            margin-right : 4rem;
+        }
         img {
             width : 15rem;
             border-radius: 0.5rem;
@@ -170,6 +183,10 @@ export default {
                 max-height : 300px;
                 box-shadow: 0px 0px 0px rgba(30, 61, 89, 0.5);
                 border-radius : 0;
+            }
+            @include largeScreen {
+                max-width : 500px;
+                max-height : 350px;
             }
         }
         &-hide {

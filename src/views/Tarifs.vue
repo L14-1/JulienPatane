@@ -85,6 +85,9 @@ export default {
       display : flex;
       justify-content: space-between;
     }
+    @include largeScreen {
+      width : 1100px;
+    }
   }
   .container {
     padding : 1rem;
