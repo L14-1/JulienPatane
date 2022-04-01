@@ -501,13 +501,14 @@ html {
 }
 
 .opening-fade-enter-active {
-  transition: all 0.2s ease-out;
+  transition: all 0.5s ease-out;
 }
-.opening-fade-leave-active {
-  transition: all 0.2s ease-out;
-}
+// .opening-fade-leave-active {
+//   transition: all 0.2s ease-out;
+// }
 .opening-fade-enter, .opening-fade-leave-to {
   opacity: 0;
-  transform: translateY(-2rem);
+  transform: translateY(-1rem);
+  height : 0;
 }
 </style>

@@ -4,19 +4,27 @@
     <div class="container">
     <div :class="[ firstQuestion ? 'opened-question' : '' , 'question']" @click="firstQuestionSwitch">
       <p class="the-question">Quelle est la durée d’une séance d’accompagnement sportif ?<i :class="[ firstQuestion ? 'left' : 'down', 'arrow' ]"></i></p>
+      <transition name="opening-fade">
       <p class="the-answer" v-if="firstQuestion">Une séance individuelle ou collective dure 1 heure.</p>
+      </transition>
     </div>
     <div :class="[ secondQuestion ? 'opened-question' : '' , 'question']" @click="secondQuestionSwitch">
       <p class="the-question">Quel est le minimum de personne pour un cours collectif ?<i :class="[ secondQuestion ? 'left' : 'down', 'arrow' ]"></i></p>
+      <transition name="opening-fade">
       <p class="the-answer" v-if="secondQuestion">Le minimum pour un cours collectif est de 3 personnes.</p>
+      </transition>
     </div>
     <div :class="[ thirdQuestion ? 'opened-question' : '' , 'question']" @click="thirdQuestionSwitch">
       <p class="the-question">Les personnes en situation de handicap peuvent-elles être accompagnées sportivement ?<i :class="[ thirdQuestion ? 'left' : 'down', 'arrow' ]"></i></p>
+      <transition name="opening-fade">
       <p class="the-answer" v-if="thirdQuestion">Non, malheureusement je n’ai pas l’agrégation pour travailler avec des personnes en situation de handicap.</p>
+      </transition>
     </div>
     <div :class="[ fourthQuestion ? 'opened-question' : '' , 'question']" @click="fourthQuestionSwitch">
       <p class="the-question">Les chèque CESU (Service à la personne) sont-ils  acceptés ?<i :class="[ fourthQuestion ? 'left' : 'down', 'arrow' ]"></i></p>
+      <transition name="opening-fade">
       <p class="the-answer" v-if="fourthQuestion">Oui, les chèque CESU sont acceptés.</p>
+      </transition>
     </div>
     </div>
   </div>

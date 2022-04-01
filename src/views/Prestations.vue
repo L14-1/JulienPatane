@@ -1,10 +1,10 @@
 <template>
   <div class="prestations">
     <div class="anchors">
-      <div><p><router-link to="/prestations">Coaching</router-link></p></div>
-      <div><p><router-link to="/prestations#coherence">Cohérence cardiaque</router-link></p></div>
-      <div><p><router-link to="/prestations#reflexologie">Reflexo</router-link></p></div>
-      <div><p><router-link to="/prestations#kinesiologie">Kinéso</router-link></p></div>
+      <router-link to="/prestations"><div><p>Coaching</p></div></router-link>
+      <router-link to="/prestations#coherence"><div><p>Cohérence cardiaque</p></div></router-link>
+      <router-link to="/prestations#reflexologie"><div><p>Reflexo</p></div></router-link>
+      <router-link to="/prestations#kinesiologie"><div><p>Kinéso</p></div></router-link>
     </div>
     <h1>Prestations</h1>
     <div class="page-container">
@@ -18,24 +18,32 @@
       <div class="box-container">
         <div class="box" @click="firstBoxSwitch">
           <p class="the-title">1. Respectez votre rythme !<i :class="[ firstBox ? 'left' : 'down', 'arrow' ]"></i></p>
+          <transition name="opening-fade">
           <p class="the-text" v-if="firstBox">Pour commencer, il convient de revenir sur la signification de « être à l’écoute de vos besoins ».<br>C’est lors de notre première rencontre que nous échangeons sur vos problématiques et attentes. Cette séance « test » nous permet d’identifier vos capacités. C’est ensemble que nous pourrons construire pas à pas, par vos ressentis, la variabilité de l’intensité des efforts.</p>
+          </transition>
         </div>
         <div class="box" @click="secondBoxSwitch">
           <p class="the-title">2. Ritualiser, créer une routine !<i :class="[ secondBox ? 'left' : 'down', 'arrow' ]"></i></p>
+          <transition name="opening-fade">
           <p class="the-text" v-if="secondBox">Comme de nombreuses activités tel que la méditation, la cohérence cardiaque ou d’autres domaines, le sport nécessite d’être pratiqué de manière régulière. C’est lors de notre première séance que nous définissons ensemble la fréquence de nos rendez-vous.<br>Grâce à la méthode d’intervalle / fractionné que je vous propose, vous pourrez rapidement intégrer ces séances dans votre semaine, de manière accompagnée ou en autonomie, seul ou à plusieurs !</p>
+          </transition>
         </div>
         <div class="box" @click="thirdBoxSwitch">
           <p class="the-title">3. La méthode intervalle training c’est quoi<i :class="[ thirdBox ? 'left' : 'down', 'arrow' ]"></i></p>
+          <transition name="opening-fade">
           <p class="the-text" v-if="thirdBox">Plus précisément appelé HIIT Training, cette méthode s’adapte partout et pour tous.
             <br>De courtes périodes d’exercices de haute intensité alterné avec des intervalles de mouvements plus lents.
             <br>Très facile à mettre en place, ces séances durent entre 20 et 35 minutes.
             <br>Les exercices s’effectuent au poids du corps et ne nécessite pas d’espace ou de matériels particulier.
             <br>Avec ou sans pathologies, elle propose de nombreux bienfaits.
           </p>
+          </transition>
         </div>
         <div class="box" @click="fourthBoxSwitch">
           <p class="the-title">4. Le mouvement pour tous<i :class="[ fourthBox ? 'left' : 'down', 'arrow' ]"></i></p>
+          <transition name="opening-fade">
           <p class="the-text" v-if="fourthBox">Vous êtes une personne active, vous avez dû ralentir la pratique sportive à la suite d’une blessure, une grossesse, une maladie, une pathologie et vous souhaitez être accompagné dans la reprise d’une activité physique et des mouvements adaptés. Le cœur de mes séances se résume en 2 mots. « Bienveillance » et « Plaisir ».</p>
+          </transition>
         </div>
       </div>
       <div class="pic-container">
@@ -131,7 +139,7 @@
         <br>- se relaxer.
         <br><br><i class="boldAccent">Elle ne comporte aucune contre indication et sepratique sur tout public.</i>
       </p>
-      <div class="pic-container">
+      <div class="pic-container-one">
         <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="Julien et une cliente, julien en train de pratiquer de la réflexologie cranio-sacrée." >
       </div>
       <div class="container">
@@ -261,19 +269,13 @@ export default {
     margin : 0;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
     @include pc {
-      width : 50rem;
+      // width : 50rem;
       left : calc(50% - 25rem);
     }
-    div {
-      display : flex;
-      align-items : center;
-      justify-content: space-around;
-      width : 25vw;
-      font-weight : 400;
-      font-size: 13px;
-      height : 3.5rem;
-      background: #dde2e6;
-      border : 1px solid white;
+    a {
+        text-decoration: none;
+        color : #1E3D59;
+        border : 1px solid white;
       border-right : none;
       &:first-child {
         border-left : none;
@@ -286,12 +288,25 @@ export default {
           border-right : 1px solid white;
         }
       }
+    }
+    div {
+      display : flex;
+      align-items : center;
+      justify-content: space-around;
+      width : 25vw;
+      max-width : calc(50rem / 4);
+      font-weight : 400;
+      font-size: 13px;
+      height : 3.5rem;
+      background-color: #dde2e6;
+      transition : background-color 0.3s ease-in;
+      &:hover {
+        background-color: #bbc4cd;
+        color: white;
+        transition : background-color 0.6s ease-out;
+      }
       p {
         text-align: center;
-      }
-      a {
-        text-decoration: none;
-        color : #1E3D59;
       }
     }
   }
@@ -318,7 +333,7 @@ export default {
     margin : 0 1.5rem;
     h3, h4 {
       color : #DF643D;
-      @include pc {
+      @include tablet {
         text-align : center;
       }
     }
@@ -429,6 +444,15 @@ export default {
         &::-webkit-scrollbar-track {
             background-color: none;
         }
+        &-one {
+          width : fit-content;
+          margin : 0 auto;
+          img {
+            margin-top : 2rem;
+            width : 100%;
+            max-width : 477px;
+          }
+        }
     }
     .list {
       display : flex;
@@ -449,7 +473,7 @@ export default {
     width : 85vw;
     max-width : 450px;
     background-color: #fbfbfc;
-    @include pc {
+    @include tablet {
       width : 400px;
       margin : 3rem auto; 
     }

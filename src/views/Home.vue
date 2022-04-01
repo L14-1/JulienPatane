@@ -66,12 +66,16 @@
     <div class="medecine-container-box">
     <div class="box" @click="kinesiologieBoxSwitch">
       <div class="the-title">Kinésiologie<i :class="[ kinesiologieBox ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+      <transition name="opening-fade">
       <p class="the-text" v-if="kinesiologieBox || windowWidth > 1100">Favorisez un état d’équilibre et<br> de bien-être grâce à la<br> kinésiologie.</p>
+      </transition>
       <div class="button" v-if="kinesiologieBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     <div class="box" @click="ReflexologieBoxSwitch">
       <div class="the-title">Réflexologie<i :class="[ ReflexologieBox ? 'leftArrow' : 'down', 'arrow' ]" v-if="windowWidth <= 1100"></i></div>
+      <transition name="opening-fade">
       <p class="the-text" v-if="ReflexologieBox || windowWidth > 1100">Douleurs chroniques,<br> migraines, acouphènes,<br> vertiges ? La reflexologie est<br> faite pour vous.</p>
+      </transition>
       <div class="button" v-if="ReflexologieBox || windowWidth > 1100"><router-link to="/prestations">En savoir plus</router-link></div>
     </div>
     </div>
@@ -179,15 +183,16 @@ export default {
 
 .home {
   @keyframes iconArrow {
-    from {opacity: 0;}
-    to {opacity: 100%;}
+    from {opacity: 100%;}
+    to {opacity: 0;}
   }
   .icon-arrow {
     z-index: 888;
     position: absolute;
-    bottom : 5rem;
     left : 48%;
-    // animation: iconArrow 1.5s ease-in-out alternate infinite;
+    animation: iconArrow 1.5s ease-in-out alternate infinite;
+    bottom : 2rem;
+    font-size : 2rem;
   }
   a {
     text-decoration: none;
