@@ -8,8 +8,10 @@
     </div>
     <h1>Prestations</h1>
     <div class="page-container">
-      <h3>Accompagnement personnalisé</h3>
-      <h4>1 ou 2 personnes</h4>
+      <div class="title-container">
+        <h3>Accompagnement personnalisé</h3>
+        <h4>1 ou 2 personnes</h4>
+      </div>
       <p class="under-title-text">
         Seul ou à plusieurs, l’activité physique n’est pas seulement un moyen très efficace pour perdre du poids et conserver sa silhouette svelte et tonique.
         <br>En <i class="orangeAccent">complément</i> d’un rythme de vie à l’écoute de vos besoins, c’est aussi un formidable allié pour votre <i class="orangeAccent">bien-être</i> général. Le sport -ou plutôt le mouvement- contribue à prévenir bon nombre de déséquilibres sur le plan physique et mental.
@@ -97,8 +99,10 @@
         </div>
       </div>
       <div class="button"><router-link to="/les-bienfaits-du-sport">Decouvrez les bienfaits<br>du sport sur la santé !</router-link></div>
+      <div class="title-container">
       <h3 id="coherence">Base de la cohérence cardiaque</h3>
       <h4>“ Le mouvement c’est la vie ”</h4>
+      </div>
       <p class="under-title-text">
         La cohérence cardiaque s’intéresse à la variabilité du rythme cardiaque qui est l’une des manifestations physiologiques de nos sentiments et de nos <i class="orangeAccent">émotions</i>. 
         <br>Elle est reconnue comme un marqueur puissant de l’activité du système nerveux autonome et de son équilibre. Le cœur et le cerveau interagissent en permanence. Lorsque l’un s’emballe, l’autre suit. C’est ainsi que notre état émotionnel influence les battements de notre cœur.
@@ -127,7 +131,9 @@
           <p>La séance dure une heure et se déroule à votre domicile ou dans un lieu extérieur. <br> <br>Elle est complémentaire avec l’accompagnement sportif , la reflexologie ou la kinésiologie</p>
         </div>
       </div>
+      <div class="title-container">
       <h3 id="reflexologie" class="margined">Réflexologie Cranio-Sacrée</h3>
+      </div>
       <p class="under-title-text">
         La Réflexologie crânio-sacrée est une approche unique et inspirée également appelé "<i class="orangeAccent">ostéo fluidique</i>".
         <br>C'est une technique manuelle douce qui consiste à appliquer une légère pression sur les os du crâne et du visage de même que sur la partie inférieure de la moelle epinière qui s’étend jusqu'au sacrum.
@@ -150,7 +156,9 @@
           <div class="adress"><p><font-awesome-icon icon="fa-solid fa-location-dot" />34 chemin de la reviree, 38240 Meylan</p></div>
         </div>
       </div>
+      <div class="title-container">
       <h3 id="kinesiologie" class="margined">La pratique kinésiologique</h3>
+      </div>
       <p class="under-title-text">
         « Les bras m’en tombent », « J’ai les jambes en coton », « J’en ai plein le dos »
         <br><br>Ces expressions populaires attestent du rapport étroit entre nos muscles et nos émotions. <i class="orangeAccent">Écoutons votre corps</i> ! Il a quelque chose à nous dire.
@@ -331,14 +339,19 @@ export default {
   }
   .page-container {
     margin : 0 1.5rem;
+    .title-container {
+      @include tablet {
+        width : fit-content;
+        margin : 2rem auto;
+      }
+    }
     h3, h4 {
       color : #DF643D;
-      @include tablet {
-        text-align : center;
-      }
     }
     h3 {
       margin-top : 4rem;
+      font-size : 24px;
+      font-weight : 600;
       &:first-child {
         margin-top : 0;
       }
@@ -347,7 +360,7 @@ export default {
       margin-bottom : 1.5rem;
     }
     h4 {
-      font-size : 0.8rem;
+      font-size : 18px;
       margin-bottom : 1.5rem;
     }
     .under-title-text {
@@ -451,6 +464,8 @@ export default {
             margin-top : 2rem;
             width : 100%;
             max-width : 477px;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 4px rgba(30, 61, 89, 0.5);
           }
         }
     }

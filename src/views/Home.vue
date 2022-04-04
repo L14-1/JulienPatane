@@ -182,17 +182,31 @@ export default {
 @import '../assets/_mixin.scss';
 
 .home {
-  @keyframes iconArrow {
-    from {opacity: 100%;}
-    to {opacity: 0;}
-  }
+  
   .icon-arrow {
     z-index: 888;
     position: absolute;
     left : 48%;
     animation: iconArrow 1.5s ease-in-out alternate infinite;
     bottom : 2rem;
-    font-size : 2rem;
+    font-size : 1.5rem;
+    transform-origin: center;
+  }
+  @keyframes iconArrow {
+    // from {
+    //   opacity: 100%;
+    //   font-size : 1.5rem;
+    // }
+    // to {
+    //   opacity: 0;
+    //   font-size : 1rem;
+    // }
+    from {
+      transform: translateY(0);
+    }
+    to   {
+      transform: translateY(-20px);
+    }
   }
   a {
     text-decoration: none;
@@ -551,6 +565,9 @@ export default {
       flex-wrap: wrap;
       justify-content: space-evenly;
       align-items : center;
+      @include pc {
+         margin-bottom : 32px
+      }
       // margin-bottom : 3rem;
       img {
         margin-bottom : 3rem;

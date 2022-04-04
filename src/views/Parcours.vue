@@ -105,10 +105,19 @@ export default {
                 // }
             }
             img {
-                width : 300px;
+                object-fit: cover;
+                object-position: 50% 20%;
                 display: none;
                 @include pc {
                     display : block;
+                    width : 40vw;
+                    height : 30vw;
+                    max-width : 400px;
+                    max-height : 300px;
+                }
+                @include largeScreen {
+                    max-width : 500px;
+                    max-height : 350px;
                 }
             }
             

@@ -6,8 +6,8 @@
       <p>Julien Patane</p>
       <p>Sport & cohérence cardiaque<br>Réflexologie & Kinésiologie</p>
       <div class="social-logos">
-        <a href="https://facebook.com"><img src="../assets/Logo-facebook.svg" alt="logo facebook" class="facebook"></a>
-        <a href="https://instagram.com"><img src="../assets/Logo-instagram.svg" alt="logo instagram" class="instagram"></a>
+        <a href="https://www.facebook.com/CoachJulienPatane/" target="_blank"><img src="../assets/Logo-facebook.svg" alt="logo facebook" class="facebook"></a>
+        <a href="https://instagram.com/julienpatane?utm_medium=copy_link" target="_blank"><img src="../assets/Logo-instagram.svg" alt="logo instagram" class="instagram"></a>
       </div>
     </div>
     <ul>

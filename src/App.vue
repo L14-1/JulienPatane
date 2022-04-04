@@ -137,6 +137,7 @@ export default {
     font-size : 24px;
     @include tablet {
       font-size : 38px;
+      font-weight : 500;
     }
   }
   h2 {
@@ -238,12 +239,18 @@ html {
     }
   }
   .nav-title {
-    font-weight : 200;
-    font-size : 18px;
+    // font-weight : 200;
+    font-size : 16px;
     text-align: center;
     line-height: 1.6rem;
     p:first-child {
-      font-weight : 300;
+      font-size : 18px;
+    }
+    @include pc {
+      font-size : 18px;
+      p:first-child {
+      font-size : 24px;
+    }
     }
   }
   .nav-menu {
