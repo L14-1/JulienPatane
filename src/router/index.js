@@ -6,6 +6,7 @@ import Tarifs from '../views/Tarifs.vue'
 import Parcours from '../views/Parcours.vue'
 import Bienfaits from '../views/Bienfaits.vue'
 import Faq from '../views/Faq.vue'
+import Merci from '../views/Merci.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/faq',
     name: 'Faq',
     component: Faq
+  },
+  {
+    path: '/merci',
+    name: 'Merci',
+    component: Merci
   },
   
 ]

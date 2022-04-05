@@ -143,7 +143,7 @@
         <br>- gérer des problématiques liés à la sphère crânienne (<i class="orangeAccent">maux de tête, migraines, acouphènes, vertiges</i>).
         <br>- retrouver du <i class="orangeAccent">tonus</i> et de la <i class="orangeAccent">vitalité</i>.
         <br>- se relaxer.
-        <br><br><i class="boldAccent">Elle ne comporte aucune contre indication et sepratique sur tout public.</i>
+        <br><br><i class="boldAccent">Elle ne comporte aucune contre indication et se pratique sur tout public.</i>
       </p>
       <div class="pic-container-one">
         <img src="../assets/Julien-seance-Kinesiologie5.jpg" alt="Julien et une cliente, julien en train de pratiquer de la réflexologie cranio-sacrée." >

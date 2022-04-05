@@ -31,7 +31,7 @@
                 </textarea>
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://l14-1.github.io/JulienPatane/#/">
+                <input type="hidden" name="_next" value="https://l14-1.github.io/JulienPatane/#/merci">
                 <button type="submit">Envoyer</button>
             </form>
         </div>
