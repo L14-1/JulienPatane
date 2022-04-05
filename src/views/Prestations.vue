@@ -463,7 +463,7 @@ export default {
           img {
             margin-top : 2rem;
             width : 100%;
-            max-width : 477px;
+            max-width : 20rem;
             border-radius: 0.5rem;
             box-shadow: 0px 4px 4px rgba(30, 61, 89, 0.5);
           }

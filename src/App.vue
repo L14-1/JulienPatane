@@ -469,7 +469,7 @@ html {
   z-index: 1100;
   position : fixed;
   right : 1rem;
-  bottom : calc(100vh - 6.5rem);
+  bottom : calc(100vh - 8.5rem);
   width : 1.5rem;
   height : 1.5rem;
   cursor: pointer;
@@ -508,7 +508,7 @@ html {
 }
 
 .opening-fade-enter-active {
-  transition: all 0.5s ease-out;
+  transition: all 1s ease-out;
 }
 // .opening-fade-leave-active {
 //   transition: all 0.2s ease-out;

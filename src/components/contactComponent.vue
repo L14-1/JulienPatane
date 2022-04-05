@@ -1,6 +1,6 @@
 <template>
   <div class="contactComponent">
-        <h4>Contactez-moi</h4>
+        <h5>Contactez-moi</h5>
         <div class="contact-link">
             <a href="tel:+33637738297">
                 <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="contact-icon">
@@ -69,7 +69,7 @@ export default {
         border-left : 1px solid black;
         border-radius : 0;
     }
-    h4 {
+    h5 {
         margin : 1.5rem 0;
         color : #1E3D59;
         font-size : 1.2rem;

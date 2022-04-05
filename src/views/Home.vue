@@ -94,12 +94,22 @@
         <img src="../assets/mare-nostrum-logo.jpg" alt="logo du groupe mare nostrum">
       </div>
     </div>
+    <transition name="slide-fade">
+    <ContactComponent v-if="contactPage" />
+    </transition>
+    <transition name="slide-fade">
+    <div class="close-cross" @click="closingContact" v-if="contactPage"></div>
+    </transition>
+    <button class="contact-home-page" @click="openingContact" v-if="windowWidth <= 1100">
+      CONTACTEZ-MOI
+    </button>
   </div>
 </template>
 
 <script>
 
 import ReviewComponent from '../components/reviewComponent.vue';
+import ContactComponent from '../components/contactComponent.vue';
 
 export default {
   name: 'Home',
@@ -113,7 +123,8 @@ export default {
     this.windowWidth = window.innerWidth;
   },
   components: {
-    ReviewComponent
+    ReviewComponent,
+    ContactComponent
   },
   data: function () {
     return {
@@ -123,6 +134,7 @@ export default {
       kinesiologieBox: false,
       ReflexologieBox: false,
       windowWidth: 0,
+      contactPage: false,
     };
   },
   methods: {
@@ -172,6 +184,12 @@ export default {
         this.ReflexologieBox = true;
       }
     },
+    closingContact() {
+        this.contactPage = false;
+    },
+    openingContact() {
+      this.contactPage = true;
+    }
   }
   
 }
@@ -188,19 +206,11 @@ export default {
     position: absolute;
     left : 48%;
     animation: iconArrow 1.5s ease-in-out alternate infinite;
-    bottom : 2rem;
+    bottom : 1rem;
     font-size : 1.5rem;
     transform-origin: center;
   }
   @keyframes iconArrow {
-    // from {
-    //   opacity: 100%;
-    //   font-size : 1.5rem;
-    // }
-    // to {
-    //   opacity: 0;
-    //   font-size : 1rem;
-    // }
     from {
       transform: translateY(0);
     }
@@ -607,6 +617,60 @@ export default {
     height : 1px;
     margin : 3rem 35vw 0 35vw;
     background: #1E3D59;
+  }
+  .contact-home-page {
+    position : fixed;
+    bottom : 1.5rem;
+    right : 0.8rem;
+    background : #FFC13B;
+    border : none;
+    padding : 0.5rem 1rem;
+    color : #fff;
+    font-size : 13px;
+    font-weight : 600;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .close-cross {
+    z-index: 1100;
+    position : fixed;
+    right : 1rem;
+    bottom : calc(100vh - 8.5rem);
+    width : 1.5rem;
+    height : 1.5rem;
+    cursor: pointer;
+    @include largeScreen {
+      right : 24rem;
+      top : 6.5rem;
+    }
+    &::after, &::before {
+      content : '';
+      position : absolute;
+      background : #1E3D59;
+      width : 1.5rem;
+      height : 2px;
+      top : 0.75rem;
+      left : 0;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+  .slide-fade-enter-active {
+    transition: all 1s ease-in-out;
+  }
+  .slide-fade-leave-active {
+    transition: all 1s ease-in-out;
+  }
+  .slide-fade-enter, .slide-fade-leave-to {
+    transform: translateY(100vh);
+    opacity: 0;
+    @include largeScreen {
+      transform: translateX(50vh);
+    }
   }
   
 }
