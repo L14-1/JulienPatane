@@ -240,9 +240,9 @@ export default {
     clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0 100%);
     @include pc {
       clip-path: polygon(70% 0, 100% 0%, 100% 100%, 30% 100%);
-      display: flex;
-      justify-content: right;
-      -webkit-justify-content: right;
+      img {
+        transform: translateX(35vh);
+      }
     }
     .ju_pic {
       opacity: 0.25;
