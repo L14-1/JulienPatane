@@ -11,13 +11,13 @@
       </div>
     </div>
     <ul>
-      <li>Acompagnement sportif</li>
+      <li><router-link to="/prestations">Acompagnement sportif</router-link></li>
       <li><router-link to="/mon-parcours">Mon parcours</router-link></li>
-      <li>Cohérence cardiaque</li>
+      <li><router-link to="/prestations#coherence">Cohérence cardiaque</router-link></li>
       <li><router-link to="/tarifs">Tarifs</router-link></li>
-      <li>Reflexologie</li>
+      <li><router-link to="/prestations#reflexologie">Reflexologie</router-link></li>
       <li><router-link to="/faq">F.A.Q.</router-link></li>
-      <li>Kinésiologie</li>
+      <li><router-link to="/prestations#kinesiologie">Kinésiologie</router-link></li>
     </ul>
     </div>
   </div>
