@@ -16,13 +16,14 @@
     <div class="menu_links" v-if="menu == 'opened' || windowWidth >= 1100" >
       <ul>
         <li @click="servicesSwitch" v-if="windowWidth < 1100">Prestations<i :class="[ servicesMenu == 'default' ? 'left' : 'down', 'arrow' ]"></i></li>
-        <router-link to="/prestations" v-if="windowWidth >= 1100"><li class="underline-anim-1">Prestations</li></router-link>
+        <router-link to="/accompagnement-personalise" v-if="windowWidth >= 1100"><li class="underline-anim-1">Prestations</li></router-link>
           <transition name="opening-fade">
         <ul class="sublinks" v-if="servicesMenu == 'opened'">
-          <router-link to="/prestations"><li @click="closingNav">Coaching</li></router-link>
-          <router-link to="/prestations#coherence"><li @click="closingNav">Cohérence cardiaque</li></router-link>
-          <router-link to="/prestations#reflexologie"><li @click="closingNav">Réflexologie</li></router-link>
-          <router-link to="/prestations#kinesiologie"><li @click="closingNav">Kinésiologie</li></router-link>
+          <router-link to="/accompagnement-personalise"><li @click="closingNav">Coaching individuel</li></router-link>
+          <router-link to="/accompagnement-collectif"><li @click="closingNav">Coaching collectif</li></router-link>
+          <router-link to="/base-de-la-coherence-cardiaque"><li @click="closingNav">Cohérence cardiaque</li></router-link>
+          <router-link to="/reflexologie-canio-sacree"><li @click="closingNav">Réflexologie</li></router-link>
+          <router-link to="/la-pratique-kinesiologique"><li @click="closingNav">Kinésiologie</li></router-link>
         </ul>
           </transition>
         <router-link to="/tarifs"><li @click="closingNav" class="underline-anim-2">Tarifs</li></router-link>
@@ -121,7 +122,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'mulish', sans-serif;
 }
 
 #app {
@@ -199,6 +200,9 @@ export default {
     }
   }
 }
+// h1, h2, h3 {
+//   font-family: 'Nunito Sans', sans-serif;
+// }
 
 html {
     &::-webkit-scrollbar {
@@ -245,6 +249,7 @@ html {
     line-height: 1.6rem;
     p:first-child {
       font-size : 18px;
+      font-family: 'La Belle Aurore', cursive;
     }
     @include pc {
       font-size : 18px;
@@ -348,7 +353,7 @@ html {
         }
         &:hover {
           &::after {
-            width : 5.5rem;
+            width : 85%;
             transition : width 0.3s ease-in-out;
           }
         }
@@ -366,7 +371,7 @@ html {
         }
         &:hover {
           &::after {
-            width : 2.7rem;
+            width : 75%;
             transition : width 0.3s ease-in-out;
           }
         }
@@ -384,7 +389,7 @@ html {
         }
         &:hover {
           &::after {
-            width : 6.7rem;
+            width : 87%;
             transition : width 0.3s ease-in-out;
           }
         }
@@ -402,7 +407,7 @@ html {
         }
         &:hover {
           &::after {
-            width : 10.5rem;
+            width : 92%;
             transition : width 0.3s ease-in-out;
           }
         }

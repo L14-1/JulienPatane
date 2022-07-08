@@ -19,7 +19,7 @@
                 34 chemin de la revirée, 38240 Meylan</a>
         </div>
         <div class="contact-form">
-            <form action="https://formsubmit.co/nico.maitre.stair@gmail.com" method="POST">
+            <form action="https://formsubmit.co/julienpatane@outlook.fr" method="POST">
                 <p class="top-text">Nom</p>
                 <input type="text" name="nom" placeholder="Entrez votre nom" required>
                 <p class="top-text">Email</p>

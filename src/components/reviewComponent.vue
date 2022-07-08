@@ -155,7 +155,7 @@ export default {
                 }
                 .bottom-mark {
                     position : absolute;
-                    transform : rotateX(180deg) rotateZ(180deg);
+                    transform : rotateZ(180deg);
                     bottom : -2rem;
                     right : -0.5rem;
                 }

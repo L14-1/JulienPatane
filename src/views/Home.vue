@@ -1,28 +1,31 @@
 <template>
   <div class="home">
-    <div class="right">
+    <!-- <div class="right">
       <img src="../assets/kinesio-home-paysage.jpg" alt="Photo de Julien en séance de kinésiologie avec un client" class="ju_pic ju_pic-paysage">
       <img src="../assets/kinesio-home-portrait.jpg" alt="Photo de Julien en séance de kinésiologie avec un client" class="ju_pic ju_pic-portrait">
     </div>
     <div class="left">
       <img src="../assets/basket-home-portrait.jpg" alt="Photo de Julien jouant au basket" class="ju_foot ju_foot-portrait">
       <img src="../assets/basket-home-paysage.jpg" alt="Photo de Julien jouant au basket" class="ju_foot ju_foot-paysage">
+    </div> -->
+    <div class="home--pic">
+      <img src="../assets/Julien-séance-sport6.jpg" alt="Julien et un client, exercice avec un ballon de yoga, julien tient le ballon au niveau de sa tête et le client frappe dedans." >
+      <div class="title">
+        <router-link to="/#prestations-sport">
+          <div class="sport">
+            <h3>SPORT</h3>
+            <div class="infos">+ d'infos</div>
+          </div>
+        </router-link>
+        <router-link to="/#prestations-bien-etre">
+          <div class="kinesiologie">
+            <h3>BIEN-ÊTRE</h3>
+            <div class="infos">+ d'infos</div>
+          </div>
+        </router-link>
+      </div>
     </div>
     <font-awesome-icon icon="fa-solid fa-angles-down" class="icon-arrow"/>
-    <div class="title">
-      <router-link to="/#prestations-sport">
-        <div class="sport">
-          <h3>SPORT &<br>COHERENCE CARDIAQUE</h3>
-          <div class="infos">+ d'infos</div>
-        </div>
-      </router-link>
-      <router-link to="/#prestations-bien-etre">
-        <div class="kinesiologie">
-          <h3>KINESIOLOGIE &<br>REFLEXOLOGIE</h3>
-          <div class="infos">+ d'infos</div>
-        </div>
-      </router-link>
-    </div>
     <h4>Qui je suis</h4>
     <div class="qui-je-suis">
       <img src="../assets/Photo-profil-Julien.jpg" alt="Photo portrait de Julien" class="ju-profil-pic">
@@ -200,7 +203,74 @@ export default {
 @import '../assets/_mixin.scss';
 
 .home {
-  
+  &--pic {
+    position : relative;
+    height : calc(100vh - 5rem);
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      height : calc(100vh - 5rem);
+      width : 100vw;
+      @include pc {
+        
+      }
+    }
+    .title {
+      position : absolute;
+      top : 5rem;
+      width : 100vw;
+      height : calc(100vh - 5rem);
+      .kinesiologie, .sport {
+        display: flex;
+        flex-direction: column;
+        align-items : center;
+        border : 1px solid #fff;
+        width : 10rem;
+        padding : 0.7rem 0;
+      }
+      .kinesiologie { 
+        position : absolute;
+        top : 38vh;
+        transform: translateX(-50%);
+        left : calc(50% + 13vw);
+        
+      }
+      .sport {
+        position : absolute;
+        top : 15vh;
+        transform: translateX(-50%);
+        left : calc(50% - 13vw);
+        
+      }
+      h3 {
+        color : #fff;
+        text-align: center;
+        font-size: 27px;
+        font-weight : 700;
+        width : fit-content;
+        font-family: 'Kumbh Sans', sans-serif;
+        // line-height: 27.51px;
+        // @include tablet {
+        //   font-size : 24px;
+        // }
+        // @include pc {
+        //   font-size: 20px;
+        // }
+      }
+      .infos {
+        font-family: 'Kumbh Sans', sans-serif;
+        color : #fff;
+        font-size: 12px;
+        text-align: center;
+        font-weight : 600;
+        @include largeScreen {
+          // font-size: 18px;
+          // padding-top : 0.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
   .icon-arrow {
     z-index: 888;
     position: absolute;
@@ -209,6 +279,7 @@ export default {
     bottom : 1rem;
     font-size : 1.5rem;
     transform-origin: center;
+    color : #1E3D59;
   }
   @keyframes iconArrow {
     from {
@@ -234,143 +305,72 @@ export default {
     color : #1E3D59;
     text-align: center;
   }
-  .right {
-    z-index : 2;
-    height : calc(100vh - 5rem);
-    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0 100%);
-    @include pc {
-      clip-path: polygon(70% 0, 100% 0%, 100% 100%, 30% 100%);
-      img {
-        transform: translateX(35vh);
-      }
-    }
-    .ju_pic {
-      opacity: 0.25;
-      height : calc(100vh - 5rem);
-      width : 100%;
-      object-fit: cover;
-      filter: blur(1px);
-      @include pc {
-        width : 85%;
-      }
-    }
-    .ju_pic-paysage {
-      display : none;
-      @include pc {
-        display : block;
-      }
-    }
-    .ju_pic-portrait {
-      @include pc {
-        display : none;
-      }
-    }
+  // .right {
+  //   z-index : 2;
+  //   height : calc(100vh - 5rem);
+  //   clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0 100%);
+  //   @include pc {
+  //     clip-path: polygon(70% 0, 100% 0%, 100% 100%, 30% 100%);
+  //     img {
+  //       transform: translateX(35vh);
+  //     }
+  //   }
+  //   .ju_pic {
+  //     opacity: 0.25;
+  //     height : calc(100vh - 5rem);
+  //     width : 100%;
+  //     object-fit: cover;
+  //     filter: blur(1px);
+  //     @include pc {
+  //       width : 85%;
+  //     }
+  //   }
+  //   .ju_pic-paysage {
+  //     display : none;
+  //     @include pc {
+  //       display : block;
+  //     }
+  //   }
+  //   .ju_pic-portrait {
+  //     @include pc {
+  //       display : none;
+  //     }
+  //   }
 
-  }
-  .left {
-    z-index : 0;
-    position : absolute;
-    top : 5rem;
-    height : calc(100vh - 5rem);
-    width : 100vw;
-    clip-path: polygon(0 0, 99% 0, 0 99%, 0 100%);
-    @include pc {
-      clip-path: polygon(0 0, 69.3% 0, 29.5% 100%, 0 100%);
-    }
-    .ju_foot {
-      opacity: 0.25;
-      height : calc(100vh - 5rem);
-      width : 100%;
-      object-fit: cover;
-      filter: blur(1px);
-      @include pc {
-        width : 71%;
-      }
-    }
-    .ju_foot-paysage {
-      display : none;
-      @include pc {
-        display : block;
-      }
-    }
-    .ju_foot-portrait {
-      @include pc {
-        display : none;
-      }
-    }
-  }
-  .title {
-    position : absolute;
-    top : 5rem;
-    width : 100vw;
-    height : calc(100vh - 5rem);
-    .kinesiologie, .sport {
-      display: flex;
-      flex-direction: column;
-      align-items : center;
-    }
-    .kinesiologie { 
-      position : absolute;
-      bottom : 10rem;
-      right : 15vw;
-      @include tablet {
-        bottom : 25vh;
-        right : 25vw;
-      }
-      @include pc {
-        top : 50vh;
-        right : 30vw;
-      }
-    }
-    .sport {
-      position : absolute;
-      top : 15vh;
-      left : 10vw;
-      @include tablet {
-        top : 25vh;
-        left : 15vw;
-      }
-      @include pc {
-        top : 25vh;
-        left : 30vw;
-      }
-    }
-    h3 {
-      color : #1E3D59;
-      text-align: center;
-      font-size: 17px;
-      font-weight : 700;
-      width : fit-content;
-      margin-bottom : 10px;
-      line-height: 27.51px;
-      @include tablet {
-        font-size : 24px;
-      }
-      @include pc {
-        font-size: 20px;
-      }
-    }
-    .infos {
-      color : #FF6E40;
-      text-align: center;
-      font-weight : 600;
-      border-bottom: 1px solid #FF6E40;
-      @include largeScreen {
-        font-size: 18px;
-        padding-top : 0.5rem;
-        cursor: pointer;
-        &:hover {
-          color : #fff;
-          background-color: #FF6E40;
-          padding : 0.5rem 0;
-          width : 99px;
-          border-bottom: none;
-          transition: background-color 1s ease-out;
-        }
-
-      }
-    }
-  }
+  // }
+  // .left {
+  //   z-index : 0;
+  //   position : absolute;
+  //   top : 5rem;
+  //   height : calc(100vh - 5rem);
+  //   width : 100vw;
+  //   clip-path: polygon(0 0, 99% 0, 0 99%, 0 100%);
+  //   @include pc {
+  //     clip-path: polygon(0 0, 69.3% 0, 29.5% 100%, 0 100%);
+  //   }
+  //   .ju_foot {
+  //     opacity: 0.25;
+  //     height : calc(100vh - 5rem);
+  //     width : 100%;
+  //     object-fit: cover;
+  //     filter: blur(1px);
+  //     @include pc {
+  //       width : 71%;
+  //     }
+  //   }
+  //   .ju_foot-paysage {
+  //     display : none;
+  //     @include pc {
+  //       display : block;
+  //     }
+  //   }
+  //   .ju_foot-portrait {
+  //     @include pc {
+  //       display : none;
+  //     }
+  //   }
+  // }
+  
   .qui-je-suis {
     display : flex;
     justify-content: center;
